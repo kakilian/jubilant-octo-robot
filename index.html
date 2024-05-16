@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Cat Quiz</title>
 </head>
+
 <body>
+    <!--front quiz page-->
     <div class="front-page">
         <h1>Welcome to the Cat Quiz!</h1>
-        <p>Text your knowledge about cats and the Chesire Cat from Alice ein Wonderland</p>
+        <p>Text your knowledge about cats and the Chesire Cat from Alice in Wonderland</p>
+        <p>Let's test your knowledge! - 10 random questions about cats and my meeting with Alice in Wonderland</p>
         <button id="start-btn">Start Quiz</button>
+    </div>
+    <!-- start quiz page -->
+    <div id="question-container" class="hide">
+        <div id="question">Question:</div>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <!-- answer results-->
+        <div class="controls">
+            <p class="correct-answer">Your answer is Correct!</p>
+            <p class="incorrect answer">incorrect answer! Don't give up!</p>
+            <button id="start-btn" class="start-btn btn">Start again</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+        <!-- quiz results correct and incorrectly answered-->
+        <div class="result">Heres how you did! Awesome effort! Take the quiz again and better your score! your Chesire.</div>
+        <div class="container" id="quiz-result">X</div>
+        <button class="btn">X</button>
+        <!--restart quiz-->
+        <button class="restart" id="refresh-quiz">Restart Quiz</button>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
