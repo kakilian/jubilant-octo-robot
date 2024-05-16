@@ -43,10 +43,46 @@ body.wrong {
     width: 800px;
     max-width: 80%;
 }
-/*
-.container.front-page {
-    background-color: #f2f2f2;**/
+/*-- Images --*/
+.front-page-container {
+    position: relative;
+    background-image: url('assets/css/image/cheshire.face.jpg');
+    background-size: cover;
+    background-position: left center;
 }
+
+.quiz-page {
+    position: relative;
+    background-image: url('assets/css/image/cute.jpg');
+    background-size: cover;
+    background-position: left center;
+}
+
+.results.container {
+    position: relative;
+    background-image: url('assets/css/image/translucent.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container.front-page,
+.container.quiz-page,
+.results.container {
+    position: relative;
+}
+
+.front-page-container .container.front-page,
+.quiz-page #question-container,
+.results.container #result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
 h1, h2, h3 {
     font-family: 'Raleway', 'Oswald', sans-serif;
     font-weight: 400;
