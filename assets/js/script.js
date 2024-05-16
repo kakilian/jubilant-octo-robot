@@ -1,3 +1,10 @@
+const quizData = [
+    {
+        question: "question 1?",
+        answers: ["Answer 1", "Answer 2", "Amswer 3", "Answer 4"]
+        correctAnswer; 0
+    },
+];
 
 
 function initalizeQuiz {
