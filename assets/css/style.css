@@ -43,6 +43,10 @@ body.wrong {
     width: 800px;
     max-width: 80%;
 }
+/*
+.container.front-page {
+    background-color: #f2f2f2;**/
+}
 h1, h2, h3 {
     font-family: 'Raleway', 'Oswald', sans-serif;
     font-weight: 400;

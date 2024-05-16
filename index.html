@@ -8,33 +8,37 @@
     <!--google fonts-->
     <link
         href="http://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
-        rel="stylesheet
-    " ;>
+        rel="stylesheet" ;>
     <!--favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/image/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/image/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/image/favicon/about.txt">
     <title>Cat Quiz</title>
-    <link rel="stylesheet" href="assets/image/image.cat/cute.jpg" alt="Cheshire - sitting on a tree branch, the cat from the disney fairy-tale classic, Alice in Wonderland">
 </head>
 
 <body>
     <!--front quiz page-->
-    <div class="container front-page">
-        <h1>Welcome to the Cat Quiz!</h1>
-        <p>Test your knowledge about cats and the Chesire Cat from Alice in Wonderland</p>
-        <p>Let's test your knowledge! - 10 random questions about cats and my meeting with Alice in Wonderland</p>
-        <button class="start-btn" id="start-btn">Start Quiz</button>
+    <div class="front-page-container">
+        <img src="assets/css/image/cheshire.face.jpg">
+        <div class="container front-page">
+            <h1>Welcome to the Cat Quiz!</h1>
+            <p>Test your knowledge about cats and the Chesire Cat from Alice in Wonderland</p>
+            <p>Let's test your knowledge! - 10 random questions about cats and my meeting with Alice in Wonderland</p>
+            <button class="start-btn" id="start-btn">Start Quiz</button>
+        </div>
     </div>
     <!-- start quiz page -->
-    <div id="question-container" class="hide">
-        <div id="question">Question:</div>
-        <div id="answer-buttons" class="btn-grid">
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
+    <div class="quiz-page">
+        <img src="assets/css/image/cute.jpg">
+        <div id="question-container" class="hide">
+            <div id="question">Question:</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
         </div>
         <!-- answer results-->
         <div class="controls">
@@ -44,12 +48,15 @@
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
         <!-- quiz results correct and incorrectly answered-->
-        <div class="result">
+        <div class="results.container">
+        <img src="assets/css/image/translucent.jpg"
+            <div id="result">
             <p>Heres how you did! Awesome effort! Take the quiz again and better your score! your Chesire.</p>
         </div>
         <div class="container" id="quiz-result">XXXend scoreXXXXX</div>
         <!--restart quiz-->
         <button class="restart" id="refresh-quiz">Restart Quiz</button>
+    </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>

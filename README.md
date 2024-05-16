@@ -23,7 +23,12 @@ I have made my favicon with  the website: - {[src=https://favicon.io/favicon-con
 I used the word "Fairytales" - everyone loves fairytales or at least have heard one or more in their lives. I wanted to tickle on this aspect and not "Quiz" or "Chesire".
 
 ## Background - Picture of Chesire:
-I tried to get a royalty free photo of Chesire, which is near to impossible, and my daughter offered to draw one for this project.
+cheshire cat photos:  //https:wallpapers.com/cheshire-cat-graphic-poster
+from "miami22" owner of picture, of Chesshire laying on a tree branch, as in the Alice of Wonderland story where he first makes contact with Alice, herself.
+for student usage for project 2, show casing Java-script.
+Picture is being used in a Quiz about Cats and also special moments during Alice in Wonderland.
+Cheshire hosts the Cat Quiz, of 10 random questions, from real live cat answers to fun inspired questions from the disney movie " Alice in Wonderland".
+
 
 ## Sourcing for Project:
 I have used different sources to help build this Quiz Project.
