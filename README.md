@@ -6,7 +6,7 @@ Idea comes from my first project, my daughter wanted something with inter-action
 And legit, those cat people out there, - do talk to their furryballs of love, so why not talk to Chesire and his journey through this awesome Quiz.
 
 ## My Process:
-I started thinking about the questions that would be not only easy, also fun facts - and maybe something to take away from the experience.
+I started thinking about the questions that should be not only easy, also fun facts - and maybe something to take away from the experience.
 
 I also realized that I needed to make random questions and have a least 20 or so questions, only to give a 10 question quiz. I have also realized that I needed to make it responsive to the user, by being a multi-choice answer questions. Anyone who can read will be able to enjoy the experience. I also want it to have a cheeky fun factor - which is the shaodw of my choosen host for this project quiz. please let me introduce you to the oh so famous "Chesire" who is ridiculously funny and can have his annoying moments for Alice herself which is trying to find her way though an amaze of misunderstandings, with pretty much little help from our cat "Chesire".
 
@@ -17,6 +17,7 @@ i Introduction to the Quiz - who is Chesire, and what is awaiting the user.
 ii The Quiz Questions -broken down into 4 possible answers. So a clicker knowledge/experience.
 iii Correct or Incorrect including score - words of encouragement for the bold user.
 iv The users end score, with the question "Do you want to try again?"
+
 
 I have made my favicon with  the website: - {[src=https://favicon.io/favicon-converter/]} 
 I used the word "Fairytales" - everyone loves fairytales or at least have heard one or more in their lives. I wanted to tickle on this aspect and not "Quiz" or "Chesire".
