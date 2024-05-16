@@ -1,5 +1,8 @@
-/* Import Font famil */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+/* Import Font family */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('font/Oswald/Oswald-VariableFont_wght.ttf') format('truetype')
+}
 
 /* Gobal setting for box */
 *, * *::before, *::after {
@@ -19,12 +22,31 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
+    font-family: 'Raleway', 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3em;
+
 }
 
 p {
     font-family: 'Raleway', sans-serif;
-    font-style: italic;
-    font-weight: 300;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #9b3416;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #48e842;
 }

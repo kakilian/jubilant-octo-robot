@@ -1,4 +1,5 @@
 
+
 function initalizeQuiz {
 // Set up eventlistener, initalize var.//
 } 
