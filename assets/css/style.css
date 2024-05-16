@@ -4,7 +4,7 @@
 /* Gobal setting for box */
 *, * *::before, *::after {
     box-sizing: border-box;
-    font-family: 
+    font-family: 'Oswald', sans-serif;
 }
 
 body {
@@ -15,5 +15,16 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: 300;
 }
