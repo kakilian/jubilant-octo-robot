@@ -1,7 +1,8 @@
 /* Import Font family */
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('font/Oswald/Oswald-VariableFont_wght.ttf&font/Raleway-VariableFont_wght.ttf') format('truetype');
+    src: url('font/Oswald/Oswald-VariableFont_wght.ttf'),
+    url('font/Raleway/Raleway-VaribleFOnt_wght.tff') format('truetype');
 }
 
 /* Gobal setting for box */
@@ -10,12 +11,14 @@
 *::after {
     box-sizing: border-box;
 }
+
 /* Page color */
 :root {
     --hue-neutral: 200;
     --hue-wrong: 0
     --hue-correct: 145;
 }
+
 /*-- Body --*/
 body {
     --hue: var(--hue-neutral);
@@ -54,6 +57,7 @@ body.wrong {
     min-width: none;   
     z-index: 1;
 }
+
 /*-- Images --*/
 
 .photo1 {
@@ -69,16 +73,16 @@ body.wrong {
     background-image: url('assets/css/image/cute.jpg');
     background-size: cover;
     background-position: center center;
+    z-index: -1;
 }
 
 .results-container {
-    position: relative;
+    position: flex;
     background-image: url('assets/css/image/translucent.jpg');
     background-size: cover;
-    background-position: center;
+    object-position: right center;
 }
 
-.container,
 .container,
 .quiz-page,
 .controls-container,
@@ -112,11 +116,14 @@ body.wrong {
     background-color: var(--hue-neutral);
 }
 
-.start-btn-quiz, 
+.start-btn, 
 .next-btn {
     font-size: 2.5rem;
     font-weight: bold;
     padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #4CAF50;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     
     
 }
@@ -129,7 +136,7 @@ body.wrong {
 
 .hide {
     display: none;
-}
+} 
 
 h1, h2, h3 {
     font-family: 'Raleway', 'Oswald', sans-serif;
@@ -154,10 +161,11 @@ button {
     padding: 10px 20px;
     font-size: 2em;
     color: #670197
-    border-radius: 2px;
+    border-radius: 15% 10%;
     border: 1px solid-black;
     cursor: pointer;
 }
+
 
 button:hover {
     background-color: greenyellow;
