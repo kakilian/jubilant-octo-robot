@@ -1,16 +1,108 @@
 console.log('script loaded')
 
-const startButton = document.getElementById('start-btn')
-const questionContainerElement = document.getElementById('question-container')
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
 
+let shuffleQuestions, currentQuestionIndex;
 
-startButton.addEventListener('click', startQuiz)
+startButton.addEventListener('click', startQuiz);
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion();
+});
 
 function startQuiz() {
-    console.log('Started')
-    startButton.classList.add('hide')
-    questionContainerElement.classList.remove('hide')
-    setNextQuestion()
+    console.log('Started');
+    startButton.classList.add('hide');
+    shuffleQuestions = questions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0
+    questionContainerElement.classList.remove('hide');
+    setNextQuestion();
+};
+
+function setNextQuestion() {
+    resetState()
+    showQuestion(shuffleQuestions[currentQuestionIndex]);
+};
+
+function showQuestion(question) {
+    questionElement.innerText = question.question;
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+            button.innerText = answer.text 
+            button.classList.add('btn');
+                if (answer.correct) {
+                button.dataset.correct = answer.correct;
+            };
+            button.addEventListener('click', selectAnswer);
+            answerButtonsElement.appendChild(button);
+        });
+}
+
+function resetState() {
+    clearStatusClass(document.body);
+    nextButton.classList.add('hide');
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild
+        (answerButtonsElement.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
+    setStatusClass(document.body, correct);
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct);
+    }) 
+    if (shuffleQuestions.length > currentQuestionindex + 1) {
+    nextButton.classListremove('hide');
+}   else {
+    startButton.innerText = 'Restart';
+    startButton.classList.remove('hide');
+}
+}
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else element.classList.add('wrong');
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+}
+
+let score = 0;
+
+function updateScore(isCorrect) {
+    if (isCorrect) {
+        score++;
+    }
+}
+
+function displayFinalScore() {
+    const finalScoreContainer = document.createElement('div');
+    finalScoreContainer.classList.add('final-score');
+
+    const scoreText = document.createElement('p');
+    scoreText.textContent = `Your final score is: ${score}`;
+    finalScoreContainer.appendChild(scoreText);
+
+
+    const resultText =document.createElement('p');
+    if (score >= 5) {
+        resultText.textContent = "Congratulations! You did great!";
+    } else {
+        resultText.textContent = "Cheshire Cat out smarted you, better luck next time!";
+    }
+    finalScoreContainer.appendChild(resultText);
+
+    document.body.appendChild(finalScoreContainer);
 }
 
 
@@ -109,56 +201,4 @@ const questions = [{
         answers: ["He teaches Alice how to fly", "He gives Alice money for a ticket home", "He provides Alice with crypic advice and directions, often confusing her further", "He watches her closely"],
         correctAnswer: "He provides Alice with crypic advice and directions, often confusing her further",
     },
-
-
-];
-// Function for random selection, quesiotns //
-function selectRandomQuestion() {
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    return questions[randomIndex];
-
-}
-// display the questions and answers boxes //
-function displayQuestion(questionObj) {
-    console.log(questionObj.question);
-    questionObj.answers.forEach((answer, index) => {
-        console.log(`${index + 1}. ${answer}`);
-    });
-}
-
-function initalizeQuiz() {
-    // Set up eventlistener, initalize var.//
-    const startButton = document.getElementById('start-btn');
-    startButton.addEventListener('click', startQuiz);
-}
-
-function checkAnswer(selectedAnswerIndex) {
-    //Check the selected answers with correct asnwer for current questions//
-}
-
-function displayResult(isCorrect) {
-    // Display whether users answer was correct or incorrect //
-}
-
-function updateScore(isCorrect) {
-    // updated score with users correct answers //
-}
-
-function displayNextQuestion() {
-    //Display next question //
-}
-
-function displayFinalScore() {
-    // Display final score with information about cats and alice in wonderland fairytale //
-}
-
-function resetQuiz() {
-    // reset Quiz, including score, and players name //
-}
-
-function shuffleArray(array) {
-    // shuffle the order of the questions and answer choices //
-}
-
-initalizeQuiz();
-//initalize the quiz //
+]; 
