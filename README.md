@@ -40,6 +40,7 @@ favicon
 ## Responsive using Lighthouse
 
 
-
+Problems incounted:
+Upload speed, create dindex.js file assets/js/index.js 
 
 

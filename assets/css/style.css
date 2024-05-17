@@ -16,7 +16,7 @@
     --hue-wrong: 0
     --hue-correct: 145;
 }
-
+/*-- Body --*/
 body {
     --hue: var(--hue-neutral);
     padding: 0;
@@ -26,7 +26,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: pink ;
+    background-color: rgb(188, 21, 174) ;
 }
 
 body.correct {
@@ -37,22 +37,31 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
-.container {
+.introduction-container {
     width: 800px;
     max-width: 80%;
     background-color: rgb(182, 34, 34);
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+
 }
 
+.front-page {
+    display: inline-table;
+    padding: 10%;
+    max-width: fit-content;
+    min-width: none;   
+    z-index: 1;
+}
 /*-- Images --*/
 
-.front-page-container {
-    position: relative;
+.photo1 {
+    display: flex;
     background-image: url('assets/css/image/cheshire.face.jpg');
     background-size: cover;
-    background-position: left left;
+    object-position: right center;
+    z-index: -1;
 }
 
 .quiz-page {
@@ -137,17 +146,19 @@ p {
     font-style: normal;
     font-weight: 600;
     font-size: 1.2em;
+    
+    
 }
 
 button {
     padding: 10px 20px;
-    font-size: 1em;
-    color: #9b3416;
+    font-size: 2em;
+    color: #670197
     border-radius: 2px;
     border: 1px solid-black;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #48e842;
-}; 
+    background-color: greenyellow;
+}
