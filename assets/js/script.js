@@ -1,6 +1,6 @@
 console.log('script loaded')
 
-const startButton = document.getElementById('start-btn');
+const startButton = document.getElementById('start-btn-quiz');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
@@ -17,8 +17,8 @@ nextButton.addEventListener('click', () => {
 function startQuiz() {
     console.log('Started');
     startButton.classList.add('hide');
-    shuffleQuestions = questions.sort(() => Math.random() - .5);
-    currentQuestionindex = 0
+    shuffleQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionindex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
 };
@@ -30,6 +30,7 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
+    answerButtonsElement.innerHTML = '';
     question.answers.forEach(answer => {
         const button = document.createElement('button');
             button.innerText = answer;
