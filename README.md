@@ -32,8 +32,8 @@ Cheshire hosts the Cat Quiz, of 10 random questions, from real live cat answers 
 
 ## Sourcing for Project:
 I have used different sources to help build this Quiz Project.
-video
-font google
+video - How to build a quiz.
+font google 
 playbook for colors - mixing colors
 favicon
 

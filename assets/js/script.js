@@ -1,5 +1,20 @@
-const questions = [
-    {
+console.log('script loaded')
+
+const startButton = document.getElementById('start-btn')
+const questionContainerElement = document.getElementById('question-container')
+
+
+startButton.addEventListener('click', startQuiz)
+
+function startQuiz() {
+    console.log('Started')
+    startButton.classList.add('hide')
+    questionContainerElement.classList.remove('hide')
+    setNextQuestion()
+}
+
+
+const questions = [{
         question: "What is the scientific name for the domestic cat?",
         answers: ["Felis catus", "Meowicus purricus", "Furry maximus", "Whiserkells whiskerensis"],
         correctAnswer: "Felis catus",
@@ -38,9 +53,9 @@ const questions = [
         question: "What is the term for a femaile cat that hasn't been spayed?",
         answers: ["Duchess", "Lady", "Queen", "Empress"],
         correctAnswer: "Queen",
-        },
+    },
     {
-        question: "qWhat is the name for a cat's retractable claws?",
+        question: "What is the name for a cat's retractable claws?",
         answers: ["Sharp-shooters", "Claw-flaws", "Retractile or protractile claws"],
         correctAnswer: "Retractile or protractile claws",
     },
@@ -94,7 +109,7 @@ const questions = [
         answers: ["He teaches Alice how to fly", "He gives Alice money for a ticket home", "He provides Alice with crypic advice and directions, often confusing her further", "He watches her closely"],
         correctAnswer: "He provides Alice with crypic advice and directions, often confusing her further",
     },
-    
+
 
 ];
 // Function for random selection, quesiotns //
@@ -112,42 +127,38 @@ function displayQuestion(questionObj) {
 }
 
 function initalizeQuiz() {
-// Set up eventlistener, initalize var.//
+    // Set up eventlistener, initalize var.//
     const startButton = document.getElementById('start-btn');
     startButton.addEventListener('click', startQuiz);
-} 
-function startQuiz() {
-
 }
 
-function checkAnswer(selectedAnswerindex) {
-//Check the selected answers with correct asnwer for current questions//
+function checkAnswer(selectedAnswerIndex) {
+    //Check the selected answers with correct asnwer for current questions//
 }
 
 function displayResult(isCorrect) {
-// Display whether users answer was correct or incorrect //
+    // Display whether users answer was correct or incorrect //
 }
 
 function updateScore(isCorrect) {
-// updated score with users correct answers //
+    // updated score with users correct answers //
 }
 
 function displayNextQuestion() {
-//Display next question //
+    //Display next question //
 }
 
 function displayFinalScore() {
-// Display final score with information about cats and alice in wonderland fairytale //
+    // Display final score with information about cats and alice in wonderland fairytale //
 }
 
 function resetQuiz() {
-// reset Quiz, including score, and players name //
+    // reset Quiz, including score, and players name //
 }
 
 function shuffleArray(array) {
-// shuffle the order of the questions and answer choices //
+    // shuffle the order of the questions and answer choices //
 }
 
-initalizeQuiz(); 
+initalizeQuiz();
 //initalize the quiz //
-

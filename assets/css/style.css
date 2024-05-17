@@ -42,8 +42,15 @@ body.wrong {
 .container {
     width: 800px;
     max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+
 }
+
 /*-- Images --*/
+
 .front-page-container {
     position: relative;
     background-image: url('assets/css/image/cheshire.face.jpg');
@@ -58,7 +65,7 @@ body.wrong {
     background-position: left center;
 }
 
-.results.container {
+.results-container {
     position: relative;
     background-image: url('assets/css/image/translucent.jpg');
     background-size: cover;
@@ -71,9 +78,10 @@ body.wrong {
     position: relative;
 }
 
-.front-page-container .container.front-page,
-.quiz-page #question-container,
-.results.container #result {
+.front-page-container,
+.quiz-page,
+.question-container,
+.results-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -81,6 +89,36 @@ body.wrong {
     text-align: center;
     color: white;
     z-index: 1;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+}
+
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }
 
 h1, h2, h3 {
@@ -111,4 +149,4 @@ button {
 
 button:hover {
     background-color: #48e842;
-}
+} 
