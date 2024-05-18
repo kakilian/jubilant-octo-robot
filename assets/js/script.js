@@ -1,5 +1,5 @@
-console.log('script loaded')
-console.log('script.js')
+console.log('script loaded');
+console.log('script.js');
 
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-btn-front');
@@ -7,25 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const questionContainerElement = document.getElementById('question-container');
     const questionElement = document.getElementById('question');
     const answerButtonsElement = document.getElementById('answer-buttons');
-    const controlsContainer= document.getElementById('controls-container');
     const correctAnswerElement = document.querySelector('.correct-answer');
     const incorrectAnswerElement = document.querySelector('.incorrect-answer');
     const refreshButton = document.getElementById('start-btn-quiz');
     const restartButton = document.getElementById('refresh-quiz');
     const resultsContainer = document.querySelector('.results-container');  
     const endScoreElement = document.getElementById('end-score');
-
+    const displayFinalScore = document.getElementById('end-score');
+    
 let shuffledQuestions, currentQuestionIndex;
 let score = 0
     
-startButton.addEventListener('click', startGame);
+startButtonFront.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
 
 function startGame() {
-    startButtonFront.classList.add('hide');
+    startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     score = 0;
@@ -51,7 +51,7 @@ function showQuestion(question) {
             answerButtonsElement.appendChild(button);
         });
 }
-
+// Resetting unnecessary elements and clearing previous answers //
 function resetState() {
     nextButton.classList.add('hide');
     correctAnswerElement.classList.add('hide');
@@ -61,7 +61,7 @@ function resetState() {
     }
 }
 
-//Array usage to keep //
+//After an answer is selected, will update score and display results //
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
@@ -78,7 +78,7 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
-        showResults();
+        showResults() updateScore();
     }   
 }    
 
@@ -98,31 +98,43 @@ function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
-
-//score, final score //
-
+// Results of score //
 function updateScore(isCorrect) {
     if (isCorrect) {
         score++;
-    }
-}
+        showResults();
+    };
+
+function showResults() { 
+    questionContainerElement.classList.add('hide');
+    resultsContainer.classList.remove('hide');
+    displayFinalScore();
+
+
 
 function displayFinalScore() {
-    const finalScoreContainer = document.createElement('div');
-    finalScoreContainer.classList.add('final-score');
-
-    const scoreText = document.createElement('p');
-    scoreText.textContent = `Your final score is: ${score}`;
-    finalScoreContainer.appendChild(scoreText);
-
-
-    const resultText =document.createElement('p');
-    if (score >= 5) {
-        resultText.textContent = "Congratulations! You did great!";
-    } else {
-        resultText.textContent = "Cheshire Cat out smarted you, better luck next time!";
+    endScoreElement.innerText = `You scored ${score} out of ${questions.length}`;
+    const finalScoreContainer = document.querySelector(`.final-score-container`);
+    finalScoreContainer.innerHTML = `
+        <P>Your final score is: ${score}</P>
+        <p>${score >= 8 ? 'Congratulations! You did great!' : 'Cheshire out smarted you, better lucky next time!'}</p>
+        `;
     }
-    finalScoreContainer.appendChild(resultText);
 
-    document.body.appendChild(finalScoreContainer);
+}
+// Restart Button //
+restartButton.addEventListener('click', ( ()=> {
+    resultsContainer.classList.add('hide');
+    startButtonFront.classList.remove('hide');
+}));
+
+//Refresh Game //
+refreshButton.addEventListener('click', () => {
+    questionContainerElement.classList.add('hide');
+    startButton.classList.remove('hide');
+
+});
+
+
+}
 });
