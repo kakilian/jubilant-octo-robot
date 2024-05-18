@@ -10,7 +10,7 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 const hideElements = document.getElementById('hide');
 
 let shuffledQuestions, currentQuestionIndex;
-let score = 0;00
+let score = 0
     
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
