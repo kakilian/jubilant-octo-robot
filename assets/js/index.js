@@ -20,7 +20,7 @@ const questions = [
         ]
     },
     {
-        question: "A wivestales: How many lives does a cat have?",
+        question: "According to the  wivestales: How many lives does a cat have?",
         answers: [
             { text: '13', correct: false },
             { text: '1', correct: false },
@@ -41,7 +41,7 @@ const questions = [
         question: "What is the largest breed of domestic cat?",
         answers: [
             { text: 'Munchkin', correct: false },
-            { text: 'Scottisch Fold', correct: false },
+            { text: 'Scottish Fold', correct: false },
             { text: 'Irish Love', correct: false },
             { text: 'Maine Coon', correct: true }
         ]
@@ -65,7 +65,7 @@ const questions = [
         ]
     },        
     {
-        question: "What is the term for a femaile cat that hasn't been spayed?",
+        question: "What is the term for a female cat that hasn't been spayed?",
         answers: [
             { text: 'Duchess', correct: false },
             { text: 'Lady', correct: false },
@@ -73,7 +73,6 @@ const questions = [
             { text: 'Empress', correct: false }
         ]
     }, 
-    
     {
         question: "What is the name for a cat's retractable claws?",
         answers: [
@@ -83,7 +82,6 @@ const questions = [
             { text: 'Paws', correct: false }
         ]
     },
-
     {
         question: "In Alice in Wonderland, ' What color is the Cheshire Cat?",
         answers: [
@@ -93,27 +91,24 @@ const questions = [
             { text: 'Black and White dots', correct: false }
         ]
     },
-
     {
         question: "Finish the quote: 'We're all mad here ... '?",
         answers: [
-            { text: '.. because cats rule !!', correct: true },
+            { text: '.. because cats rule !!', correct: false },
             { text: '.. but that is what makes life interesting', correct: true},
-            { text: '.. except for the teapot corner', correct: true },
-            { text: '.. so let us have a tea party !', correct: true }
+            { text: '.. except for the teapot corner', correct: false },
+            { text: '.. so let us have a tea party !', correct: false }
         ]
     },
-
     {
         question: "What does the Cheshire Cat like to do in the story?",
         answers: [
             { text: 'He likes to tease and confuse Alice with his cryptic comments', correct: true },
-            { text: 'He likes to take long naps', correct: false},
+            { text: 'He likes to take long naps', correct: false },
             { text: 'He loves to play chess with the Queen of Hearts!', correct: false },
             { text: 'He enjoys baking cookies for the Mad Hatters tea parties', correct: false }
         ]
     },
-
     {
         question: "What distinctive feature does the Cheshire Cat have?",
         answers: [
@@ -123,7 +118,6 @@ const questions = [
             { text: 'He .. can talke to other animals', correct: false }
         ]
     },
-
     {
         question: "What does the Cheshire Cat's grin look like?",
         answers: [
@@ -142,7 +136,6 @@ const questions = [
             { text: 'He offers advice and guidance to Alice', correct: true }
         ]
     },
-
     {
         question: "Where does the Cheshire Cat first appear in 'Alice in Wonderland?",
         answers: [
@@ -161,7 +154,6 @@ const questions = [
             { text: 'He becomes invisible', correct: false }
         ]
     },
-
     {
         question: "What is Cheshire Cat's famous catchphase?",
         answers: [
@@ -171,7 +163,6 @@ const questions = [
             { text: 'We are all mad here', correct: true }
         ]
     },
-
     {
         question: "How does the Cheshire Cat help Alice?",
         answers: [
@@ -180,5 +171,5 @@ const questions = [
             { text: 'He watches her closely', correct: false },
             { text: 'He provides Alice with crypic advice and directions, often confusing her further', correct: true }
         ]
-    },
+    }
 ]; 
