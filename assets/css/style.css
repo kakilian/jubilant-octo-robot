@@ -2,42 +2,40 @@
 @font-face {
     font-family: 'MyCustomFont';
     src: url('font/Oswald/Oswald-VariableFont_wght.ttf'),
-    url('font/Raleway/Raleway-VaribleFOnt_wght.tff') format('truetype');
+        url('font/Raleway/Raleway-VaribleFOnt_wght.tff') format('truetype');
 }
 
 /* Gobal setting for box */
-*, 
-*::before, 
+*,
+*::before,
 *::after {
     box-sizing: border-box;
 }
 
 /* Page color */
 :root {
-    --hue-neutral: 200;
-    --hue-wrong: 0
-    --hue-correct: 145;
+    --bg-color-neutral: rgb(188, 21, 174);
+    --hue-wrong: 0 --hue-correct: 145;
 }
 
 /*-- Body --*/
 body {
-    --hue: var(--hue-neutral);
+    background-color: var(--bg-color-neutral);
     padding: 0;
     margin: 0;
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     justify-content: center;
     align-items: center;
-    background-color: rgb(188, 21, 174) ;
 }
 
 body.correct {
-    --hue: var(--hue-correct);
+    background-color: green;
 }
 
 body.wrong {
-    --hue: var(--hue-wrong);
+    background-color: red;
 }
 
 .introduction-container {
@@ -51,11 +49,14 @@ body.wrong {
 }
 
 .front-page {
-    display: inline-table;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
     padding: 10%;
     max-width: fit-content;
-    min-width: none;   
-    z-index: 1;
+
 }
 
 /*-- Images --*/
@@ -65,7 +66,7 @@ body.wrong {
     background-image: url('assets/css/image/cheshire.face.jpg');
     background-size: cover;
     object-position: right center;
-    z-index: -1;
+
 }
 
 .quiz-page {
@@ -73,7 +74,7 @@ body.wrong {
     background-image: url('assets/css/image/cute.jpg');
     background-size: cover;
     background-position: center center;
-    z-index: -1;
+
 }
 
 .results-container {
@@ -100,7 +101,7 @@ body.wrong {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 1;
+
 }
 
 .btn-grid {
@@ -116,7 +117,7 @@ body.wrong {
     background-color: var(--hue-neutral);
 }
 
-.start-btn, 
+.start-btn,
 .next-btn {
     font-size: 2.5rem;
     font-weight: bold;
@@ -124,8 +125,8 @@ body.wrong {
     border-radius: 20px;
     border: 2px solid #4CAF50;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    
-    
+
+
 }
 
 .controls {
@@ -134,11 +135,11 @@ body.wrong {
     align-items: center;
 }
 
-.hide {
-    display: none;
-} 
 
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: 'Raleway', 'Oswald', sans-serif;
     font-weight: 400;
 }
@@ -152,13 +153,13 @@ p {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 1.2em;  
+    font-size: 1.2em;
 }
 
 button {
     padding: 10px 20px;
     font-size: 2em;
-    color: #670197
+    color: #670197;
     border-radius: 15% 10%;
     border: 1px solid-black;
     cursor: pointer;
@@ -167,4 +168,8 @@ button {
 
 button:hover {
     background-color: greenyellow;
+}
+
+.hide {
+    display: none;
 }
