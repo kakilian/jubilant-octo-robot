@@ -33,8 +33,8 @@ const questions = [
         answers: [ 
             { text: 'A meow-meow crew', correct: false },
             { text: 'A whisker-flock', correct: false },
-            { text: 'A clowder or a glaring', correct: false },
-            { text: 'A purr-fect party', correct: true }
+            { text: 'A clowder or a glaring', correct: true },
+            { text: 'A purr-fect party', correct: false }
         ]
     },
     {
@@ -113,9 +113,9 @@ const questions = [
         question: "What distinctive feature does the Cheshire Cat have?",
         answers: [
             { text: 'He ... can vanish, leaving only its grin visible', correct: true },
-            { text: 'He .. has glowing eves', correct: false},
+            { text: 'He .. has glowing eyes', correct: false},
             { text: 'He .. has wings', correct: false },
-            { text: 'He .. can talke to other animals', correct: false }
+            { text: 'He .. can talk to other animals', correct: false }
         ]
     },
     {

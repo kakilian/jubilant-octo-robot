@@ -63,7 +63,7 @@ body.wrong {
 
 .photo1 {
     display: flex;
-    background-image: url('assets/image/cheshire.face.jpg');
+    background-image: url('assets/image/cheshire.jpg');
     background-size: cover;
     object-position: right center;
 
@@ -103,7 +103,12 @@ body.wrong {
     color: white;
 
 }
+#question {
+    font-family: inherit;
+    font-size: 3em;
 
+
+}
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);

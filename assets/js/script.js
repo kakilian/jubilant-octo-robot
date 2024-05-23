@@ -51,6 +51,8 @@ function startGame() {
 
 function setNextQuestion() {
     resetState();
+    console.log('next Question');
+
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
