@@ -3,11 +3,11 @@ console.log('script loaded');
 console.log('script.js');
 
 const startButton = document.getElementById('start-btn-front');
-console.log(startButton)
-const questionNumber = document.getElementById('question-number')
-const introductionContainer = document.getElementById('introduction-container')
+console.log(startButton);
+const questionNumber = document.getElementById('question-number');
+const introductionContainer = document.getElementById('introduction-container');
 const nextButton = document.getElementById('next-btn');
-const controlsContainer = document.getElementById('controls-container')
+const controlsContainer = document.getElementById('controls-container');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
@@ -18,8 +18,8 @@ const restartButton = document.getElementById('refresh-quiz');
 const resultsContainer = document.querySelector('.results-container');
 const endScoreElement = document.getElementById('end-score');
 let shuffledQuestions, currentQuestionIndex;
-let score = 0
-let currentQuestionIndexToDisplay = 1
+let score = 0;
+let currentQuestionIndexToDisplay = 1;
 /**
 * 
 */
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
         currentQuestionIndexToDisplay++;
-        questionNumber.innerText = currentQuestionIndexToDisplay
+        questionNumber.innerText = currentQuestionIndexToDisplay;
         setNextQuestion();
         console.log('setNext Question');
         // nextButton.classList.add('hide');
@@ -50,21 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayFinalScore.addEventListener('click', () => {
         
-    } )
+    } );
 });
 /** 
  *  
 */
 function startGame() {
-    console.log("Start Game function started")
+    console.log("Start Game function started");
     introductionContainer.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
-    questionNumber.innerText = currentQuestionIndexToDisplay
+    questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
-    console.log("Start Game function ENDED")
+    console.log("Start Game function ENDED");
 }
 /**
 * 
@@ -80,7 +80,7 @@ function setNextQuestion() {
 
 
 
-    console.log('next')
+    console.log('next');
 
     resetState();
     console.log('next Question');
@@ -105,7 +105,7 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
-    controlsContainer.classList.add("hide")
+    controlsContainer.classList.add("hide");
 }
 /**
 * Resetting elements and clearing prevoius answers
@@ -137,7 +137,7 @@ function selectAnswer(e) {
     }
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         // nextButton.classList.remove('hide');
-        controlsContainer.classList.remove("hide")
+        controlsContainer.classList.remove("hide");
     } else {
         showResults();
     }
