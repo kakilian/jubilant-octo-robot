@@ -1,10 +1,13 @@
+/* jshint esversion: 8 */
 console.log('script loaded');
 console.log('script.js');
 
 const startButton = document.getElementById('start-btn-front');
 console.log(startButton)
+const questionNumber = document.getElementById('question-number')
 const introductionContainer = document.getElementById('introduction-container')
 const nextButton = document.getElementById('next-btn');
+const controlsContainer = document.getElementById('controls-container')
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
@@ -16,13 +19,21 @@ const resultsContainer = document.querySelector('.results-container');
 const endScoreElement = document.getElementById('end-score');
 let shuffledQuestions, currentQuestionIndex;
 let score = 0
-
+let currentQuestionIndexToDisplay = 1
+/**
+* 
+*/
 document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', startGame);
 
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
+        currentQuestionIndexToDisplay++;
+        questionNumber.innerText = currentQuestionIndexToDisplay
         setNextQuestion();
+        console.log('setNext Question');
+        // nextButton.classList.add('hide');
+        console.log('showing next button');
     });
 
     restartButton.addEventListener('click', () => {
@@ -36,20 +47,41 @@ document.addEventListener('DOMContentLoaded', () => {
         introductionContainer.classList.remove('hide');
 
     });
-});
 
+    displayFinalScore.addEventListener('click', () => {
+        
+    } )
+});
+/** 
+ *  
+*/
 function startGame() {
     console.log("Start Game function started")
     introductionContainer.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
+    questionNumber.innerText = currentQuestionIndexToDisplay
     score = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
     console.log("Start Game function ENDED")
 }
-
+/**
+* 
+*/
 function setNextQuestion() {
+
+    // var x = document.getElementById('click-btn');
+    // if (x.style.display === "none") {
+    //     x.style.display = "block";
+    // } else {
+    //     x.style.display = "none";
+    // }; 
+
+
+
+    console.log('next')
+
     resetState();
     console.log('next Question');
 
@@ -57,7 +89,9 @@ function setNextQuestion() {
     console.log('shuffled Question');
 
 }
-
+/**
+* 
+*/
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -71,11 +105,13 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
+    controlsContainer.classList.add("hide")
 }
-
-// Resetting unnecessary elements and clearing previous answers //
+/**
+* Resetting elements and clearing prevoius answers
+*/ 
 function resetState() {
-    nextButton.classList.add('hide');
+    // nextButton.classList.add('hide');
     correctAnswerElement.classList.add('hide');
     incorrectAnswerElement.classList.add('hide');
     while (answerButtonsElement.firstChild) {
@@ -83,7 +119,9 @@ function resetState() {
     }
 }
 
-//After an answer is selected, will update score and display results //
+/**
+* After an answer is selected, will update score and display results 
+*/
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
@@ -98,13 +136,16 @@ function selectAnswer(e) {
         incorrectAnswerElement.classList.remove('hide');
     }
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide');
+        // nextButton.classList.remove('hide');
+        controlsContainer.classList.remove("hide")
     } else {
         showResults();
     }
 }
 
-// Is the Answer Correct or wrong //
+/**
+*Is the Answer Correct or wrong 
+*/
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -114,19 +155,30 @@ function setStatusClass(element, correct) {
         element.classList.add('wrong');
     }
 }
-//To remove elements on page, after use //
+/**
+* To remove elements on page, after use
+*/
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
 
+/**
+* 
+*/
+
+
 function showResults() {
+    
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
     displayFinalScore();
 }
 
+/**
+* 
+*/
 function displayFinalScore() {
     endScoreElement.innerText = `You scored ${score} out of ${questions.length}`;
     const finalScoreContainer = document.querySelector(`.final-score-container`);

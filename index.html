@@ -28,32 +28,35 @@
         <div class="front-page">
             <h1>Welcome to the Cat Quiz!</h1>
             <p>Test your knowledge about cats and the Cheshire Cat from Alice in Wonderland</p>
-            <p>Let's test your knowledge! - 10 random questions about cats and my meeting with Alice in Wonderland
+            <p>Let's test your knowledge! - 20 random questions about cats and my meeting with Alice in Wonderland
             </p>
             <button class="start-btn" id="start-btn-front">Start Quiz</button>
         </div>
     </div>
     <!-- Start quiz page -->
     <div class="quiz-page hide" id="question-container">
+        <div>Question: <span id="question-number">0</span>/20</div>
         <img src="assets/image/cute.jpg" alt="a Cute Comic Cat, Cheshire from Alice in Wonderland">
         <div id="question">Question:</div>
         <div id="answer-buttons" class="btn-grid btn"></div>
-    <!-- answer results-->
-        <div class="controls controls-container hide" id="controls-container">
+        <!-- answer results-->
+        <div class="controls controls-container" id="controls-container">
             <p class="correct-answer">Your answer is Correct!</p>
             <p class="incorrect-answer">Incorrect answer! Don't give up!</p>
             <button id="start-btn-quiz" class="refresh-btn btn">Refresh</button>
-            <button id="next-btn" class="next-btn btn">Next</button>
+            <div>
+                <!-- <button id="next-btn" onclick="click-btn" class="next-btn btn hide">Next</button> -->
+                <button id="next-btn" class="next-btn btn">Next</button>
+            </div>
         </div>
         <!-- quiz results correct and incorrectly answered-->
-        <div class="results-container hide">
+        <div class="results-container hide" id="end-score">
             <img src="assets/image/translucent.jpg"
                 alt="Cheshire Cat walking away, with his back towards you, looking to see if you will follow him">
             <div id="result" class="final-score-container">
-                <p>Heres how you did! Awesome effort! Take the quiz again and better your score! your Chesire.</p>
+                <p id="final-message">Heres how you did! Awesome effort! Take the quiz again and better your score! your Chesire.</p>
             </div>
-            <div class="score-box" id="end-score">
-            </div>
+            <div class="score-box" id="final-score"></div>
             <!--restart quiz-->
             <button class="restart" id="refresh-quiz">Restart Quiz</button>
         </div>

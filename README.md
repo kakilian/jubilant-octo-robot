@@ -1,6 +1,6 @@
 {logo} {[src="assets/image/favicon-32x32.png]}
 
-# Quizzing with Chesire!
+# Quizzing with Cheshire!
 
 Idea comes from my first project, my daughter wanted something with inter-action.  Alice in wonderland is a beautiful colorful crazy fairytale and I was determined to bring it to life on this PP2 project.
 And legit, those cat people out there, - do talk to their furryballs of love, so why not talk to Chesire and his journey through this awesome Quiz.
@@ -36,6 +36,7 @@ video - How to build a quiz.
 font google 
 playbook for colors - mixing colors
 favicon
+https://forum.freecodecamp.org/t/how-do-i-make-this-js-code-to-unshuffle-my-questions/513180
 
 ## Responsive using Lighthouse
 

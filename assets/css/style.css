@@ -1,8 +1,9 @@
 /* Import Font family */
+/* Import Images */
 @font-face {
     font-family: 'MyCustomFont';
     src: url('font/Oswald/Oswald-VariableFont_wght.ttf'),
-        url('font/Raleway/Raleway-VaribleFOnt_wght.tff') format('truetype');
+    url('font/Raleway/Raleway-VaribleFOnt_wght.tff') format('truetype');
 }
 
 /* Gobal setting for box */
@@ -71,10 +72,19 @@ body.wrong {
 
 .quiz-page {
     position: relative;
-    background-image: url('assets/image/cute.jpg');
+
     background-size: cover;
     background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+
+.quiz-page img {
+    background-image: url('assets/image/cute.jpg');
+    max-width: 200px;
 }
 
 .results-container {
@@ -91,6 +101,10 @@ body.wrong {
     position: relative;
 }
 
+.controls-container {
+    background-color: pink;
+}
+
 .container,
 .quiz-page,
 .question-container,
@@ -103,13 +117,15 @@ body.wrong {
     color: white;
 
 }
+
 #question {
     display: flex center;
-    font-family: 'Raleway' sans-serif;
+    font-family: 'Raleway'sans-serif;
     font-size: 3em;
 
 
 }
+
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -125,14 +141,13 @@ body.wrong {
 
 .start-btn,
 .next-btn {
+    display: flex !important;
     font-size: 2.5rem;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 20px;
     border: 2px solid #4CAF50;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-
-
 }
 
 .controls {
@@ -171,22 +186,10 @@ button {
     cursor: pointer;
 }
 
-.button1,
-.button2,
-.button3,
-.button4 {
-    display: inline;
-    padding: 10px 10px;
-    font-size: 1em;
-    color: #670197;
-    border-radius: 12px;
-    border: 1px solid-black;
-    cursor: pointer;
-
-}
-
 #answer-buttons {
+
     color: solid purple;
+    background-color: pink;
 }
 
 button:hover {
