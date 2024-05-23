@@ -63,7 +63,7 @@ body.wrong {
 
 .photo1 {
     display: flex;
-    background-image: url('assets/css/image/cheshire.face.jpg');
+    background-image: url('assets/image/cheshire.face.jpg');
     background-size: cover;
     object-position: right center;
 
@@ -71,7 +71,7 @@ body.wrong {
 
 .quiz-page {
     position: relative;
-    background-image: url('assets/css/image/cute.jpg');
+    background-image: url('assets/image/cute.jpg');
     background-size: cover;
     background-position: center center;
 
@@ -79,7 +79,7 @@ body.wrong {
 
 .results-container {
     position: flex;
-    background-image: url('assets/css/image/translucent.jpg');
+    background-image: url('assets/image/translucent.jpg');
     background-size: cover;
     object-position: right center;
 }
@@ -165,6 +165,17 @@ button {
     cursor: pointer;
 }
 
+.button1,
+.button2,
+.button3,
+.button4 {
+    padding: 10px 20px;
+    font-size: 2em;
+    color: #670197;
+    border-radius: 15% 10%;
+    border: 1px solid-black;
+    cursor: pointer;
+}
 
 button:hover {
     background-color: greenyellow;
