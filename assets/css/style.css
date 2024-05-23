@@ -104,7 +104,8 @@ body.wrong {
 
 }
 #question {
-    font-family: inherit;
+    display: flex center;
+    font-family: 'Raleway' sans-serif;
     font-size: 3em;
 
 
@@ -174,12 +175,18 @@ button {
 .button2,
 .button3,
 .button4 {
-    padding: 10px 20px;
-    font-size: 2em;
+    display: inline;
+    padding: 10px 10px;
+    font-size: 1em;
     color: #670197;
-    border-radius: 15% 10%;
+    border-radius: 12px;
     border: 1px solid-black;
     cursor: pointer;
+
+}
+
+#answer-buttons {
+    color: solid purple;
 }
 
 button:hover {

@@ -137,7 +137,7 @@ const questions = [
         ]
     },
     {
-        question: "Where does the Cheshire Cat first appear in 'Alice in Wonderland?",
+        question: "Where does the Cheshire Cat first appear in 'Alice in Wonderland'?",
         answers: [
             { text: 'He first merges ..from a hole in the ground', correct: false },
             { text: 'He appears ..sitting on a mushroom in the garden', correct: false },

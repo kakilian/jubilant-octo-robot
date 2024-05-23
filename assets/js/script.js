@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     refreshButton.addEventListener('click', () => {
-        questionContainerElement.classList.add('class');
-        introductionContainer.classList.remove('class');
+        questionContainerElement.classList.add('hide');
+        introductionContainer.classList.remove('hide');
 
     });
 });
@@ -54,6 +54,8 @@ function setNextQuestion() {
     console.log('next Question');
 
     showQuestion(shuffledQuestions[currentQuestionIndex]);
+    console.log('shuffled Question');
+
 }
 
 
@@ -71,7 +73,7 @@ function showQuestion(question) {
     });
 }
 
-    // Resetting unnecessary elements and clearing previous answers //
+// Resetting unnecessary elements and clearing previous answers //
 function resetState() {
     nextButton.classList.add('hide');
     correctAnswerElement.classList.add('hide');
@@ -81,7 +83,7 @@ function resetState() {
     }
 }
 
-    //After an answer is selected, will update score and display results //
+//After an answer is selected, will update score and display results //
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
@@ -94,15 +96,15 @@ function selectAnswer(e) {
         score++;
     } else {
         incorrectAnswerElement.classList.remove('hide');
-        }
-        if (shuffledQuestions.length > currentQuestionIndex + 1) {
-            nextButton.classList.remove('hide');
-        } else {
-            showResults();
-        }
+    }
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide');
+    } else {
+        showResults();
+    }
 }
 
-    // Is the Answer Correct or wrong //
+// Is the Answer Correct or wrong //
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -112,7 +114,7 @@ function setStatusClass(element, correct) {
         element.classList.add('wrong');
     }
 }
-    //To remove elements on page, after use //
+//To remove elements on page, after use //
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
@@ -124,6 +126,7 @@ function showResults() {
     resultsContainer.classList.remove('hide');
     displayFinalScore();
 }
+
 function displayFinalScore() {
     endScoreElement.innerText = `You scored ${score} out of ${questions.length}`;
     const finalScoreContainer = document.querySelector(`.final-score-container`);
