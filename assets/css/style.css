@@ -16,7 +16,7 @@
 /* Page color */
 :root {
     --bg-color-neutral: rgb(188, 21, 174);
-    --hue-wrong: 0 --hue-correct: 145;
+    --hue-wrong: --hue-correct: 145;
 }
 
 /*-- Body --*/
@@ -88,7 +88,7 @@ body.wrong {
 }
 
 .results-container {
-    position: flex;
+    /*position: flex; */
     background-image: url('assets/image/translucent.jpg');
     background-size: cover;
     object-position: right center;
@@ -119,8 +119,8 @@ body.wrong {
 }
 
 #question {
-    display: flex center;
-    font-family: 'Raleway'sans-serif;
+    display: flex;
+    font-family: 'Raleway';
     font-size: 3em;
 
 
@@ -130,7 +130,7 @@ body.wrong {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 20px;
-    margin: 10x 0
+    margin: 10px 0;
 }
 
 .btn {
@@ -182,13 +182,13 @@ button {
     font-size: 2em;
     color: #670197;
     border-radius: 15% 10%;
-    border: 1px solid-black;
+    border: 1px black;
     cursor: pointer;
 }
 
 #answer-buttons {
 
-    color: solid purple;
+    color: purple;
     background-color: pink;
 }
 
