@@ -20,6 +20,8 @@ const endScoreElement = document.getElementById('end-score');
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 let currentQuestionIndexToDisplay = 1;
+let question; 
+
 /**
 * 
 */
@@ -39,26 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
     restartButton.addEventListener('click', () => {
         resultsContainer.classList.add('hide');
         introductionContainer.classList.remove('hide');
-
     });
 
     refreshButton.addEventListener('click', () => {
         questionContainerElement.classList.add('hide');
         introductionContainer.classList.remove('hide');
-
     });
 
     displayFinalScore.addEventListener('click', () => {
-        
-    } );
+        resultsContainer.classList.remove('hide');
+        document.getElementById('end-score');
+        introductionContainer.classList.add('hide');
+    });
 });
+
 /** 
  *  
 */
 function startGame() {
     console.log("Start Game function started");
     introductionContainer.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    shuffledQuestions = question.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
@@ -66,34 +69,23 @@ function startGame() {
     setNextQuestion();
     console.log("Start Game function ENDED");
 }
+
 /**
 * 
 */
 function setNextQuestion() {
-
-    // var x = document.getElementById('click-btn');
-    // if (x.style.display === "none") {
-    //     x.style.display = "block";
-    // } else {
-    //     x.style.display = "none";
-    // }; 
-
-
-
     console.log('next');
-
     resetState();
     console.log('next Question');
-
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
+    question = shuffledQuestions[currentQuestionIndex];
+    showQuestion(question);
     console.log('shuffled Question');
-
 }
+
 /**
 * 
 */
-
-function showQuestion(question) {
+function showQuestion(question) { 
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement('button');
@@ -107,8 +99,9 @@ function showQuestion(question) {
     });
     controlsContainer.classList.add("hide");
 }
+
 /**
-* Resetting elements and clearing prevoius answers
+* Resetting elements and clearing previous answers
 */ 
 function resetState() {
     // nextButton.classList.add('hide');
@@ -144,9 +137,8 @@ function selectAnswer(e) {
 }
 
 /**
-*Is the Answer Correct or wrong 
+* Is the Answer Correct or wrong 
 */
-
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -155,10 +147,10 @@ function setStatusClass(element, correct) {
         element.classList.add('wrong');
     }
 }
+
 /**
 * To remove elements on page, after use
 */
-
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
@@ -167,10 +159,7 @@ function clearStatusClass(element) {
 /**
 * 
 */
-
-
 function showResults() {
-    
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
     displayFinalScore();
@@ -180,7 +169,7 @@ function showResults() {
 * 
 */
 function displayFinalScore() {
-    endScoreElement.innerText = `You scored ${score} out of ${questions.length}`;
+    endScoreElement.innerText = `You scored ${score} out of ${question.length}`;
     const finalScoreContainer = document.querySelector(`.final-score-container`);
     finalScoreContainer.innerHTML = `
         <P>Your final score is: ${score}</P>
