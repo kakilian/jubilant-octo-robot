@@ -1,5 +1,5 @@
-// Questions //
-const questions = [
+// Question //
+const question = [
     {
         question: "What is the scientific name for the domestic cat?",
         answers: [

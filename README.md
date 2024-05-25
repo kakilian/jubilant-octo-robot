@@ -1,6 +1,6 @@
 # Quizzing with Cheshire!
 
-![Cheshire Logo](assets/image/favicon-32x32.png)
+![Cheshire Logo](assets/favicon/favicon-32x32.png)
 
 Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
 
@@ -30,16 +30,21 @@ For the background image of Cheshire, I sourced a captivating graphic poster fro
 
 ## Project Sources:
 I leveraged various resources throughout the development of this Quiz Project:
-- Video tutorials on quiz building. [Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
+- Video tutorials on quiz building. ![Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
 - Google Fonts for typography choices.
 - Color palettes from design playbooks to ensure visual harmony.
-- Favicon creation tool from [favicon.io](https://favicon.io/favicon-converter/).
-- Community forums like [FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code snippets.
-- GPT - helping write questions 
+- Favicon creation tool from ![favicon.io](https://favicon.io/favicon-converter/).
+- Community forums like ![FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code snippets.
+- GPT - Helped write questions and text corrections.
 - 
 
 ## Responsive Design and Testing:
 I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
+
+[JSHint] (https://jshint.com/)
+[W3C] (https://validator.w3.org/) 
+[Lighthouse](assets/image/pp2.png)
+
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
 
