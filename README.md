@@ -1,47 +1,45 @@
-{logo} {[src="assets/image/favicon-32x32.png]}
-
 # Quizzing with Cheshire!
 
-Idea comes from my first project, my daughter wanted something with inter-action.  Alice in wonderland is a beautiful colorful crazy fairytale and I was determined to bring it to life on this PP2 project.
-And legit, those cat people out there, - do talk to their furryballs of love, so why not talk to Chesire and his journey through this awesome Quiz.
+![Cheshire Logo](assets/image/favicon-32x32.png)
+
+Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
+
+## For First-Time Users:
+
+Are you ready to embark on a journey filled with curiosity, wonder, and, of course, cats? Join us as Cheshire, the mischievous feline from Alice in Wonderland, guides you through a delightful exploration of cat trivia and fairy tale magic. Our quiz is designed to be enjoyable and chill, featuring a couple of light-hearted questions about cats that are perfect for users of all reading ages.
+
+With Cheshire by your side, you'll not only test your knowledge of our furry friends but also discover fascinating tidbits about the whimsical world of Alice in Wonderland. Get ready to immerse yourself in a magical adventure that's sure to leave you smiling and wanting more!
+
+## For Returning Users:
+
+Welcome back, fellow explorer! If you've enjoyed your previous journey with Cheshire, get ready for even more excitement and fun. We're considering adding more questions from the fairy tale and general cat trivia to enhance your quiz experience. Additionally, we're exploring the possibility of developing a leaderboard, where you can compete with other players and showcase your cat knowledge prowess. Stay tuned for these exciting updates as we continue to make "Quizzing with Cheshire" even more purr-fectly delightful!
+
+This project is inspired by my daughter's desire for interactive experiences. Drawing from the whimsical world of Alice in Wonderland, I set out to bring it to life in this project. And let's be real, those cat lovers out there often have conversations with their furry companions, so why not engage in a quiz with Cheshire and his adventures?
 
 ## My Process:
-I started thinking about the questions that should be not only easy, also fun facts - and maybe something to take away from the experience.
+I brainstormed questions that would not only be easy but also offer fun facts and memorable takeaways. Realizing the need for variety, I crafted over 20 random questions to curate a dynamic 10-question quiz. To ensure accessibility, I designed it as a multiple-choice experience, suitable for users of all reading levels. And of course, I injected a cheeky fun factor, embodied by our mischievous host, Cheshire.
 
-I also realized that I needed to make random questions and have a least 20 or so questions, only to give a 10 question quiz. I have also realized that I needed to make it responsive to the user, by being a multi-choice answer questions. Anyone who can read will be able to enjoy the experience. I also want it to have a cheeky fun factor - which is the shaodw of my choosen host for this project quiz. please let me introduce you to the oh so famous "Chesire" who is ridiculously funny and can have his annoying moments for Alice herself which is trying to find her way though an amaze of misunderstandings, with pretty much little help from our cat "Chesire".
+To accommodate the content flow, I structured the project into four main sections:
+1. Introduction to the Quiz: Welcome users and introduce them to Cheshire and the adventure that awaits.
+2. Quiz Questions: Present users with a series of questions, each with four possible answers, fostering interactive engagement.
+3. Correct or Incorrect Responses: Provide feedback and encouragement based on user answers, along with tracking their score.
+4. Final Score: Display the user's end score and offer the option to start the quiz anew.
 
-I initally started the same basic starts as the walk through suggest and found that since I can not show all at once, that I would have to make a first introduction page then have a questions page, also and answer and final page where I want to show the users score and the possibility to - do it all again.
+## Background - Picture of Cheshire:
+For the background image of Cheshire, I sourced a captivating graphic poster from [wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to "miami22". The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
 
-## This project has a total of (4) sites:
-i Introduction to the Quiz - who is Chesire, and what is awaiting the user.
-ii The Quiz Questions -broken down into 4 possible answers. So a clicker knowledge/experience.
-iii Correct or Incorrect including score - words of encouragement for the bold user.
-iv The users end score, with the question "Do you want to try again?"
+## Project Sources:
+I leveraged various resources throughout the development of this Quiz Project:
+- Video tutorials on quiz building. [Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
+- Google Fonts for typography choices.
+- Color palettes from design playbooks to ensure visual harmony.
+- Favicon creation tool from [favicon.io](https://favicon.io/favicon-converter/).
+- Community forums like [FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code snippets.
+- GPT - helping write questions 
+- 
 
+## Responsive Design and Testing:
+I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
 
-I have made my favicon with  the website: - {[src=https://favicon.io/favicon-converter/]} 
-I used the word "Fairytales" - everyone loves fairytales or at least have heard one or more in their lives. I wanted to tickle on this aspect and not "Quiz" or "Chesire".
-
-## Background - Picture of Chesire:
-cheshire cat photos:  //https:wallpapers.com/cheshire-cat-graphic-poster
-from "miami22" owner of picture, of Chesshire laying on a tree branch, as in the Alice of Wonderland story where he first makes contact with Alice, herself.
-for student usage for project 2, show casing Java-script.
-Picture is being used in a Quiz about Cats and also special moments during Alice in Wonderland.
-Cheshire hosts the Cat Quiz, of 10 random questions, from real live cat answers to fun inspired questions from the disney movie " Alice in Wonderland".
-
-
-## Sourcing for Project:
-I have used different sources to help build this Quiz Project.
-video - How to build a quiz.
-font google 
-playbook for colors - mixing colors
-favicon
-https://forum.freecodecamp.org/t/how-do-i-make-this-js-code-to-unshuffle-my-questions/513180
-
-## Responsive using Lighthouse
-
-
-Problems incounted:
-Upload speed, create dindex.js file assets/js/index.js 
-
+Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
 

@@ -199,3 +199,7 @@ button:hover {
 .hide {
     display: none;
 }
+
+.hide-button {
+    display: none;
+}

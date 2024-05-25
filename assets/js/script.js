@@ -1,9 +1,10 @@
 /* jshint esversion: 8 */
 console.log('script loaded');
 console.log('script.js');
-
+/**
+ *  Define and log key DOM elements
+ */
 const startButton = document.getElementById('start-btn-front');
-console.log(startButton);
 const questionNumber = document.getElementById('question-number');
 const introductionContainer = document.getElementById('introduction-container');
 const nextButton = document.getElementById('next-btn');
@@ -23,19 +24,16 @@ let currentQuestionIndexToDisplay = 1;
 let question; 
 
 /**
-* 
+* Inititalize event listeners after the DOM content is loaded
 */
 document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', startGame);
-
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
         currentQuestionIndexToDisplay++;
         questionNumber.innerText = currentQuestionIndexToDisplay;
         setNextQuestion();
-        console.log('setNext Question');
         // nextButton.classList.add('hide');
-        console.log('showing next button');
     });
 
     restartButton.addEventListener('click', () => {
@@ -56,10 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /** 
- *  
+ * Start the game by hiding the introduction and setting up the first question
 */
 function startGame() {
-    console.log("Start Game function started");
     introductionContainer.classList.add('hide');
     shuffledQuestions = question.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
@@ -67,23 +64,20 @@ function startGame() {
     score = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
-    console.log("Start Game function ENDED");
 }
 
 /**
-* 
+* Set up next question in the quiz
 */
 function setNextQuestion() {
-    console.log('next');
     resetState();
-    console.log('next Question');
     question = shuffledQuestions[currentQuestionIndex];
     showQuestion(question);
-    console.log('shuffled Question');
 }
 
 /**
-* 
+* Display the question and its answers
+* @param {Object} question - The question objects to display 
 */
 function showQuestion(question) { 
     questionElement.innerText = question.question;
@@ -101,7 +95,7 @@ function showQuestion(question) {
 }
 
 /**
-* Resetting elements and clearing previous answers
+* Reset the state of the quiz interface
 */ 
 function resetState() {
     // nextButton.classList.add('hide');
@@ -113,15 +107,18 @@ function resetState() {
 }
 
 /**
-* After an answer is selected, will update score and display results 
+* Handle the selection of an answer
+* @para {Event} e - The event object
 */
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
+        if (button.classList.add('hide')
+        )};
         setStatusClass(button, button.dataset.correct === 'true');
-    });
+    };
     if (correct) {
         correctAnswerElement.classList.remove('hide');
         score++;
@@ -129,15 +126,17 @@ function selectAnswer(e) {
         incorrectAnswerElement.classList.remove('hide');
     }
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        // nextButton.classList.remove('hide');
-        controlsContainer.classList.remove("hide");
+        nextButton.classList.remove('hide');
+        controlsContainer.classList.remove('hide');
     } else {
         showResults();
     }
-}
+
 
 /**
-* Is the Answer Correct or wrong 
+* Set the status class on a element based on whether the answer is correct
+* @param {Element} element - THe DOM element to set the class on
+* @param {boolean} correct - Whether the answer is correct 
 */
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -149,7 +148,8 @@ function setStatusClass(element, correct) {
 }
 
 /**
-* To remove elements on page, after use
+* Clear the status class from an element
+* @param {Element} element - THe DOM element to clear the class from  
 */
 function clearStatusClass(element) {
     element.classList.remove('correct');
@@ -157,7 +157,7 @@ function clearStatusClass(element) {
 }
 
 /**
-* 
+* Show the final results of the quiz
 */
 function showResults() {
     questionContainerElement.classList.add('hide');
@@ -166,7 +166,7 @@ function showResults() {
 }
 
 /**
-* 
+* Display the final score of the quiz
 */
 function displayFinalScore() {
     endScoreElement.innerText = `You scored ${score} out of ${question.length}`;
@@ -175,4 +175,6 @@ function displayFinalScore() {
         <P>Your final score is: ${score}</P>
         <p>${score >= 8 ? 'Congratulations! You did great!' : 'Cheshire out smarted you, better lucky next time!'}</p>
     `;
-}
+    finalScoreContainer.classList.remove('hide');
+    resultsContainer.classList.remove('hide');
+};
