@@ -186,19 +186,19 @@ button {
 }
 
 #answer-buttons {
+   color: purple;
+   background-color: pink;
 
-    color: purple;
-    background-color: pink;
 }
 
 button:hover {
     background-color: greenyellow;
 }
 
-.hide {
-    display: none;
+.button:disabled {
+    cursor: no-drop;
 }
 
-.hide-button {
+.hide {
     display: none;
 }

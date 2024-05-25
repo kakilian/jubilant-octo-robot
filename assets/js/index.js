@@ -1,5 +1,7 @@
-// Question //
-const question = [
+/**
+ * Questions to Quiz
+ */
+const questions = [
     {
         question: "What is the scientific name for the domestic cat?",
         answers: [
