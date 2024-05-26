@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'MyCustomFont';
     src: url('font/Oswald/Oswald-VariableFont_wght.ttf'),
-    url('font/Raleway/Raleway-VaribleFOnt_wght.tff') format('truetype');
+    url('font/Raleway/Raleway-VaribleFont_wght.tff') format('truetype');
 }
 
 /* Gobal setting for box */
@@ -13,21 +13,17 @@
     box-sizing: border-box;
 }
 
-/* Page color */
-:root {
-    --bg-color-neutral: rgb(188, 21, 174);
-    --hue-wrong: red;
-    --hue-correct: green;
-}
-
 /*-- Body --*/
 body {
-    background-color: var(--bg-color-neutral);
+    background-color: rgb(211, 24, 195);
     padding: 0;
     margin: 0;
     display: flex;
+    width: 100vw;
+    height:100vh;
     justify-content: center;
     align-items: center;
+    
 }
 
 body.correct {
@@ -35,17 +31,16 @@ body.correct {
 }
 
 body.wrong {
-    background-color: red;
+    background-color: rgb(214, 51, 51);
 }
 
 .introduction-container {
     width: 800px;
     max-width: 80%;
-    background-color: rgb(182, 34, 34);
+    background-color: whitesmoke;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-
 }
 
 .front-page {
@@ -65,13 +60,12 @@ body.wrong {
     display: flex;
     background-image: url('assets/image/cheshire.jpg');
     background-size: cover;
-    object-position: right center;
+    background-position: right center;
 
 }
 
 .quiz-page {
     position: relative;
-
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -81,27 +75,31 @@ body.wrong {
 }
 
 
-.quiz-page img {
+.quiz-page, img{
     background-image: url('assets/image/cute.jpg');
-    max-width: 200px;
+    max-width: 50vh;
 }
 
 .results-container {
-    /*position: flex; */
     background-image: url('assets/image/translucent.jpg');
     background-size: cover;
-    object-position: right center;
+    background-position: right center;
 }
 
 .container,
 .quiz-page,
-.controls-container,
 .results-container {
-    position: relative;
+    width: 800px;
+    max-width: 80%;
+    background-color: whitesmoke;
+    border: 5px solid brown;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
 }
 
 .controls-container {
-    background-color: pink;
+    background-color: whitesmoke;
+    border-radius: 5px;
 }
 
 .container,
@@ -121,46 +119,13 @@ body.wrong {
     display: flex;
     font-family: 'Raleway';
     font-size: 3em;
-
-
 }
-
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 20px;
-    margin: 10px 0;
-}
-
-.btn {
-    --hue: var(--hue-neutral);
-    border: 2px solid black;
-    background-color: var(--hue-neutral);
-}
-
-.start-btn,
-.next-btn {
-    display: flex !important;
-    font-size: 2.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 2px solid #4CAF50;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 
 h1,
 h2,
 h3 {
     font-family: 'Raleway', 'Oswald', sans-serif;
+    font-size: 2.5em;
     font-weight: 400;
 }
 
@@ -175,8 +140,59 @@ p {
     font-weight: 600;
     font-size: 1.2em;
 }
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
 
-button {
+.btn-grid, #answer-buttons {
+    border: 1px violet, 100%, 30%;
+    background-color: blueviolet, 100%, 30%;
+    display: flex;
+    grid-template-columns: repeat(2 auto);
+    border: 1px black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    background-color: green;
+    color: black,
+}
+
+.btn.wrong {
+    background-color: red;
+}
+
+.start-btn, 
+.next-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-color: aqua;
+    display: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.button {
     padding: 10px 20px;
     font-size: 2em;
     color: #670197;
@@ -185,20 +201,7 @@ button {
     cursor: pointer;
 }
 
-#answer-buttons {
-   color: purple;
-   background-color: pink;
-
-}
-
-button:hover {
-    background-color: greenyellow;
-}
 
 .button:disabled {
     cursor: no-drop;
-}
-
-.hide {
-    display: none;
 }

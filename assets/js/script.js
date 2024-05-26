@@ -1,6 +1,7 @@
 /* jshint esversion: 8 */
 console.log('script loaded');
 console.log('script.js');
+console.log('index.js');
 /**
  *  Define and log key DOM elements
  */
@@ -31,7 +32,8 @@ let shuffledQuestions;
 */
 document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', startGame);
-
+    introductionContainer.classList.remove('hide');
+    questionContainerElement.classList.add('hide');
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
         currentQuestionIndexToDisplay++;
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 function startGame() {
     introductionContainer.classList.add('hide');
-    shuffledQuestions = questions.sort => Math.random() - 0.5;
+    shuffledQuestions = question.sort(() => Math.random() - 0.5).slice(0, 10);
     currentQuestionIndex = 0;
     questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
@@ -75,20 +77,17 @@ function startGame() {
 */
 function setNextQuestion() {
     resetState();
-    question = shuffledQuestions[currentQuestionIndex];
-    showQuestion(question);
-    controlsContainer.classList.remove('hide');
-}
-  
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
+} 
+     
 /**
 * Display the question and its answers
 * @param {Object} question - The question objects to display 
 */
 function showQuestion(question) { 
-    resetState();
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        //const button = document.createElement('button');
+        const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
         if (answer.correct) {
@@ -103,7 +102,6 @@ function showQuestion(question) {
 * Reset the state of the quiz interface
 */ 
 function resetState() {
-    //nextButton.style.display = 'none';
     nextButton.classList.add('hide');
     correctAnswerElement.classList.add('hide');
     incorrectAnswerElement.classList.add('hide');
@@ -118,27 +116,28 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
+    
     if (correct) {
         correctAnswerElement.classList.remove('hide');
         score++;
     } else {
         incorrectAnswerElement.classList.remove('hide');
     }
+
     setStatusClass(document.body, correct);
+
     Array.from(answerButtonsElement.children).forEach(button => {
         button.classList.add('hide');
         setStatusClass (button, button.dataset.correct === 'true');
     });
-    //button.disabled = true;
-};
-    //nextButton.style.display = "block";
-
+  
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
         controlsContainer.classList.remove('hide');
     } else {
         showResults();
     }
+}    
 /**
 * Set the status class on a element based on whether the answer is correct
 * @param {Element} element - THe DOM element to set the class on
@@ -171,12 +170,10 @@ function showResults() {
     const endScoreElement = document.getElementById('end-score');
     
     endScoreElement.innerText = `You scored ${score} out of 10 questions}`;
-    const finalScoreContainer = document.querySelector(`.final-score-container`);
-    finalScoreContainer.innerHTML = `
+    const finalScoreContainer = document.querySelector('.final-score-container');
+    finalScoreContainer.innerText = `
         <P>Your final score is: ${score}</P>
         <p>${score === 10 ? 'Congratulations! You did great!' : 'Cheshire out smarted you, better lucky next time!'}</p>
-    `;
-          
+    `;         
 }
-
-startGame ()
+startGame ();
