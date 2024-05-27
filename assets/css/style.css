@@ -49,6 +49,7 @@ body.wrong {
 
 .img1{
     background-image: url('assets/image/cheshire.jpg');
+    max-width: fit-content;
     
 }
 .img2{
@@ -58,6 +59,7 @@ body.wrong {
 
 .img3 {
     background-image: url('assets/image/translucent.jpg');
+    max-width: fit-content;
 }
 
 .front-page {
@@ -123,11 +125,12 @@ p {
 
 .btn-grid, #answer-buttons {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 2 auto;
     align-items: center;
     gap: 10px;
     margin: 20px 0;
 }
+
 .hide {
     display: none;
 }
