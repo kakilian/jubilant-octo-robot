@@ -37,15 +37,15 @@
     <div class="quiz-page hide" id="question-container">
         <div>Question: <span id="question-number">0</span>/10</div>
         <img class="img2" src="assets/image/cute.jpg" alt="a Cute Comic Cat, Cheshire from Alice in Wonderland">
-        <div id="question">Question:</div>
-        <div id="answer-buttons" class="btn-grid btn">
+        <div class="question-class" id="question">Question:</div>
+        <div class="btn-grid btn" id="answer-buttons">
             <button>Answer 1</button>
             <button>Answer 2</button>
             <button>Answer 3</button>
             <button>Answer 4</button>
         </div>
         <!-- answer results-->
-        <div class="controls controls-container" id="controls-container">
+        <div class="controls cont-container hide" id="controls-container">
             <p class="correct-answer">Your answer is Correct!</p>
             <p class="incorrect-answer">Incorrect answer! Don't give up!</p>
             <button id="start-btn-quiz" class="refresh-btn btn">Refresh</button>
@@ -59,17 +59,17 @@
         <img class="img3" src="assets/image/translucent.jpg"
             alt="Cheshire Cat walking away, with his back towards you, looking to see if you will follow him">
         <div id="result" class="final-score-container">
-            <p id="final-message">Heres how you did! Awesome effort! Take the quiz again and better your score! your
+            <p id="final-message">Awesome effort! Take the quiz again and better your score! your
                 Cheshire.</p>
         </div>
         <div class="score-box" id="final-score"></div>
     </div>
         <!--restart quiz-->
-        <div class="restart" id="refresh-quiz">
+        <div class="restart hide" id="refresh-quiz">
            <button>Restart Quiz</button>
         </div>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/index.js"></script>
-</body>
+        <script src="assets/js/index.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
 
 </html>
