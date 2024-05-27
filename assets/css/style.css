@@ -49,8 +49,7 @@ body.wrong {
 
 .img1{
     background-image: url('assets/image/cheshire.jpg');
-    max-width: fit-content;
-    
+    background-attachment: fixed;   
 }
 .img2{
     background-image: url('assets/image/cute.jpg');
