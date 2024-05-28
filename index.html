@@ -19,8 +19,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <!--Styles-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -57,7 +55,14 @@
         </div>
     </div>
     <!-- quiz results correct and incorrectly answered-->
-    <div class="results-container hide" id="end-score">
+    <div class="results-container hide" id="end-score spieler">
+        <table>
+            <thead>
+                <th>Player:</th>
+                <th>Score:</th>
+            </thead>
+            <tbody id="spieler"></tbody>
+        </table>
         <img class="img3" src="assets/image/translucent.jpg"
             alt="Cheshire Cat walking away, with his back towards you, looking to see if you will follow him">
         <div id="result" class="final-score-container">
@@ -65,12 +70,17 @@
                 Cheshire.</p>
         </div>
         <div class="score-box" id="final-score"></div>
+        <div id="leaderboard"></div>
     </div>
-        <!--restart quiz-->
-        <div class="restart hide" id="refresh-quiz">
-           <button>Restart Quiz</button>
-        </div>
-        
-    </body>
+    <!-- Restart quiz -->
+    <div class="restart hide" id="refresh-quiz">
+        <button>Restart Quiz</button>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/questions.js" type="module"></script>
+    <script src="assets/js/players.js" type="module"></script>
+    <script src="assets/js/timer.js" type="module"></script>
+    <script src="assets/js/script.js" type="module"></script>
+</body>
 
 </html>

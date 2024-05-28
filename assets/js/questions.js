@@ -1,9 +1,10 @@
-console.log('Hello Im here')
+
+console.log('question.js');
 
 /**
  * Questions to Quiz
  */
-const questions = [
+export const questions = [
     {
         question: "What is the scientific name for the domestic cat?",
         answers: [

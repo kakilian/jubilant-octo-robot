@@ -1,15 +1,21 @@
 
 /* jshint esversion: 8 */
+
+import { displayLeaderboard, addPlayer  } from './players.js';
+import { questions } from './questions';
+
 console.log('script loaded');
 console.log('script.js');
-console.log('index.js');
-console.log(questions[0])
-//let questions = {};
-let correctAnswer = {};
+console.log('players.js');
+console.log('questions.js');
+console.log('questions[0]');
+//let questions = ();
+let correctAnswers = {};
 let incorrectAnswers = {};
-let key = 'Item'; {
-    localStorage.setItem(key, 'Value, name, score')
-    };
+let key = 'Item';
+{
+    localStorage.setItem(key, 'Value, name, score');
+};
 
 var startButton
 var questionNumber 
@@ -31,8 +37,6 @@ var answerButton2
 var answerButton3
 var answerButton4
 
-
-
 let currentQuestionIndex;
 let score = 0;
 let currentQuestionIndexToDisplay = 1;
@@ -40,8 +44,7 @@ let question = [];
 let shuffledQuestions;
 let correctQuestionIndex = -1
 
-
-function initializeDomComponents(){
+function initializeDomComponents() {
     startButton = document.getElementById('start-btn-front');
     questionNumber = document.getElementById('question-number');
     introductionContainer = document.getElementById('introduction-container');
@@ -56,35 +59,25 @@ function initializeDomComponents(){
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.querySelector('.results-container');
     displayFinalScore = document.getElementById('end-score');
+
     answerButton1 = document.getElementById('answer-btn-1');
     answerButton2 = document.getElementById('answer-btn-2');
     answerButton3 = document.getElementById('answer-btn-3');
     answerButton4 = document.getElementById('answer-btn-4');
 
-    answerButton1.addEventListener('click', () => {
-        // Check if answer is correct
-
-        //if yes
-    })
-    answerButton2.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Try again'))
-    answerButton3.addEventListener('click', () => alert(2 === correctQuestionIndex ? 'Your answer is correct' : 'Try again'))
-    answerButton4.addEventListener('click', () => alert(3 === correctQuestionIndex ? 'Your answer is correct' : 'Try again'))
-    
+    answerButton1.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
+    answerButton2.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
+    answerButton3.addEventListener('click', () => alert(2 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
+    answerButton4.addEventListener('click', () => alert(3 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
 }
 
 /** 
  * DOM Loading
 */ 
 document.addEventListener('DOMContentLoaded', () => {
-    
     initializeDomComponents();
     startButton.addEventListener('click', startGame);
 
-    // const introductionContainer = document.getElementById('introduction-container'); 
-    // const questionContainerElement = document.getElementById('question-container');
-    // introductionContainer.classList.remove('hide');
-    // questionContainerElement.classList.add('hide');
-    // nextButton.addEventListener.classList.add('hide');
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
         currentQuestionIndexToDisplay++;
@@ -93,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextButton.classList.add('hide');
         setNextQuestion();
     });
+
     restartButton.addEventListener('click', () => {
         resultsContainer.classList.add('hide');
         introductionContainer.classList.remove('hide');
@@ -115,19 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 function startGame() {
     introductionContainer.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10);
+    shuffledQuestions = question.sort(() => Math.random() - 0.5).slice(0, 10);
     currentQuestionIndex = 0;
     questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
     
-    setQuestionContent(questions[currentQuestionIndex])
+    setQuestionContent(shuffledQuestions[currentQuestionIndex])
     
     questionContainerElement.classList.remove('hide');
-    //etNextQuestion();
+    //controlsContainer.classList.remove('hide');
+    
+    setNextQuestion();
 }
 
 function setQuestionContent(question){
-
     questionElement.innerText = question.question
     answerButton1.innerText = question.answers[0].text;
     answerButton2.innerText = question.answers[1].text;
@@ -137,8 +132,9 @@ function setQuestionContent(question){
     correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true)
 }
 
-function setNextQuestion () {
-    const currentQuestionsShuffled = questions.sort(() => Math.random() -0.5).slice(0, 10);
+function setNextQuestion() {
+    console.log('startGame')
+    //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
     const correctAnswers = document.innerText('answers.true');
     if (correctAnswers) {
         button.dataset.correct = correct.answers;
@@ -150,7 +146,7 @@ function setNextQuestion () {
     showAnswer(shuffledAnswers[currentAnswersIndex]);
     nextButton.classList.remove('hide');
    resetState();
-};
+}
 
 function resetState () {
     nextButton.classList.add('hide');
@@ -159,38 +155,18 @@ function resetState () {
     setNextQuestion();
 }
 
-function results() {
+function displayFinalScore() {
     questionContainerElement.classList.add('hide');
-    resultsContainerElement.classList.remove('hide');
-    const endScoreElement = document.getElementById('end-score');
+    resultsContainer.classList.remove('hide');
+    displayFinalScore.innerHTML = `You scored ${score} out of 10 questions}`;
+       let playerName = prompt('Enter your name:');
+       let currentDate = new Date().toLocaleDateString();
+       addPlayer(playerName, currentDate, score);
 
-    endScoreElement.innerHTML =`You scored ${score} out of 10 questions}`;
-       
     if (score === 10) {
         endScoreElement.innerHTML += `Congratulations! You did great!`;
     } else if (score < 10) {
         endScoreElement.innerHTML += `Cheshire out smarted you, better luck next time!`;
     }
     leaderboard();
-}
-function name () {
-  leaderboard();
-}
-function leaderboard () {
- 
-}
-
-function myTimer () {
-    document.getElementById('timer').innerHTML = sec + "sec left";
-    sec--;
-    if (sec === -1) {
-        clearInterval(time);
-        alert("Time is almost up!",(''));
-    }
-
-}
-
-
-function setupEventHandlers() {
-
 }
