@@ -34,7 +34,7 @@ I leveraged various resources throughout the development of this Quiz Project:
 - Google Fonts for typography choices.
 - Color palettes from design playbooks to ensure visual harmony.
 - Favicon creation tool from ![favicon.io](https://favicon.io/favicon-converter/).
-- Community forums like ![FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code snippets.
+- Community forums like ![FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code inspiration.
 - GPT - Helped write questions and text corrections.
 - 
 
@@ -47,4 +47,18 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
+
+
+
+## Problems:
+During the project, I had used in the beginning a video which I had been given as a source to code from. After I asked for help to fix parts of the non-functioning code - I was told that it was a "well used code - from students" and it would in turn give me a "fail" for PP2.
+
+Unfortunately with 3 working days left, I could not unsee the code I had been using. I have tried to use another variation, using var as a gobal usage. I had, although using an "overused-code" got to add more to my learning experience - freehand/freestyle even tho it had already been pre-written. - My deepest apologies there.
+
+I do understand the word ####'Plagiarism'#### - I am quite certain noone without intent would do something that is not correct to harm their learning accomplishments - with completeing this course. I appreciate that there are mails from student-care in regard, as guidelines also in the online information.
+
+
+And now with this said - even tho I had been using code taken from a video, which was given to me fom a teacher! I had no idea at this time that it would be called 'Plagiarism'. Again!, I found that, I had also a lot of learning experience using this code, watching this video.
+
+I am sitting here with the last 48 hours, including nightshift work, adding in pieces which I hope will help me pass this part of the course. I ask you my project marker, please to be kind, that once I had seen how something works and started using it - it became hard to break away from. I know I could use if, else to accomplish the same result. I am afraid after seeing this well written, easy to see code that it started making more sense than to go back to let. Function is an interesting loop to use which is what java-script is about. It does the work - for the UI = user interface. And through my mishaps I realized there is more to java-script than I had taken away from the course content - which at the end of the day is our target, as students and teacher - also the course developers.
 
