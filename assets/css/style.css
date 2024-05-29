@@ -50,7 +50,7 @@ body.wrong {
 
 .img1{
     background-color: aqua;
-    background-image: url('assets/image/cheshire.jpg');
+    background-image: url('assets/image/cheshire.png');
     background-attachment: fixed; 
     padding-top: 600px;
       
@@ -58,13 +58,13 @@ body.wrong {
 
 .img2{
     background-color: aquamarine;
-    background-image: url('assets/image/cute.jpg');
+    background-image: url('assets/image/cute.png');
     max-width: 40%;
 }
 
 .img3 {
     background-color: aquamarine;
-    background-image: url('assets/image/translucent.jpg');
+    background-image: url('assets/image/translucent.png');
     max-width: fit-content;
 }
 
