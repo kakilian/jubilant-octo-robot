@@ -66,20 +66,21 @@ Provides feedback and encouragement based on user answers, along with tracking t
 Displays the user's end score and offers the option to start the quiz anew.
 These features work together to create an engaging and interactive quiz experience for the user.
 
-## Color Reference:[Color Palette](https://colorhunt.co/palette/6420aaff3ea5ff7ed4ffb5da)
+## Color Reference:[Color Palette](https://color.adobe.com/create/color-wheel#)![color wheel from adobe](#assets/image/color-palette.png)
+
 
 The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland." Below are the specific colors used throughout the project:
 
-- **Primary Color**: [#ff3ea5](https://placehold.co/20x20/f03c15/ff3ea5.png) - A vibrant pink color used for primary elements.
-- **Wrong Answer**: [#d63333](https://placehold.co/20x20/f03c15/d63333.png) - A bold red color indicating incorrect answers.
-- **Correct Answer**: [#008000](https://placehold.co/20x20/f03c15/008000.png)  - A standard green color indicating correct answers.
+- **Primary Color**: [#ff3ea5] - A vibrant pink color used for primary elements.
+- **Wrong Answer**: [#d63333] - A bold red color indicating incorrect answers.
+- **Correct Answer**: [#008000]  - A standard green color indicating correct answers.
 - **Font Colors**:
-  - **Black**: [#000000](https://placehold.co/20x20/f03c15/000000.png) - Used for the main text to ensure readability.
-  - **Purple**: [#800080](https://placehold.co/20x20/f03c15/800080.png)  - Used for paragraph text, adding a whimsical touch in line with the theme.
-- **Start Button Border**: [#00ffff](https://placehold.co/20x20/f03c15/00ffff.png) - A bright aqua color used for the border of the start button to make it stand out.
-- **Table Borders** (`<th>` and `<td>` elements): [#ffd700](https://placehold.co/20x20/f03c15/#ffd700.png) - A gold color used for table borders to add a touch of elegance.
-- **Background Color**: [#f5f5f5](https://placehold.co/20x20/f03c15/f5f5f5.png) - A light, neutral background color that keeps the interface clean and readable.
-- **Image Fallback Color**: [#00ffff](https://placehold.co/20x20/f03c15/#00ffff.png)- Aqua color used as a fallback if an image fails to load.
+  - **Black**: [#000000]- Used for the main text to ensure readability.
+  - **Purple**: [#800080] - Used for paragraph text, adding a whimsical touch in line with the theme.
+- **Start Button Border**: [#00ffff] - A bright aqua color used for the border of the start button to make it stand out.
+- **Table Borders** (`<th>` and `<td>` elements): [#ffd700] - A gold color used for table borders to add a touch of elegance.
+- **Background Color**: [#f5f5f5] - A light, neutral background color that keeps the interface clean and readable.
+- **Image Fallback Color**: [#00ffff]- Aqua color used as a fallback if an image fails to load.
 
 
 These colors were selected not only for their aesthetic appeal but also to maintain consistency with the playful and fantastical theme of the Cheshire Cat.
