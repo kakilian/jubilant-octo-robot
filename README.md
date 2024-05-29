@@ -50,15 +50,14 @@ Feel free to explore the whimsical world of Cheshire and embark on this cat-tast
 
 
 
-## Problems:
-During the project, I had used in the beginning a video which I had been given as a source to code from. After I asked for help to fix parts of the non-functioning code - I was told that it was a "well used code - from students" and it would in turn give me a "fail" for PP2.
+## Apology and Explanation Regarding Project Code Usage
+During the project, I initially used a video provided to me as a source for coding. When I sought assistance to fix parts of the non-functioning code, I was informed that the code was "well-used by students" and could result in a fail for my PP2 project.
 
-Unfortunately with 3 working days left, I could not unsee the code I had been using. I have tried to use another variation, using var as a gobal usage. I had, although using an "overused-code" got to add more to my learning experience - freehand/freestyle even tho it had already been pre-written. - My deepest apologies there.
+Unfortunately, with only three working days left, it was difficult to distance myself from the code I had been using. I attempted to make changes by using var for global usage. Despite working with "overused code," I still learned a lot by adding my own modifications and coding freestyle, even though the base code was pre-written. I deeply apologize for this.
 
-I do understand the word ####'Plagiarism'#### - I am quite certain noone without intent would do something that is not correct to harm their learning accomplishments - with completeing this course. I appreciate that there are mails from student-care in regard, as guidelines also in the online information.
+I understand the seriousness of plagiarism and I assure you that I had no intention of compromising my learning achievements or the integrity of the course. I appreciate the guidelines provided by student care and the online information regarding this matter.
 
+I want to clarify that I used the code from a video given to me by a teacher, unaware that it could be considered plagiarism. Despite this, I gained significant learning experience from using the code and watching the video.
 
-And now with this said - even tho I had been using code taken from a video, which was given to me fom a teacher! I had no idea at this time that it would be called 'Plagiarism'. Again!, I found that, I had also a lot of learning experience using this code, watching this video.
-
-I am sitting here with the last 48 hours, including nightshift work, adding in pieces which I hope will help me pass this part of the course. I ask you my project marker, please to be kind, that once I had seen how something works and started using it - it became hard to break away from. I know I could use if, else to accomplish the same result. I am afraid after seeing this well written, easy to see code that it started making more sense than to go back to let. Function is an interesting loop to use which is what java-script is about. It does the work - for the UI = user interface. And through my mishaps I realized there is more to java-script than I had taken away from the course content - which at the end of the day is our target, as students and teacher - also the course developers.
+With just 48 hours remaining, including working through the night, I have been diligently adding my own pieces to the project in the hope of passing this part of the course. I kindly ask for your understanding. Once I saw how certain parts of the code worked, it became challenging to break away from it. I know I could use 'if' and 'else' statements to achieve similar results. However, after seeing the well-written, easy-to-understand code, it made more sense to use it. Functions, which are fundamental to JavaScript, help create a seamless user interface (UI). Through my mistakes, I realized that JavaScript is more complex than I initially understood from the course content. Ultimately, our goal as students, teachers, and course developers is to deepen our understanding and mastery of the subject.
 

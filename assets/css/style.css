@@ -26,6 +26,7 @@ body {
     
 }
 
+
 body.correct {
     background-color: green;
 }
@@ -48,15 +49,21 @@ body.wrong {
 /*-- Images --*/
 
 .img1{
+    background-color: aqua;
     background-image: url('assets/image/cheshire.jpg');
-    background-attachment: fixed;   
+    background-attachment: fixed; 
+    padding-top: 600px;
+      
 }
+
 .img2{
+    background-color: aquamarine;
     background-image: url('assets/image/cute.jpg');
     max-width: 40%;
 }
 
 .img3 {
+    background-color: aquamarine;
     background-image: url('assets/image/translucent.jpg');
     max-width: fit-content;
 }
