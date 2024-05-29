@@ -1,6 +1,6 @@
 # Quizzing with Cheshire!
 
-![Cheshire Logo](assets/favicon/favion-512x512.png)
+![Cheshire Logo](assets/favicon/android-chrome-512x512.png)
 
 <!-- Table of Contents -->
 -[About the Project] : Table of Contents
@@ -41,49 +41,123 @@ This project is inspired by my daughter's desire for interactive experiences. Dr
 
 I brainstormed questions that would not only be easy but also offer fun facts and memorable takeaways. Realizing the need for variety, I crafted over 20 random questions to curate a dynamic 10-question quiz. To ensure accessibility, I designed it as a multiple-choice experience, suitable for users of all reading levels. And of course, I injected a cheeky fun factor, embodied by our mischievous host, Cheshire.
 
-## Features:
-### Project Features Overview:
+## Project Features Overview:
 
 This project includes several key features designed to enhance the user experience:
 
-#### Introduction Page: 
+### Introduction Page: 
 An inviting introduction page welcomes the user and encourages them to play the game.
-#### Quiz Section: 
+### Quiz Section: 
 The main section of the game contains 29 questions about cats and the Cheshire Cat from Alice in Wonderland.
-#### Score Section: 
+### Score Section: 
 At the end of the quiz, a score section displays the user's results and includes a leaderboard, which is stored locally using local storage.
-#### Timer: 
+### Timer: 
 A timer starts running when the user clicks the start button, adding a time-based challenge element to the game.
 
-### To accommodate the content flow, the project is structured into four main sections:
+## To accommodate the content flow, the project is structured into four main sections:
 
-#### Introduction to the Quiz: 
+### Introduction to the Quiz: 
 Welcomes users and introduces them to Cheshire and the adventure that awaits.
-#### Quiz Questions: 
+### Quiz Questions: 
 Presents users with a series of questions, each with four possible answers, fostering interactive engagement.
-#### Correct or Incorrect Responses: 
+### Correct or Incorrect Responses: 
 Provides feedback and encouragement based on user answers, along with tracking their score.
-#### Final Score: 
+### Final Score: 
 Displays the user's end score and offers the option to start the quiz anew.
 These features work together to create an engaging and interactive quiz experience for the user.
 
 ## Color Reference: 
 
-| Color             |  Hex                                              |
-| ----------------------------------------------------------------------|
-| Primary Color  |  ![#FF3EA5](https://colorhunt.co/palette/6420aaff3ea5ff7ed4ffb5da)                                         |
-| econdary Color  |  Hex                                              |
-| Accent Color             |  Hex                                              |
-| Text Color             |  Hex                                              |
+The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland." Below are the specific colors used throughout the project:
 
+- **Primary Color**: `rgb(255, 62, 165)` - A vibrant pink color used for primary elements.
+- **Wrong Answer**: `rgb(214, 51, 51)` - A bold red color indicating incorrect answers.
+- **Correct Answer**: `rgb(0, 128, 0)` - A standard green color indicating correct answers.
+- **Font Colors**:
+  - **Black**: `rgb(0, 0, 0)` - Used for the main text to ensure readability.
+  - **Purple**: `rgb(128, 0, 128)` - Used for paragraph text, adding a whimsical touch in line with the theme.
+- **Start Button Border**: `rgb(0, 255, 255)` - A bright aqua color used for the border of the start button to make it stand out.
+- **Table Borders** (`<th>` and `<td>` elements): `rgb(255, 215, 0)` - A gold color used for table borders to add a touch of elegance.
+- **Background Color**: `rgb(245, 245, 245)` - A light, neutral background color that keeps the interface clean and readable.
+- **Image Fallback Color**: `rgb(0, 255, 255)` - Aqua color used as a fallback if an image fails to load.
 
-
-
+These colors were selected not only for their aesthetic appeal but also to maintain consistency with the playful and fantastical theme of the Cheshire Cat.
 
 ## Usage:
+### How to Play "Quizzing with Cheshire":
+
+1. **Starting the Quiz**:
+   - Upon opening the quiz, you will be greeted by an inviting introduction page with Cheshire's warm welcome. Read through the brief introduction and click on the "Start Quiz" button to begin your adventure.
+
+2. **Answering Questions**:
+   - The quiz consists of a series of 10 random questions about cats and the Cheshire Cat from Alice in Wonderland.
+   - Each question will appear one at a time, accompanied by four possible answers.
+   - Click on the answer you believe is correct. The interface will provide immediate feedback, indicating whether your answer was correct or incorrect.
+
+3. **Feedback and Encouragement**:
+   - For each question, after selecting an answer, you will see a message indicating if your answer was correct (green) or incorrect (red). 
+   - Encouraging messages will be displayed to motivate you to continue, regardless of whether your answer was right or wrong.
+
+4. **Tracking Your Progress**:
+   - A progress tracker will display your current question number out of the total 10 questions, helping you keep track of your journey through the quiz.
+
+5. **Timer**:
+   - The quiz features a timer that starts as soon as you click the "Start Quiz" button. This adds an element of challenge, encouraging you to think quickly and answer promptly.
+
+6. **Completing the Quiz**:
+   - After answering all 10 questions, you will be taken to the final score section. Here, your total score will be displayed, along with feedback based on your performance.
+   - The score section also includes a leaderboard feature, where your score will be stored locally, allowing you to see how you rank compared to other players.
+
+7. **Restarting the Quiz**:
+   - If you wish to play again, you can click the "Restart Quiz" button. This will reset the quiz, allowing you to start over and attempt to improve your score.
+
+### Tips for a Great Quiz Experience:
+
+- **Read Carefully**: Take your time to read each question and all possible answers thoroughly before making your selection.
+- **Stay Calm**: The timer adds a challenge, but staying calm and focused will help you perform better.
+- **Learn and Improve**: Use the feedback provided to learn from any mistakes and improve your knowledge for future attempts.
+- **Have Fun**: Remember, the primary goal of "Quizzing with Cheshire" is to provide an enjoyable and whimsical experience. Have fun and embrace the magical world of cats and Cheshire!
+
+By following these steps and tips, you will be able to fully enjoy and engage with the "Quizzing with Cheshire" experience, testing your knowledge and having fun along the way.
 
 
-## Roadmap
+## Roadmap: Possible extensions/ To do List!
+
+To continuously enhance the "Quizzing with Cheshire" experience, the following roadmap outlines planned developments and potential future features:
+
+1. **Expand Question Bank**:
+   - Add more questions to increase the variety and depth of the quiz, covering more aspects of both general cat trivia and "Alice in Wonderland."
+   - Implement a categorization feature to allow users to choose specific topics or difficulty levels.
+
+2. **Enhanced User Interaction**:
+   - Introduce animated transitions and effects to make the quiz more engaging and visually appealing.
+   - Add audio feedback for correct and incorrect answers to enhance the interactive experience.
+
+3. **Leaderboard Improvements**:
+   - Develop a more sophisticated leaderboard system that allows users to create profiles and save their scores across multiple sessions.
+   - Introduce weekly and monthly leaderboards to encourage repeat participation and competition among users.
+
+4. **Social Sharing Features**:
+   - Enable users to share their quiz results on social media platforms directly from the results page.
+   - Add social media integration to allow users to challenge their friends and compare scores.
+
+5. **Mobile Optimization**:
+   - Further optimize the quiz for mobile devices to ensure a smooth and responsive experience on all screen sizes.
+   - Develop a standalone mobile app version of the quiz for both iOS and Android platforms.
+
+6. **Accessibility Enhancements**:
+   - Implement features to improve accessibility, such as text-to-speech options, adjustable font sizes, and high-contrast color themes for users with visual impairments.
+   - Ensure compliance with the latest web accessibility standards (WCAG) to make the quiz inclusive for all users.
+
+7. **Advanced Analytics**:
+   - Introduce analytics to track user engagement, question performance, and overall quiz difficulty.
+   - Use data insights to refine question selection, difficulty balancing, and feature development based on user behavior and feedback.
+
+8. **Additional Languages**:
+   - Translate the quiz into multiple languages to reach a broader audience.
+   - Implement a language selection feature, allowing users to choose their preferred language for the quiz.
+
+By following this roadmap, we aim to create a more engaging, educational, and enjoyable experience for all users, continuously evolving the "Quizzing with Cheshire" project to meet and exceed user expectations.
 
 
 ## Responsive Design and Testing:
@@ -96,6 +170,9 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 ## Contribution:
 ## Question:
 ## Contact:
+
+
+
 
 ## Picture Credits:
 ### Background - Picture of Cheshire:
