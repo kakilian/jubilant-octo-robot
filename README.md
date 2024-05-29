@@ -66,20 +66,21 @@ Provides feedback and encouragement based on user answers, along with tracking t
 Displays the user's end score and offers the option to start the quiz anew.
 These features work together to create an engaging and interactive quiz experience for the user.
 
-## Color Reference: 
+## Color Reference:[Color Palette](https://colorhunt.co/palette/6420aaff3ea5ff7ed4ffb5da)
 
 The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland." Below are the specific colors used throughout the project:
 
-- **Primary Color**: `rgb(255, 62, 165)` - A vibrant pink color used for primary elements.
-- **Wrong Answer**: `rgb(214, 51, 51)` - A bold red color indicating incorrect answers.
-- **Correct Answer**: `rgb(0, 128, 0)` - A standard green color indicating correct answers.
+- **Primary Color**: [#ff3ea5](https://placehold.co/20x20/f03c15/ff3ea5.png) - A vibrant pink color used for primary elements.
+- **Wrong Answer**: [#d63333](https://placehold.co/20x20/f03c15/d63333.png) - A bold red color indicating incorrect answers.
+- **Correct Answer**: [#008000](https://placehold.co/20x20/f03c15/008000.png)  - A standard green color indicating correct answers.
 - **Font Colors**:
-  - **Black**: `rgb(0, 0, 0)` - Used for the main text to ensure readability.
-  - **Purple**: `rgb(128, 0, 128)` - Used for paragraph text, adding a whimsical touch in line with the theme.
-- **Start Button Border**: `rgb(0, 255, 255)` - A bright aqua color used for the border of the start button to make it stand out.
-- **Table Borders** (`<th>` and `<td>` elements): `rgb(255, 215, 0)` - A gold color used for table borders to add a touch of elegance.
-- **Background Color**: `rgb(245, 245, 245)` - A light, neutral background color that keeps the interface clean and readable.
-- **Image Fallback Color**: `rgb(0, 255, 255)` - Aqua color used as a fallback if an image fails to load.
+  - **Black**: [#000000](https://placehold.co/20x20/f03c15/000000.png) - Used for the main text to ensure readability.
+  - **Purple**: [#800080](https://placehold.co/20x20/f03c15/800080.png)  - Used for paragraph text, adding a whimsical touch in line with the theme.
+- **Start Button Border**: [#00ffff](https://placehold.co/20x20/f03c15/00ffff.png) - A bright aqua color used for the border of the start button to make it stand out.
+- **Table Borders** (`<th>` and `<td>` elements): [#ffd700](https://placehold.co/20x20/f03c15/#ffd700.png) - A gold color used for table borders to add a touch of elegance.
+- **Background Color**: [#f5f5f5](https://placehold.co/20x20/f03c15/f5f5f5.png) - A light, neutral background color that keeps the interface clean and readable.
+- **Image Fallback Color**: [#00ffff](https://placehold.co/20x20/f03c15/#00ffff.png)- Aqua color used as a fallback if an image fails to load.
+
 
 These colors were selected not only for their aesthetic appeal but also to maintain consistency with the playful and fantastical theme of the Cheshire Cat.
 
@@ -169,14 +170,20 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 
 ## Contribution:
 ## Question:
+## Licence:
+
+Distributed under the no License. See LICENSE.txt for more information.
+
 ## Contact:
+
+
 
 
 
 
 ## Picture Credits:
 ### Background - Picture of Cheshire:
-For the background image of Cheshire, I sourced a captivating graphic poster from [wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to "miami22". The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
+For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](#https://wallpapers.com/cheshire-cat-graphic-poster), credited to "miami22". The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
 ## Project Sources:
 I leveraged various resources throughout the development of this Quiz Project:
 - Video tutorials on quiz building. ![Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
