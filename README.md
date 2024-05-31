@@ -3,7 +3,7 @@
 ![Cheshire Logo](assets/favicon/android-chrome-512x512.png)
 
 <!-- Table of Contents -->
--[About the Project] : Table of Contents
+## Table of Contents
 * [Project Introduction](#)
 * [For First-Time Users:](#)
 * [For Returning Users](#)
@@ -66,7 +66,7 @@ Provides feedback and encouragement based on user answers, along with tracking t
 Displays the user's end score and offers the option to start the quiz anew.
 These features work together to create an engaging and interactive quiz experience for the user.
 
-## Color Reference:[Color Palette](https://color.adobe.com/create/color-wheel#)![color wheel from adobe](assets/image/color-palette.png)
+## Color Reference:[Color Palette](https://www.color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/color-palette.png)
 
 
 The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland." Below are the specific colors used throughout the project:
@@ -166,7 +166,8 @@ By following this roadmap, we aim to create a more engaging, educational, and en
 I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
 
 [JSHint] (https://jshint.com/)
-[W3C] (https://validator.w3.org/) 
+[W3C] (https://validator.w3.org/) ![W3C for html](assets/image/html.validator.w3.org.png) 
+
 [Lighthouse](assets/image/pp2.png)
 
 ## Contribution:

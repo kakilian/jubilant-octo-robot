@@ -2,14 +2,14 @@
 /* jshint esversion: 8 */
 
 import { displayLeaderboard, addPlayer  } from './players.js';
-import { questions } from './questions';
+import { questions } from './questions.js';
 
 console.log('script loaded');
 console.log('script.js');
 console.log('players.js');
 console.log('questions.js');
 console.log('questions[0]');
-//let questions = ();
+
 let correctAnswers = {};
 let incorrectAnswers = {};
 let key = 'Item';
@@ -21,12 +21,12 @@ var startButton
 var questionNumber 
 var introductionContainer  
 var nextButton 
-var controlsContainer 
+//var controlsContainer 
 var questionContainerElement
 var questionElement 
-var answerButtonsElement
+//var answerButtonsElement
 var correctAnswerElement
-var incorrectAnswerElement 
+var wrongAnswerElement 
 var refreshButton
 var restartButton 
 var resultsContainer
@@ -54,18 +54,18 @@ function initializeDomComponents() {
     questionElement = document.getElementById('question');
     answerButtonsElement = document.getElementById('answer-buttons');
     correctAnswerElement = document.querySelector('.correct-answer');
-    incorrectAnswerElement = document.querySelector('.incorrect-answer');
+    wrongAnswerElement = document.querySelector('wrong-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.querySelector('.results-container');
-    displayFinalScore = document.getElementById('end-score');
+    let displayFinalScoreElement = document.getElementById('end-score');
 
     answerButton1 = document.getElementById('answer-btn-1');
     answerButton2 = document.getElementById('answer-btn-2');
     answerButton3 = document.getElementById('answer-btn-3');
     answerButton4 = document.getElementById('answer-btn-4');
 
-    answerButton1.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
+    answerButton1.addEventListener('click', () => alert(0 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
     answerButton2.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
     answerButton3.addEventListener('click', () => alert(2 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
     answerButton4.addEventListener('click', () => alert(3 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
@@ -77,30 +77,21 @@ function initializeDomComponents() {
 document.addEventListener('DOMContentLoaded', () => {
     initializeDomComponents();
     startButton.addEventListener('click', startGame);
-
     nextButton.addEventListener('click', () => {
         currentQuestionIndex++;
         currentQuestionIndexToDisplay++;
         questionNumber.innerText = currentQuestionIndexToDisplay;
-        console.log('setNext Question');
         nextButton.classList.add('hide');
         setNextQuestion();
     });
-
     restartButton.addEventListener('click', () => {
         resultsContainer.classList.add('hide');
         introductionContainer.classList.remove('hide');
     });
-
     refreshButton.addEventListener('click', () => {
         questionContainerElement.classList.add('hide');
         introductionContainer.classList.remove('hide');
-    });
-
-    displayFinalScore.addEventListener('click', () => {
-        resultsContainer.classList.remove('hide');
-        introductionContainer.classList.add('hide');
-    });
+    });     
     
 });
 
@@ -109,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 function startGame() {
     introductionContainer.classList.add('hide');
-    shuffledQuestions = question.sort(() => Math.random() - 0.5).slice(0, 10);
+    const shuffledQuestions = question.sort(() => Math.random() - 0.5).slice(0, 10);
     currentQuestionIndex = 0;
     questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
@@ -129,23 +120,33 @@ function setQuestionContent(question){
     answerButton3.innerText = question.answers[2].text;
     answerButton4.innerText = question.answers[3].text;
     
-    correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true)
+    correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true);
 }
 
 function setNextQuestion() {
     console.log('startGame')
     //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
-    const correctAnswers = document.innerText('answers.true');
+    const correctAnswers = document.querySelector('#answers').innerText === 'true';
+    
     if (correctAnswers) {
         button.dataset.correct = correct.answers;
         score++;
     } else {
         answers.classList.add('wrong');   
     }
+
     introductionContainer.classList.add('hide');
     showAnswer(shuffledAnswers[currentAnswersIndex]);
     nextButton.classList.remove('hide');
-   resetState();
+    
+    if ('shuffledQuestions') {
+        let x = 10;
+        document.getElementById('final-score').innerHTML = (x === 10);
+        displayFinalScore('endScore');
+        console.log('hello here I am');
+    } else {
+        resetState();
+    };
 }
 
 function resetState () {
@@ -158,15 +159,14 @@ function resetState () {
 function displayFinalScore() {
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
-    displayFinalScore.innerHTML = `You scored ${score} out of 10 questions}`;
+    document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions}`;
        let playerName = prompt('Enter your name:');
        let currentDate = new Date().toLocaleDateString();
        addPlayer(playerName, currentDate, score);
 
     if (score === 10) {
-        endScoreElement.innerHTML += `Congratulations! You did great!`;
-    } else if (score < 10) {
-        endScoreElement.innerHTML += `Cheshire out smarted you, better luck next time!`;
+        document.getElementById('end-score').innerHTML += `Congratulations! You did great!`;
+    } else {}
+        document.getElementById('end-score').innerHTML += `Cheshire out smarted you, better luck next time!`;
     }
-    leaderboard();
-}
+    displayLeaderboard();
