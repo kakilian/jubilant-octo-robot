@@ -184,11 +184,9 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 ## Contribution:
 
 ## Picture Credits:
-![**Picture of Cheshire**](assets/image/cheshire.png)
-
-![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
-
-![**Cheshire leaving the game**](assets/image/translucent.png) 
+![**Picture of Cheshire**](assets/image/cheshire.png) {:width = "200px"}
+![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png) {:width = "200px"}
+![**Cheshire leaving the game**](assets/image/translucent.png) {:height = "200px"}
 
   For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to **"miami22"**. The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
 
@@ -204,7 +202,7 @@ I leveraged various resources throughout the development of this Quiz Project:
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
 
 [^1]
-[^1]: ## Apology and Explanation Regarding Project Code Usage
+## Apology and Explanation Regarding Project Code Usage
 During the project, I initially used a video provided to me as a source for coding. When I sought assistance to fix parts of the non-functioning code, I was informed that the code was "well-used by students" and could result in a fail for my PP2 project.
 
 Unfortunately, with only three working days left, it was difficult to distance myself from the code I had been using. I attempted to make changes by using var for global usage. Despite working with "overused code," I still learned a lot by adding my own modifications and coding freestyle, even though the base code was pre-written. I deeply apologize for this.
@@ -215,3 +213,4 @@ I want to clarify that I used the code from a video given to me by a teacher, un
 
 With just 48 hours remaining, including working through the night, I have been diligently adding my own pieces to the project in the hope of passing this part of the course. I kindly ask for your understanding. Once I saw how certain parts of the code worked, it became challenging to break away from it. I know I could use 'if' and 'else' statements to achieve similar results. However, after seeing the well-written, easy-to-understand code, it made more sense to use it. Functions, which are fundamental to JavaScript, help create a seamless user interface (UI). Through my mistakes, I realized that JavaScript is more complex than I initially understood from the course content. Ultimately, our goal as students, teachers, and course developers is to deepen our understanding and mastery of the subject.
 
+[^1]: 
