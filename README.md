@@ -164,28 +164,33 @@ By following this roadmap, we aim to create a more engaging, educational, and en
 ## Responsive Design and Testing:
 I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
 
-[JSHint] (https://jshint.com/)
+![JSHint](https://jshint.com/)
 
-[W3C] (https://validator.w3.org/) 
+![W3C](https://validator.w3.org/) 
+
 ![W3C for html](assets/image/html.validator.w3.org.png) 
+   Here I adjusted the errors as advised in html W3C. ALso I was told to remove the autor in <meta> so I moved it down to the footer as shown in templates
 
-[Lighthouse](assets/image/pp2.png)
+![Lighthouse](assets/image/pp2.png)
 
 ## Licence:
 
-Distributed under the no License. See LICENSE.txt for more information.
+   Distributed under the no License. See LICENSE.txt for more information.
 
 ## Contact:
 
-linkedin.com/in/katarina-kilian-082169276
+   linkedin.com/in/katarina-kilian-082169276
 
 ## Contribution:
 
 ## Picture Credits:
-### Background - [**Picture of Cheshire**](assets/image/cheshire.png)
-[**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
-[**Cheshire leaving the game**](assets/image/translucent.png) 
-For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to **"miami22"**. The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
+![**Picture of Cheshire**](assets/image/cheshire.png)
+
+![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
+
+![**Cheshire leaving the game**](assets/image/translucent.png) 
+
+  For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to **"miami22"**. The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
 
 ## Project Sources:
 I leveraged various resources throughout the development of this Quiz Project:
@@ -198,8 +203,8 @@ I leveraged various resources throughout the development of this Quiz Project:
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
 
-
-## Apology and Explanation Regarding Project Code Usage
+[^1]
+[^1]: ## Apology and Explanation Regarding Project Code Usage
 During the project, I initially used a video provided to me as a source for coding. When I sought assistance to fix parts of the non-functioning code, I was informed that the code was "well-used by students" and could result in a fail for my PP2 project.
 
 Unfortunately, with only three working days left, it was difficult to distance myself from the code I had been using. I attempted to make changes by using var for global usage. Despite working with "overused code," I still learned a lot by adding my own modifications and coding freestyle, even though the base code was pre-written. I deeply apologize for this.
