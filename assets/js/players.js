@@ -1,5 +1,5 @@
 
-console.log('Score-Board');
+console.log('score-board');
 
 class Player {
     constructor(name, date, score) {

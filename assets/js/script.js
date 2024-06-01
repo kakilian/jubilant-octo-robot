@@ -21,10 +21,10 @@ var startButton
 var questionNumber 
 var introductionContainer  
 var nextButton 
-//var controlsContainer 
+var controlsContainer 
 var questionContainerElement
 var questionElement 
-//var answerButtonsElement
+var answerButtonsElement
 var correctAnswerElement
 var wrongAnswerElement 
 var refreshButton
@@ -108,7 +108,7 @@ function startGame() {
     setQuestionContent(shuffledQuestions[currentQuestionIndex])
     
     questionContainerElement.classList.remove('hide');
-    //controlsContainer.classList.remove('hide');
+    controlsContainer.classList.remove('hide');
     
     setNextQuestion();
 }
