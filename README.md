@@ -165,18 +165,21 @@ By following this roadmap, we aim to create a more engaging, educational, and en
 I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
 
 [JSHint] (https://jshint.com/)
-[W3C] (https://validator.w3.org/) ![W3C for html](assets/image/html.validator.w3.org.png) 
+
+[W3C] (https://validator.w3.org/) 
+![W3C for html](assets/image/html.validator.w3.org.png) 
 
 [Lighthouse](assets/image/pp2.png)
 
-## Contribution:
-## Question:
 ## Licence:
 
 Distributed under the no License. See LICENSE.txt for more information.
 
 ## Contact:
 
+linkedin.com/in/katarina-kilian-082169276
+
+## Contribution:
 
 ## Picture Credits:
 ### Background - [**Picture of Cheshire**](assets/image/cheshire.png)
@@ -194,7 +197,6 @@ I leveraged various resources throughout the development of this Quiz Project:
 - GPT - Helped write questions and text corrections.
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
-
 
 
 ## Apology and Explanation Regarding Project Code Usage
