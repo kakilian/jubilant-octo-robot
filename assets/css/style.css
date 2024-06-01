@@ -1,9 +1,8 @@
-/* Import Font family */
-/* Import Images */
+console.log('font-family');
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('font/Oswald/Oswald-VariableFont_wght.ttf'),
-    url('font/Raleway/Raleway-VaribleFont_wght.ttf') format('truetype');
+    src: url('font/oswald/oswald-VariableFont_wght.ttf'),
+    url('font/raleway/raleway-VaribleFont_wght.ttf') format('truetype');
 }
 
 /* Gobal setting for box */
@@ -57,13 +56,6 @@ body.wrong {
     box-shadow: 0 0 10px;
 }
 
-.img2 {
-    position: relative;
-    background-color: aquamarine;
-    background-image: url('assets/image/cute.png');
-    max-width: 20%;
-}
-
 .img3 {
     position: relative;
     background-color: aquamarine;
@@ -82,11 +74,9 @@ body.wrong {
 
 .quiz-page {
     display: flex;
-    position: relative;
-    background-size: cover;
-    background-position: center center;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
 }
 
 .question-class {
@@ -110,7 +100,7 @@ p,
 
 h1 {
     font-size: 2em;
-    font-style: bold;
+    font-weight: bold;
     margin-top: 0;
     
 }
@@ -118,7 +108,7 @@ h1 {
 p {
     line-height: 1.6;
     color: purple;
-    font-style: bold;
+    font-weight: bold;
 }
 
 .start-btn, 
@@ -136,14 +126,35 @@ p {
     background-color: aquamarine;
 }
 
-.btn-grid, #answer-buttons {
+.btn-grid {
     display: grid;
-    grid-template-columns: 2 2;
-    align-items: center;
+    grid-template-columns: repeat(2 1fr);
     gap: 10px;
-    margin: 20px 0;
-
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
 }
+
+.btn-grid button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: aqua;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-grid button:hover {
+    background-color: aquamarine;
+}
+
+.img2 {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
 table {
     border-collapse: collapse;
 }
