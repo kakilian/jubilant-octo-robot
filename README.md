@@ -4,26 +4,31 @@
 
 <!-- Table of Contents -->
 ## Table of Contents
-* [Project Introduction](#)
-* [For First-Time Users:](#)
-* [For Returning Users](#)
-* [My Process](#)
-* [Features](#)
-* [art: Color Reference](#) 
-* [Usage](#)
-* [Roadmap](#)
-* [Contributing](#)
+* [Project Introduction](#project-introduction)
+* [Wireframes](#)
+* [For First-Time Users:](#for-first-time-users)
+* [For Returning Users](#for-returning-users)
+* [My Process](#my-process)
+* [Features]()
+* [art: Color Reference](#color-referencecolor-palette-color-wheel-from-adobe) 
+* [Usage](#usage)
+* [Roadmap](#roadmap-possible-extensions-to-do-list)
+* [Contributing](#contribution)
 * [Questions: FAQ](#)
-* [License](#)
-* [Contact](#)
-* [Background pictures - credits](#)
-* [Project Sources](#)
-* [Responsive Design and Testing](#)
-* [Apology and Explaination Regarding Code Usage](#)
+* [License](#licence)
+* [Contact](#contact)
+* [Background pictures - credits](#picture-credits)
+* [Project Sources](#project-sources)
+* [Responsive Design and Testing](#responsive-design-and-testing)
+* [Apology and Explaination Regarding Code Usage](#apology-and-explanation-regarding-project-code-usage)
 
 ## Project Introduction:
 
 Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
+
+## Wireframes with Balsamiq ![Balsamiq](assets/image/balsamiq.wireframes.pdf)
+
+Orignally I draw on paper, design changed when I found images that were allow to be used on this project.
 
 ## For First-Time Users:
 
