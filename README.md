@@ -66,7 +66,7 @@ Provides feedback and encouragement based on user answers, along with tracking t
 Displays the user's end score and offers the option to start the quiz anew.
 These features work together to create an engaging and interactive quiz experience for the user.
 
-## Color Reference:[Color Palette](https://color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/pp2.project.colors.png)
+## Color Reference:[Color Palette](https://color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/circle.palette.png)
 
 The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland." Below are the specific colors used throughout the project:
 
@@ -178,13 +178,12 @@ Distributed under the no License. See LICENSE.txt for more information.
 ## Contact:
 
 
-
-
-
-
 ## Picture Credits:
-### Background - Picture of Cheshire:
-For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](#https://wallpapers.com/cheshire-cat-graphic-poster), credited to "miami22". The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
+### Background - [**Picture of Cheshire**](assets/image/cheshire.png)
+[**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
+[**Cheshire leaving the game**](assets/image/translucent.png) 
+For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to **"miami22"**. The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
+
 ## Project Sources:
 I leveraged various resources throughout the development of this Quiz Project:
 - Video tutorials on quiz building. ![Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
