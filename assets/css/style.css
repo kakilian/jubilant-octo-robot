@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'MyCustomFont';
     src: url('font/Oswald/Oswald-VariableFont_wght.ttf'),
-    url('font/Raleway/Raleway-VaribleFont_wght.tff') format('truetype');
+    url('font/Raleway/Raleway-VaribleFont_wght.ttf') format('truetype');
 }
 
 /* Gobal setting for box */
@@ -15,7 +15,7 @@
 
 /*-- Body --*/
 body {
-    font-family: 'Raleway' sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     background-color: rgb(211, 24, 195);
     padding: 0;
     margin: 0;
@@ -101,8 +101,16 @@ body.wrong {
     border-radius: 5px;
 }
 
+h1, 
+p, 
+.start-btn,
+.next-btn {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
 h1 {
     font-size: 2em;
+    font-style: bold;
     margin-top: 0;
     
 }
@@ -110,6 +118,7 @@ h1 {
 p {
     line-height: 1.6;
     color: purple;
+    font-style: bold;
 }
 
 .start-btn, 
@@ -117,8 +126,6 @@ p {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 2rem;
-    background-color: blueviolet;
-    color:rgb(214, 51, 51);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -131,15 +138,15 @@ p {
 
 .btn-grid, #answer-buttons {
     display: grid;
-    grid-template-columns: 2 auto;
+    grid-template-columns: 2 2;
     align-items: center;
     gap: 10px;
     margin: 20px 0;
+
 }
 table {
     border-collapse: collapse;
 }
-
 
 th, 
 td {
