@@ -181,6 +181,8 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 **I noticed a lot** of mistakes, both in typing errors and using the wrong folder/file in my "explorer". One common mistake was the use of capital letters, which often explained why my links were broken. It was the first time I used Balsamiq. Knowing that it wouldn't be a prerequisite for this PP2, I still wanted to get a hands-on feeling for what I could do with it. 
 My <git add> . with commit messages are strained, trying to be direct but not too dry. I also found myself uncertain whether what I had tried to achieve had actually worked. As a result, I ended up sending <git commit> a crazy number of times for something I was trying to accomplish.
 
+
+
 ## Licence:
 
    Distributed under the no License. See LICENSE.txt for more information.

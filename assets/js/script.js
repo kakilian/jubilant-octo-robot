@@ -30,7 +30,7 @@ var wrongAnswerElement
 var refreshButton
 var restartButton 
 var resultsContainer
-var displayFinalScore
+//var displayFinalScore
 
 var answerButton1
 var answerButton2
@@ -58,7 +58,7 @@ function initializeDomComponents() {
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.querySelector('.results-container');
-    let displayFinalScoreElement = document.getElementById('end-score');
+    //displayFinalScore = document.getElementById('end-score');
 
     answerButton1 = document.getElementById('answer-btn-1');
     answerButton2 = document.getElementById('answer-btn-2');
@@ -100,12 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 function startGame() {
     introductionContainer.classList.add('hide');
-    const shuffledQuestions = question.sort(() => Math.random() - 0.5).slice(0, 10);
+    shuffledQuestions = question.sort(() => Math.random() - 0.5).slice(0, 10);
     currentQuestionIndex = 0;
     questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
     
-    setQuestionContent(shuffledQuestions[currentQuestionIndex])
+    setQuestionContent(shuffledQuestions[currentQuestionIndex]);
     
     questionContainerElement.classList.remove('hide');
     controlsContainer.classList.remove('hide');
@@ -114,7 +114,12 @@ function startGame() {
 }
 
 function setQuestionContent(question){
-    questionElement.innerText = question.question
+    //questionElement.innerText = question.question
+    if (!question || !question.answers) {
+        console.error('Invalid Question or questions is undefined:', question)
+        return;
+    }
+    
     answerButton1.innerText = question.answers[0].text;
     answerButton2.innerText = question.answers[1].text;
     answerButton3.innerText = question.answers[2].text;
