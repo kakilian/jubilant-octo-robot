@@ -17,25 +17,25 @@ let key = 'Item';
     localStorage.setItem(key, 'Value, name, score');
 };
 
-var startButton
-var questionNumber 
-var introductionContainer  
-var nextButton 
-var controlsContainer 
-var questionContainerElement
-var questionElement 
-var answerButtonsElement
-var correctAnswerElement
-var wrongAnswerElement 
-var refreshButton
-var restartButton 
-var resultsContainer
+var startButton;
+var questionNumber; 
+var introductionContainer;  
+var nextButton;
+var controlsContainer; 
+var questionContainerElement;
+var questionElement;
+var answerButtonsElement;
+var correctAnswerElement;
+var wrongAnswerElement;
+var refreshButton;
+var restartButton;
+var resultsContainer;
 //var displayFinalScore
 
-var answerButton1
-var answerButton2
-var answerButton3
-var answerButton4
+var answerButton1;
+var answerButton2;
+var answerButton3;
+var answerButton4;
 
 let currentQuestionIndex;
 let score = 0;
@@ -115,16 +115,25 @@ function startGame() {
 
 function setQuestionContent(question){
     //questionElement.innerText = question.question
+    // Debug log to check the recieved question object
+    console.log('Recieved question:', question);
+    // Check if the question object answers array is valid
     if (!question || !question.answers) {
         console.error('Invalid Question or questions is undefined:', question)
         return;
     }
     
+    // Question length with array - is correct?
+    if (question.answers.length < 4) {
+        console.error('expect at least 4 answers, but got:' question.answers.length) return;
+    }
+
     answerButton1.innerText = question.answers[0].text;
     answerButton2.innerText = question.answers[1].text;
     answerButton3.innerText = question.answers[2].text;
     answerButton4.innerText = question.answers[3].text;
     
+    // Looking for correct answer index 
     correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true);
 }
 
