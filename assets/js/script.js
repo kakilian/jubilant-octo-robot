@@ -1,41 +1,43 @@
-
 /* jshint esversion: 8 */
 
-import { displayLeaderboard, addPlayer  } from './players.js';
-import { questions } from './questions.js';
+import {
+    displayLeaderboard,
+    addPlayer
+} from './players.js';
+import {
+    questions
+} from './questions.js';
 
 console.log('script loaded');
 console.log('script.js');
 console.log('players.js');
 console.log('questions.js');
-console.log('questions[0]');
 
 let correctAnswers = {};
 let incorrectAnswers = {};
-let key = 'Item';
-{
+let key = 'Item'; {
     localStorage.setItem(key, 'Value, name, score');
 };
 
-var startButton;
-var questionNumber; 
-var introductionContainer;  
-var nextButton;
-var controlsContainer; 
-var questionContainerElement;
-var questionElement;
-var answerButtonsElement;
-var correctAnswerElement;
-var wrongAnswerElement;
-var refreshButton;
-var restartButton;
-var resultsContainer;
-//var displayFinalScore
+let startButton;
+let questionNumber;
+let introductionContainer;
+let nextButton;
+let controlsContainer;
+let questionContainerElement;
+let questionElement;
+let answerButtonsElement;
+let correctAnswerElement;
+let wrongAnswerElement;
+let refreshButton;
+let restartButton;
+let resultsContainer;
+//let displayFinalScore
 
-var answerButton1;
-var answerButton2;
-var answerButton3;
-var answerButton4;
+let answerButton1;
+let answerButton2;
+let answerButton3;
+let answerButton4;
 
 let currentQuestionIndex;
 let score = 0;
@@ -73,7 +75,7 @@ function initializeDomComponents() {
 
 /** 
  * DOM Loading
-*/ 
+ */
 document.addEventListener('DOMContentLoaded', () => {
     initializeDomComponents();
     startButton.addEventListener('click', startGame);
@@ -91,68 +93,72 @@ document.addEventListener('DOMContentLoaded', () => {
     refreshButton.addEventListener('click', () => {
         questionContainerElement.classList.add('hide');
         introductionContainer.classList.remove('hide');
-    });     
-    
+    });
+
 });
 
 /** 
  * Start the game by hiding the introduction and setting up the first question
-*/
+ */
 function startGame() {
     introductionContainer.classList.add('hide');
-    shuffledQuestions = question.sort(() => Math.random() - 0.5).slice(0, 10);
+    console.log('questions,', questions)
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10);
+    console.log('Shuffled Questions', shuffledQuestions)
     currentQuestionIndex = 0;
     questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
-    
+    console.log('Before set question')
     setQuestionContent(shuffledQuestions[currentQuestionIndex]);
-    
+    console.log('After set question')
     questionContainerElement.classList.remove('hide');
     controlsContainer.classList.remove('hide');
-    
+
     setNextQuestion();
 }
 
-function setQuestionContent(question){
+function setQuestionContent(question) {
     //questionElement.innerText = question.question
     // Debug log to check the recieved question object
     console.log('Recieved question:', question);
     // Check if the question object answers array is valid
     if (!question || !question.answers) {
-        console.error('Invalid Question or questions is undefined:', question)
+        console.error('Invalid Question or questions is undefined:', question);
         return;
     }
-    
-    // Question length with array - is correct?
-    if (question.answers.length < 4) {
-        console.error('expect at least 4 answers, but got:' question.answers.length) return;
-    }
 
+    // Question length with array - is correct?
+    //if (question.answers.length < 4) {
+    //    console.error('Expect at least 4 answers, but got:', question.answers.length); 
+    //    return;
+    //}
+
+    questionElement.innerText = question.question;
     answerButton1.innerText = question.answers[0].text;
     answerButton2.innerText = question.answers[1].text;
     answerButton3.innerText = question.answers[2].text;
     answerButton4.innerText = question.answers[3].text;
-    
+
     // Looking for correct answer index 
     correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true);
 }
 
 function setNextQuestion() {
-    console.log('startGame')
+    console.log('setNextQuestion')
     //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
-    const correctAnswers = document.querySelector('#answers').innerText === 'true';
-    
+    const correctAnswers = document.querySelector('answers').innerText === 'true';
+
     if (correctAnswers) {
         button.dataset.correct = correct.answers;
         score++;
     } else {
-        answers.classList.add('wrong');   
+        answers.classList.add('wrong');
     }
 
     introductionContainer.classList.add('hide');
     showAnswer(shuffledAnswers[currentAnswersIndex]);
     nextButton.classList.remove('hide');
-    
+
     if ('shuffledQuestions') {
         let x = 10;
         document.getElementById('final-score').innerHTML = (x === 10);
@@ -163,7 +169,7 @@ function setNextQuestion() {
     };
 }
 
-function resetState () {
+function resetState() {
     nextButton.classList.add('hide');
     correctAnswerElement.classList.add('hide');
     incorrectAnswers.classList.add('hide');
@@ -174,13 +180,13 @@ function displayFinalScore() {
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
     document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions}`;
-       let playerName = prompt('Enter your name:');
-       let currentDate = new Date().toLocaleDateString();
-       addPlayer(playerName, currentDate, score);
+    let playerName = prompt('Enter your name:');
+    let currentDate = new Date().toLocaleDateString();
+    addPlayer(playerName, currentDate, score);
 
     if (score === 10) {
         document.getElementById('end-score').innerHTML += `Congratulations! You did great!`;
     } else {}
-        document.getElementById('end-score').innerHTML += `Cheshire out smarted you, better luck next time!`;
-    }
-    displayLeaderboard();
+    document.getElementById('end-score').innerHTML += `Cheshire out smarted you, better luck next time!`;
+}
+displayLeaderboard();
