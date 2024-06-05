@@ -55,8 +55,8 @@ function initializeDomComponents() {
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
     answerButtonsElement = document.getElementById('answer-buttons');
-    correctAnswerElement = document.querySelector('.correct-answer');
-    wrongAnswerElement = document.querySelector('wrong-answer');
+    correctElement = document.querySelector('.correct-answer');
+    wrongElement = document.querySelector('.incorrect-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.querySelector('.results-container');
@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function startGame() {
     introductionContainer.classList.add('hide');
+    console.log('question,', question)
     console.log('questions,', questions)
     shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10);
     console.log('Shuffled Questions', shuffledQuestions)
@@ -112,7 +113,7 @@ function startGame() {
     setQuestionContent(shuffledQuestions[currentQuestionIndex]);
     console.log('After set question')
     questionContainerElement.classList.remove('hide');
-    controlsContainer.classList.remove('hide');
+    // controlsContainer.classList.remove('hide');
 
     setNextQuestion();
 }
@@ -120,6 +121,7 @@ function startGame() {
 function setQuestionContent(question) {
     //questionElement.innerText = question.question
     // Debug log to check the recieved question object
+    controlsContainer.classList.add('hide');
     console.log('Recieved question:', question);
     // Check if the question object answers array is valid
     if (!question || !question.answers) {
@@ -146,15 +148,16 @@ function setQuestionContent(question) {
 function setNextQuestion() {
     console.log('setNextQuestion')
     //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
-    const correctAnswers = document.querySelector('answers').innerText === 'true';
+
+    //const correctAnswer = document.querySelector('answers').innerText === 'true';
 
     if (correctAnswers) {
-        button.dataset.correct = correct.answers;
+        correctAnswers.dataset.correct = correct.answer;
         score++;
     } else {
-        answers.classList.add('wrong');
+        incorrectAnswers.answer.classList.add('wrong');
     }
-
+    controlsContainer.classList.remove('hide');
     introductionContainer.classList.add('hide');
     showAnswer(shuffledAnswers[currentAnswersIndex]);
     nextButton.classList.remove('hide');

@@ -1,10 +1,9 @@
-
 console.log('font-family');
 
 @font-face {
     font-family: 'MyCustomFont';
     src: url('font/oswald/oswald-VariableFont_wght.ttf'),
-    url('font/raleway/raleway-VaribleFont_wght.ttf') format('truetype');
+        url('font/raleway/raleway-VaribleFont_wght.ttf') format('truetype');
 }
 
 /* Gobal setting for box */
@@ -22,18 +21,19 @@ body {
     margin: 0;
     display: flex;
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    
 }
 
 
-body.correct {
+.correct, 
+#cor-answer {
     background-color: green;
 }
 
-body.wrong {
+.wrong,
+#incor-answer {
     background-color: rgb(214, 51, 51);
 }
 
@@ -49,6 +49,7 @@ body.wrong {
     border-radius: 10px;
     box-shadow: 0 0 10px;
 }
+
 /*-- Images --*/
 
 .img1 {
@@ -93,8 +94,8 @@ body.wrong {
     border-radius: 5px;
 }
 
-h1, 
-p, 
+h1,
+p,
 .start-btn,
 .next-btn {
     font-family: 'MyCustomFont', sans-serif;
@@ -104,7 +105,7 @@ h1 {
     font-size: 2em;
     font-weight: bold;
     margin-top: 0;
-    
+
 }
 
 p {
@@ -113,7 +114,7 @@ p {
     font-weight: bold;
 }
 
-.start-btn, 
+.start-btn,
 .next-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -131,6 +132,7 @@ p {
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2 1fr);
+    color: black;
     gap: 10px;
     width: 100%;
     max-width: 500px;
@@ -161,7 +163,7 @@ table {
     border-collapse: collapse;
 }
 
-th, 
+th,
 td {
     border: 2px gold;
     padding: 5px;
@@ -169,6 +171,6 @@ td {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 
 }

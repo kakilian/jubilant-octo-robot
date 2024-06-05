@@ -26,7 +26,7 @@
 
 Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
 
-## Wireframes with Balsamiq ![Balsamiq](assets/image/balsamiq.wireframes.pdf)
+## Wireframes with Balsamiq ![Balsamiq](assets/image/wireframes.pdf)
 
 Orignally I draw on paper, design changed when I found images that were allow to be used on this project.
 
@@ -71,7 +71,7 @@ Provides feedback and encouragement based on user answers, along with tracking t
 Displays the user's end score and offers the option to start the quiz anew.
 These features work together to create an engaging and interactive quiz experience for the user.
 
-## Color Reference:[Color Palette](https://color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/circle.palette.png)
+## Color Reference:[Color Palette](https://color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/circle-palette.png)
 
 The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland." Below are the specific colors used throughout the project:
 
@@ -173,7 +173,7 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 
 ![W3C](https://validator.w3.org/) 
 
-![W3C for html](assets/image/html.validator.w3.org.png) 
+![W3C for html](assets/image/html-validator.png) 
    Here I adjusted the errors as advised in html W3C. ALso I was told to remove the autor in <meta> so I moved it down to the footer as shown in templates
 
 ![Lighthouse](assets/image/pp2.png)
