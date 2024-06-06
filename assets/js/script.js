@@ -55,11 +55,11 @@ function initializeDomComponents() {
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
     answerButtonsElement = document.getElementById('answer-buttons');
-    correctElement = document.querySelector('.correct-answer');
-    wrongElement = document.querySelector('.incorrect-answer');
+    correctAnswerElement = document.getElementById('correct-answer');
+    wrongAnswerElement = document.getElementById('incorrect-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
-    resultsContainer = document.querySelector('.results-container');
+    resultsContainer = document.getElementById('.results-container');
     //displayFinalScore = document.getElementById('end-score');
 
     answerButton1 = document.getElementById('answer-btn-1');
@@ -147,6 +147,15 @@ function setQuestionContent(question) {
 
 function setNextQuestion() {
     console.log('setNextQuestion')
+    if (currentQuestionIndex >= shuffledQuestions.length) {
+        displayFinalScore();
+    }
+    console.log('finalScore');
+    setQuestionContent(shuffledQuestions[currentQuestionIndex]);
+    questionContainerElement.classList.remove('hide');
+    nextButton.classList.add('hide');
+    controlsContainer.classList.remove('hide');
+}
     //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
 
     //const correctAnswer = document.querySelector('answers').innerText === 'true';
@@ -170,7 +179,7 @@ function setNextQuestion() {
     } else {
         resetState();
     };
-}
+
 
 function resetState() {
     nextButton.classList.add('hide');
