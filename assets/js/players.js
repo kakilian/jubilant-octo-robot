@@ -3,9 +3,9 @@ console.log('score-board');
 
 class Player {
     constructor(name, date, score) {
-    this.name = name;
-    this.date = date;
-    this.score = score;
+        this.name = name;
+        this.date = date;
+        this.score = score;
     }
 }
 

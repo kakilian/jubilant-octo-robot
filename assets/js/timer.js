@@ -8,4 +8,4 @@ export function myTimer () {
         clearInterval(time);
         alert("Time is almost up!",(''));
     }
-}
+};

@@ -1,20 +1,27 @@
 /* jshint esversion: 8 */
 
 import {
-    displayLeaderboard,
-    addPlayer
+    timer
+} from './timer.js';
+
+import {
+    addPlayer,
+    displayLeaderboard
 } from './players.js';
+
 import {
     questions
 } from './questions.js';
 
 console.log('script loaded');
 console.log('script.js');
+console.log('timer.js');
 console.log('players.js');
 console.log('questions.js');
 
-let correctAnswers = [`true`];
-let incorrectAnswers = [`false`];
+
+let correctAnswers = {};
+let incorrectAnswers = {};
 let key = 'Item'; {
     localStorage.setItem(key, 'Value, name, score');
 };
@@ -32,7 +39,8 @@ let refreshButton;
 let restartButton;
 let resultsContainer;
 let followingButton;
-//let displayFinalScore
+let displayFinalScore;
+
 
 let answerButton1;
 let answerButton2;
@@ -50,6 +58,7 @@ function initializeDomComponents() {
     startButton = document.getElementById('start-btn-front');
     questionNumber = document.getElementById('question-number');
     introductionContainer = document.getElementById('introduction-container');
+    followingButton = document.getElementById('following-btn')
     controlsContainer = document.getElementById('controls-container');
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
@@ -58,15 +67,16 @@ function initializeDomComponents() {
     incorAnswerElement = document.getElementById('incorrect-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
-    resultsContainer = document.getElementById('.results-container');
-    followingButton = document.getElementById('following-btn')
-    //displayFinalScore = document.getElementById('end-score');
+    resultsContainer = document.getElementById('end-score-spieler');
 
     answerButton1 = document.getElementById('answer-btn-1');
     answerButton2 = document.getElementById('answer-btn-2');
     answerButton3 = document.getElementById('answer-btn-3');
     answerButton4 = document.getElementById('answer-btn-4');
 
+    /**
+     * Add Event listeners for the button-grid
+     */
     answerButton1.addEventListener('click', () => alert(0 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
     answerButton2.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
     answerButton3.addEventListener('click', () => alert(2 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
@@ -74,7 +84,7 @@ function initializeDomComponents() {
 }
 
 /** 
- * DOM Loading
+ * Load the DOM, !Important
  */
 document.addEventListener('DOMContentLoaded', () => {
     initializeDomComponents();
@@ -159,8 +169,6 @@ function setNextQuestion() {
     followingButton.classList.add('hide');
     controlsContainer.classList.remove('hide');
 
-    //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
-
     const correctAnswer = document.querySelector('[data-correct="true"]');
     console.log('showing correct answer')
     const incorrectAnswer = document.querySelector('[data-incorrect="false"]');
@@ -168,60 +176,59 @@ function setNextQuestion() {
     if (correctAnswer) {
         correctAnswer.dataset.correct = correctAnswer.dataset.correct;
         score++;
-        correctAnswer.classList.remove('hide');
-        incorrectAnswer.answer.classList.add('hide');
     } else if (incorrectAnswer) {
         incorrectAnswer.classList.add('wrong');
-        
     }
-    controlsContainer.classList.add('hide');
+
     console.log('correct-incorrect answers')
-    showAnswer(shuffledAnswers[currentAnswersIndex]).innerText === true;
-
-
     followingButton.classList.remove('hide');
 }
 
-function handleAnswerClick(answerindex) {
-    if (answerindex === correctQuestionindex) {
+function correctQuestionIndex(answerindex) {
+    if (answerindex === correctQuestionIndex) {
         score++;
-        correctAnswerElement.classList.remove('hide');
-        incorrectAnswerElement.classList.add('hide');
+        corAnswerElement.classList.remove('hide');
+        incorAnswerElement.classList.add('hide');
     } else {
-        correctAnswerElement.classList.add('hide');
-        incorrectAnswerElement.classList.remove('hide');
+        corAnswerElement.classList.add('hide');
+        incorAnswerElement.classList.remove('hide');
         followingButton.classList.remove('hide');
+    }
+    let x = 10;
+    document.getElementById('final-score').innerHTML = (score === x) ? "Congratulations! You scored 10 out of 10" : `You scored ${score} out of 10 questions`;
 
-        //   }   
-        //    let x = 10;
-        //  document.getElementById('final-score').innerHTML = (x === 10);
-        //displayFinalScore('endScore');
-        // console.log('hello here I am');
-        //} else {
+    console.log('hello here I am');
+    displayFinalScore('endScoreSpieler');
+
+    if (currentQuestionIndex >= shuffledQuestions.length) {
         resetState();
-        //};
     }
+}
 
-    function resetState() {
-        followingButton.classList.add('hide');
-        correctAnswerElement.classList.add('hide');
-        incorrectAnswerElement.classList.add('hide');
-        setNextQuestion();
+
+function resetState() {
+    followingButton.classList.add('hide');
+    corAnswerElement.classList.add('hide');
+    incorAnswerElement.classList.add('hide');
+    setNextQuestion();
+}
+
+function displayFinalScore() {
+    console.log('finalscore - please write your name here')
+    questionContainerElement.classList.add('hide');
+    resultsContainer.classList.remove('hide');
+
+    document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions}`;
+    let playerName = prompt('Enter your name:');
+    let currentDate = new Date().toLocaleDateString();
+    addPlayer(playerName, currentDate, score);
+
+    if (score === 10) {
+        document.getElementById('end-score').innerHTML = `Congratulations! You did great!`;
+    } else {
+        document.getElementById('end-score').innerHTML = `Cheshire out smarted you, better luck next time!`;
     }
-
-    function displayFinalScore() {
-        questionContainerElement.classList.add('hide');
-        resultsContainer.classList.remove('hide');
-        document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions}`;
-        let playerName = prompt('Enter your name:');
-        let currentDate = new Date().toLocaleDateString();
-        addPlayer(playerName, currentDate, score);
-
-        if (score === 10) {
-            document.getElementById('end-score').innerHTML += `Congratulations! You did great!`;
-        } else {}
-        document.getElementById('end-score').innerHTML += `Cheshire out smarted you, better luck next time!`;
-    }
+    console.log('finished script read');
 
     displayLeaderboard();
 }
