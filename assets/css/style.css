@@ -47,6 +47,8 @@ body {
 .controls-container,
 .results-container {
     display: flex;
+    width: 80%;
+    height: 80%;
     align-items: center;
     gap: 20px;
     padding: 20px;
@@ -102,19 +104,17 @@ body {
 h1,
 p,
 .start-btn,
-.next-btn {
+.next-btn,
+.refresh-btn {
     font-family: 'MyCustomFont', sans-serif;
 }
 
 .next-btn {
     font-size: 2em;
-
 }
 
-.refresh-btn,
-.next-btn {
-    font-family: inherit;
-    font-size: 2em;
+.refresh-btn {
+    font-size: 1.2em;
 
 }
 
@@ -172,6 +172,10 @@ p {
     cursor: pointer;
 }
 
+#answer-btn {
+    font: bold;
+
+}
 .next-btn {}
 
 .img2 {
