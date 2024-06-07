@@ -22,16 +22,16 @@ let key = 'Item'; {
 let startButton;
 let questionNumber;
 let introductionContainer;
-let nextButton;
 let controlsContainer;
 let questionContainerElement;
 let questionElement;
 let answerButtonsElement;
 let correctAnswerElement;
-let wrongAnswerElement;
+let incorrectAnswerElement;
 let refreshButton;
 let restartButton;
 let resultsContainer;
+let followingButton;
 //let displayFinalScore
 
 let answerButton1;
@@ -50,16 +50,16 @@ function initializeDomComponents() {
     startButton = document.getElementById('start-btn-front');
     questionNumber = document.getElementById('question-number');
     introductionContainer = document.getElementById('introduction-container');
-    nextButton = document.getElementById('next-btn');
     controlsContainer = document.getElementById('controls-container');
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
     answerButtonsElement = document.getElementById('answer-buttons');
     correctAnswerElement = document.getElementById('correct-answer');
-    wrongAnswerElement = document.getElementById('incorrect-answer');
+    incorrectAnswerElement = document.getElementById('incorrect-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.getElementById('.results-container');
+    followingButton = document.getElementById('following-btn')
     //displayFinalScore = document.getElementById('end-score');
 
     answerButton1 = document.getElementById('answer-btn-1');
@@ -79,11 +79,11 @@ function initializeDomComponents() {
 document.addEventListener('DOMContentLoaded', () => {
     initializeDomComponents();
     startButton.addEventListener('click', startGame);
-    nextButton.addEventListener('click', () => {
+    followingButton.addEventListener('click', () => {
         currentQuestionIndex++;
         currentQuestionIndexToDisplay++;
         questionNumber.innerText = currentQuestionIndexToDisplay;
-        nextButton.classList.add('hide');
+        followingButton.classList.add('hide');
         setNextQuestion();
     });
     restartButton.addEventListener('click', () => {
@@ -114,7 +114,8 @@ function startGame() {
     console.log('After set question')
     questionContainerElement.classList.remove('hide');
     // controlsContainer.classList.remove('hide');
-
+    followingButton.classList.remove('hide');
+    console.log('next-button is here')
     setNextQuestion();
 }
 
@@ -155,67 +156,66 @@ function setNextQuestion() {
     console.log('finalScore');
     setQuestionContent(shuffledQuestions[currentQuestionIndex]);
     questionContainerElement.classList.remove('hide');
-    nextButton.classList.add('hide');
+    followingButton.classList.add('hide');
     controlsContainer.classList.remove('hide');
 
-//const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
+    //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
 
-//const correctAnswer = document.querySelector('answers').innerText === 'true';
+    //const correctAnswer = document.querySelector('answers').innerText === 'true';
 
-//if (correctAnswers) {
-//  correctAnswers.dataset.correct = correct.answer;
-//score++;
-//} else {
-//  incorrectAnswers.answer.classList.add('wrong');
-//}
-//controlsContainer.classList.add('hide');
-//showAnswer(shuffledAnswers[currentAnswersIndex]).innerText === true;
+    //if (correctAnswers) {
+    //  correctAnswers.dataset.correct = correct.answer;
+    //score++;
+    //} else {
+    //  incorrectAnswers.answer.classList.add('wrong');
+    //}
+    //controlsContainer.classList.add('hide');
+    //showAnswer(shuffledAnswers[currentAnswersIndex]).innerText === true;
 
 
-nextButton.classList.remove('hide');
+    followingButton.classList.remove('hide');
 }
 
 function handleAnswerClick(answerindex) {
     if (answerindex === correctQuestionindex) {
         score++;
         correctAnswerElement.classList.remove('hide');
+        incorrectAnswerElement.classList.add('hide');
     } else {
         correctAnswerElement.classList.add('hide');
-        wrongAnswerElement.classList.remove('hide');
+        incorrectAnswerElement.classList.remove('hide');
+        followingButton.classList.remove('hide');
 
+        //   }   
+        //    let x = 10;
+        //  document.getElementById('final-score').innerHTML = (x === 10);
+        //displayFinalScore('endScore');
+        // console.log('hello here I am');
+        //} else {
+        resetState();
+        //};
+    }
 
-nextButton.classList.remove('hide');
+    function resetState() {
+        followingButton.classList.add('hide');
+        correctAnswerElement.classList.add('hide');
+        incorrectAnswerElement.classList.add('hide');
+        setNextQuestion();
+    }
 
-//   }   
-//    let x = 10;
-//  document.getElementById('final-score').innerHTML = (x === 10);
-//displayFinalScore('endScore');
-// console.log('hello here I am');
-//} else {
-    resetState();
-//};
-}
+    function displayFinalScore() {
+        questionContainerElement.classList.add('hide');
+        resultsContainer.classList.remove('hide');
+        document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions}`;
+        let playerName = prompt('Enter your name:');
+        let currentDate = new Date().toLocaleDateString();
+        addPlayer(playerName, currentDate, score);
 
-function resetState() {
-    nextButton.classList.add('hide');
-    correctAnswerElement.classList.add('hide');
-    incorrectAnswers.classList.add('hide');
-    setNextQuestion();
-}
+        if (score === 10) {
+            document.getElementById('end-score').innerHTML += `Congratulations! You did great!`;
+        } else {}
+        document.getElementById('end-score').innerHTML += `Cheshire out smarted you, better luck next time!`;
+    }
 
-function displayFinalScore() {
-    questionContainerElement.classList.add('hide');
-    resultsContainer.classList.remove('hide');
-    document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions}`;
-    let playerName = prompt('Enter your name:');
-    let currentDate = new Date().toLocaleDateString();
-    addPlayer(playerName, currentDate, score);
-
-    if (score === 10) {
-        document.getElementById('end-score').innerHTML += `Congratulations! You did great!`;
-    } else {}
-    document.getElementById('end-score').innerHTML += `Cheshire out smarted you, better luck next time!`;
-}
-
-displayLeaderboard();
+    displayLeaderboard();
 }
