@@ -13,8 +13,8 @@ console.log('script.js');
 console.log('players.js');
 console.log('questions.js');
 
-let correctAnswers = {};
-let incorrectAnswers = {};
+let correctAnswers = [`true`];
+let incorrectAnswers = [`false`];
 let key = 'Item'; {
     localStorage.setItem(key, 'Value, name, score');
 };
@@ -25,9 +25,9 @@ let introductionContainer;
 let controlsContainer;
 let questionContainerElement;
 let questionElement;
-let answerButtonsElement;
-let correctAnswerElement;
-let incorrectAnswerElement;
+let answerButtonElement;
+let corAnswerElement;
+let incorAnswerElement;
 let refreshButton;
 let restartButton;
 let resultsContainer;
@@ -53,9 +53,9 @@ function initializeDomComponents() {
     controlsContainer = document.getElementById('controls-container');
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
-    answerButtonsElement = document.getElementById('answer-buttons');
-    correctAnswerElement = document.getElementById('correct-answer');
-    incorrectAnswerElement = document.getElementById('incorrect-answer');
+    answerButtonElement = document.getElementById('answer-button');
+    corAnswerElement = document.getElementById('correct-answer');
+    incorAnswerElement = document.getElementById('incorrect-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.getElementById('.results-container');
@@ -161,16 +161,22 @@ function setNextQuestion() {
 
     //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
 
-    //const correctAnswer = document.querySelector('answers').innerText === 'true';
-
-    //if (correctAnswers) {
-    //  correctAnswers.dataset.correct = correct.answer;
-    //score++;
-    //} else {
-    //  incorrectAnswers.answer.classList.add('wrong');
-    //}
-    //controlsContainer.classList.add('hide');
-    //showAnswer(shuffledAnswers[currentAnswersIndex]).innerText === true;
+    const correctAnswer = document.querySelector('[data-correct="true"]');
+    console.log('showing correct answer')
+    const incorrectAnswer = document.querySelector('[data-incorrect="false"]');
+    console.log('answer complete');
+    if (correctAnswer) {
+        correctAnswer.dataset.correct = correctAnswer.dataset.correct;
+        score++;
+        correctAnswer.classList.remove('hide');
+        incorrectAnswer.answer.classList.add('hide');
+    } else if (incorrectAnswer) {
+        incorrectAnswer.classList.add('wrong');
+        
+    }
+    controlsContainer.classList.add('hide');
+    console.log('correct-incorrect answers')
+    showAnswer(shuffledAnswers[currentAnswersIndex]).innerText === true;
 
 
     followingButton.classList.remove('hide');
