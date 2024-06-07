@@ -43,7 +43,7 @@ let currentQuestionIndex;
 let score = 0;
 let currentQuestionIndexToDisplay = 1;
 let question = [];
-let shuffledQuestions;
+let shuffledQuestions = [];
 let correctQuestionIndex = -1
 
 function initializeDomComponents() {
@@ -143,43 +143,58 @@ function setQuestionContent(question) {
 
     // Looking for correct answer index 
     correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true);
+
 }
 
 function setNextQuestion() {
     console.log('setNextQuestion')
     if (currentQuestionIndex >= shuffledQuestions.length) {
         displayFinalScore();
+        return;
     }
     console.log('finalScore');
     setQuestionContent(shuffledQuestions[currentQuestionIndex]);
     questionContainerElement.classList.remove('hide');
     nextButton.classList.add('hide');
     controlsContainer.classList.remove('hide');
+
+//const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
+
+//const correctAnswer = document.querySelector('answers').innerText === 'true';
+
+//if (correctAnswers) {
+//  correctAnswers.dataset.correct = correct.answer;
+//score++;
+//} else {
+//  incorrectAnswers.answer.classList.add('wrong');
+//}
+//controlsContainer.classList.add('hide');
+//showAnswer(shuffledAnswers[currentAnswersIndex]).innerText === true;
+
+
+nextButton.classList.remove('hide');
 }
-    //const currentQuestionsShuffled = question.sort(() => Math.random() -0.5).slice(0, 10);
 
-    //const correctAnswer = document.querySelector('answers').innerText === 'true';
-
-    if (correctAnswers) {
-        correctAnswers.dataset.correct = correct.answer;
+function handleAnswerClick(answerindex) {
+    if (answerindex === correctQuestionindex) {
         score++;
+        correctAnswerElement.classList.remove('hide');
     } else {
-        incorrectAnswers.answer.classList.add('wrong');
-    }
-    controlsContainer.classList.remove('hide');
-    introductionContainer.classList.add('hide');
-    showAnswer(shuffledAnswers[currentAnswersIndex]);
-    nextButton.classList.remove('hide');
+        correctAnswerElement.classList.add('hide');
+        wrongAnswerElement.classList.remove('hide');
 
-    if ('shuffledQuestions') {
-        let x = 10;
-        document.getElementById('final-score').innerHTML = (x === 10);
-        displayFinalScore('endScore');
-        console.log('hello here I am');
-    } else {
-        resetState();
-    };
 
+nextButton.classList.remove('hide');
+
+//   }   
+//    let x = 10;
+//  document.getElementById('final-score').innerHTML = (x === 10);
+//displayFinalScore('endScore');
+// console.log('hello here I am');
+//} else {
+    resetState();
+//};
+}
 
 function resetState() {
     nextButton.classList.add('hide');
@@ -201,4 +216,6 @@ function displayFinalScore() {
     } else {}
     document.getElementById('end-score').innerHTML += `Cheshire out smarted you, better luck next time!`;
 }
+
 displayLeaderboard();
+}
