@@ -1,10 +1,6 @@
 /* jshint esversion: 8 */
 
 import {
-    timer
-} from './timer.js';
-
-import {
     addPlayer,
     displayLeaderboard
 } from './players.js';
@@ -15,7 +11,6 @@ import {
 
 console.log('script loaded');
 console.log('script.js');
-console.log('timer.js');
 console.log('players.js');
 console.log('questions.js');
 
@@ -77,6 +72,7 @@ function initializeDomComponents() {
     /**
      * Add Event listeners for the button-grid
      */
+
     answerButton1.addEventListener('click', () => alert(0 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
     answerButton2.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
     answerButton3.addEventListener('click', () => alert(2 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
@@ -140,11 +136,11 @@ function setQuestionContent(question) {
         return;
     }
 
-    // Question length with array - is correct?
-    //if (question.answers.length < 4) {
-    //    console.error('Expect at least 4 answers, but got:', question.answers.length); 
-    //    return;
-    //}
+    //Question length with array - is correct?
+    if (question.answers.length < 4) {
+        console.error('Expect at least 4 answers, but got:', question.answers.length);
+        return;
+    }
 
     questionElement.innerText = question.question;
     answerButton1.innerText = question.answers[0].text;
@@ -184,7 +180,7 @@ function setNextQuestion() {
     followingButton.classList.remove('hide');
 }
 
-function correctQuestionIndex(answerindex) {
+function handleAnswerClick(answerindex) {
     if (answerindex === correctQuestionIndex) {
         score++;
         corAnswerElement.classList.remove('hide');
@@ -194,11 +190,11 @@ function correctQuestionIndex(answerindex) {
         incorAnswerElement.classList.remove('hide');
         followingButton.classList.remove('hide');
     }
+
     let x = 10;
     document.getElementById('final-score').innerHTML = (score === x) ? "Congratulations! You scored 10 out of 10" : `You scored ${score} out of 10 questions`;
 
     console.log('hello here I am');
-    displayFinalScore('endScoreSpieler');
 
     if (currentQuestionIndex >= shuffledQuestions.length) {
         resetState();
@@ -211,24 +207,4 @@ function resetState() {
     corAnswerElement.classList.add('hide');
     incorAnswerElement.classList.add('hide');
     setNextQuestion();
-}
-
-function displayFinalScore() {
-    console.log('finalscore - please write your name here')
-    questionContainerElement.classList.add('hide');
-    resultsContainer.classList.remove('hide');
-
-    document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions}`;
-    let playerName = prompt('Enter your name:');
-    let currentDate = new Date().toLocaleDateString();
-    addPlayer(playerName, currentDate, score);
-
-    if (score === 10) {
-        document.getElementById('end-score').innerHTML = `Congratulations! You did great!`;
-    } else {
-        document.getElementById('end-score').innerHTML = `Cheshire out smarted you, better luck next time!`;
-    }
-    console.log('finished script read');
-
-    displayLeaderboard();
 }

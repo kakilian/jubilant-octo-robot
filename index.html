@@ -1,19 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Game. Quiz. About cats and questions about Alice in Wonderland Cat, Cheshire. Fairy-tale">
+    <meta name="description" content="Game. Quiz. About cats and questions about Alice in Wonderland Cat, Cheshire. Fairy-tale">
     <meta name="keywords" content="quiz, cats, fun, game, Fairy-tale">
     <meta name="author" content="Katarina Kilian">
     <!-- Title-->
     <title>Cat Quiz</title>
     <!--Google Fonts-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -24,13 +22,12 @@
 
 <body>
     <!--front quiz page-->
-    <div id="introduction-container" class="introduction">
+    <div class="introduction" id="introduction-container">
         <img class="img1" src="assets/image/cheshire.png" alt="Cheshire the cat, his face only, with a big smile.">
         <div class="front-page">
             <h1>Welcome to the Cat Quiz!</h1>
             <p>Test your knowledge about cats and the Cheshire Cat from Alice in Wonderland</p>
-            <p>Let's test your knowledge! 10 random questions about cats and my meeting with Alice in Wonderland
-            </p>
+            <p>Let's test your knowledge! 10 random questions about cats and my meeting with Alice in Wonderland</p>
             <button class="start-btn" id="start-btn-front">Start Quiz</button>
         </div>
     </div>
@@ -49,7 +46,7 @@
         <div class="controls cont-container hide" id="controls-container">
             <p class="correct-answer" id="cor-answer">Your answer is Correct!</p>
             <p class="incorrect-answer" id="incor-answer">Incorrect answer! Don't give up!</p>
-            <button id="start-btn-quiz" class="refresh-btn btn">Refresh</button>
+            <button class="refresh-btn btn" id="start-btn-quiz">Refresh</button>
             <div>
                 <button class="next-btn" id="following-btn">Next</button>
             </div>
@@ -57,6 +54,7 @@
     </div>
     <!-- quiz results correct and incorrectly answered-->
     <div class="results-container hide" id="end-score-spieler">
+        <img class="img3" src="assets/image/translucent.png" alt="Cheshire Cat walking away, with his back towards you, looking to see if you will follow him">
         <table>
             <thead>
                 <tr>
@@ -66,14 +64,9 @@
             </thead>
             <tbody id="spieler"></tbody>
         </table>
-        <img class="img3" src="assets/image/translucent.png"
-            alt="Cheshire Cat walking away, with his back towards you, looking to see if you will follow him">
-        <div id="result" class="final-score-container">
-            <p id="final-message">Awesome effort! Take the quiz again and better your score! your
-                Cheshire.</p>
+        <div class="final-score-container score-box hide" id="result">
+            <p id="final-message">Awesome effort! Take the quiz again and better your score! your Cheshire.</p>
         </div>
-        <div class="score-box" id="final-score"></div>
-        <div id="leaderboard"></div>
     </div>
     <!-- Restart quiz -->
     <div class="restart hide" id="refresh-quiz">
