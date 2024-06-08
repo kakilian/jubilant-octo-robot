@@ -1,6 +1,10 @@
 /* jshint esversion: 8 */
 
 import {
+    startTimer
+} from './timer.js';
+
+import {
     addPlayer,
     displayLeaderboard
 } from './players.js';
@@ -9,16 +13,11 @@ import {
     questions
 } from './questions.js';
 
-import {
-    startTimer
-} from './timer.js';
-
 console.log('script loaded');
 console.log('script.js');
 console.log('players.js');
 console.log('questions.js');
 console.log('timer.js');
-
 
 let correctAnswers = {};
 let incorrectAnswers = {};
@@ -32,7 +31,6 @@ let introductionContainer;
 let controlsContainer;
 let questionContainerElement;
 let questionElement;
-//let answerButtonElement;
 let corAnswerElement;
 let incorAnswerElement;
 let refreshButton;
@@ -71,16 +69,10 @@ function initializeDomComponents() {
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.getElementById('end-score-spieler');
     timerElement = document.getElementById('timer');
-
     answerButton1 = document.getElementById('answer-btn-1');
     answerButton2 = document.getElementById('answer-btn-2');
     answerButton3 = document.getElementById('answer-btn-3');
     answerButton4 = document.getElementById('answer-btn-4');
-
-    /**
-     * Add Event listeners for the button-grid
-     */
-
     answerButton1.addEventListener('click', () => handleAnswerClick(0));
     answerButton2.addEventListener('click', () => handleAnswerClick(1));
     answerButton3.addEventListener('click', () => handleAnswerClick(2));
@@ -123,11 +115,11 @@ function startGame() {
     questionContainerElement.classList.remove('hide');
     followingButton.classList.remove('hide');
     setNextQuestion();
-    startTimer(timerDuration, timerElement, endQuiz);
+
     if (timerElement) {
         startTimer(timerDuration, timerElement, endQuiz);
     } else {
-        console.error('Timer elemand not found in the DOM');
+        console.error('Timer element not found in the DOM');
     }
     console.log('Timer started');
 }
