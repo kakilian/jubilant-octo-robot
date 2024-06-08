@@ -34,7 +34,7 @@ let refreshButton;
 let restartButton;
 let resultsContainer;
 let followingButton;
-let displayFinalScore;
+//let displayFinalScore;
 
 
 let answerButton1;
@@ -45,7 +45,6 @@ let answerButton4;
 let currentQuestionIndex;
 let score = 0;
 let currentQuestionIndexToDisplay = 1;
-let question = [];
 let shuffledQuestions = [];
 let correctQuestionIndex = -1
 
@@ -57,7 +56,7 @@ function initializeDomComponents() {
     controlsContainer = document.getElementById('controls-container');
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
-    answerButtonElement = document.getElementById('answer-button');
+    //answerButtonElement = document.getElementById('answer-button');
     corAnswerElement = document.getElementById('cor-answer');
     incorAnswerElement = document.getElementById('incor-answer');
     refreshButton = document.getElementById('start-btn-quiz');
@@ -131,6 +130,10 @@ function setQuestionContent(question) {
     controlsContainer.classList.add('hide');
     console.log('Recieved question:', question);
     // Check if the question object answers array is valid
+    corAnswerElement.classList.add('hide');
+    incorAnswerElement.classList.add('hide');
+    startButton.classList.add('hide');
+
     if (!question || !question.answers) {
         console.error('Invalid Question or questions is undefined:', question);
         return;
@@ -164,20 +167,6 @@ function setNextQuestion() {
     questionContainerElement.classList.remove('hide');
     followingButton.classList.add('hide');
     controlsContainer.classList.remove('hide');
-
-    const correctAnswer = document.querySelector('[data-correct="true"]');
-    console.log('showing correct answer')
-    const incorrectAnswer = document.querySelector('[data-incorrect="false"]');
-    console.log('answer complete');
-    if (correctAnswer) {
-        correctAnswer.dataset.correct = correctAnswer.dataset.correct;
-        score++;
-    } else if (incorrectAnswer) {
-        incorrectAnswer.classList.add('wrong');
-    }
-
-    console.log('correct-incorrect answers')
-    followingButton.classList.remove('hide');
 }
 
 function handleAnswerClick(answerindex) {
@@ -185,6 +174,7 @@ function handleAnswerClick(answerindex) {
         score++;
         corAnswerElement.classList.remove('hide');
         incorAnswerElement.classList.add('hide');
+        followingButton.classList.remove('hide');
     } else {
         corAnswerElement.classList.add('hide');
         incorAnswerElement.classList.remove('hide');
@@ -206,4 +196,22 @@ function resetState() {
     corAnswerElement.classList.add('hide');
     incorAnswerElement.classList.add('hide');
     setNextQuestion();
+}
+
+function displayFinalScore() {
+    questionContainerElement.classList.add('hide');
+    resultsContainer.classList.remove('hide');
+
+    document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions`;
+    let playerName = prompt('Enter your name:');
+    let currentDate = new Date().toLocaleDateString();
+    addPlayer(playerName, currentDate, score);
+
+    if (score === 10) {
+        document.getElementById('end-score').innerHTML = `Congratulations! You did great!`;
+    } else {
+        document.getElementById('end-score').innerHTML = `Cheshire outsmarted you, better luck next time!`;
+    }
+
+    displayLeaderboard();
 }
