@@ -1,7 +1,7 @@
 console.log('score-board');
 
 /**
- *  Player Class as a blueprint for creating payer objects, etc having own name, date and score
+ *  Player Class as a blueprint for creating player objects, Own name, date and score
  */
 
 class Player {

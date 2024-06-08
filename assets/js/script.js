@@ -9,14 +9,15 @@ import {
     questions
 } from './questions.js';
 
-//import {
-//    startTimer
-//} from './timer.js';
+import {
+    startTimer
+} from './timer.js';
 
 console.log('script loaded');
 console.log('script.js');
 console.log('players.js');
 console.log('questions.js');
+console.log('timer.js');
 
 
 let correctAnswers = {};
@@ -122,9 +123,15 @@ function startGame() {
     questionContainerElement.classList.remove('hide');
     followingButton.classList.remove('hide');
     setNextQuestion();
-    startTimer(timerDuration, timerElement, timeInterval);
+    startTimer(timerDuration, timerElement, endQuiz);
+    if (timerElement) {
+        startTimer(timerDuration, timerElement, endQuiz);
+    } else {
+        console.error('Timer elemand not found in the DOM');
+    }
     console.log('Timer started');
 }
+
 /**
  * Set Question Content
  * @param {*} question 
@@ -236,32 +243,8 @@ function displayFinalScore() {
 }
 
 /**
- * Quiz End 
+ * Quiz End with Timer 'Call-back'
  */
 function endQuiz() {
     displayFinalScore();
-}
-
-/**
- * Timer
- */
-function startTimer(duration, display) {
-    console.log('Timers running');
-    let timer = duration,
-        minutes, seconds;
-    let timeInterval = setInterval(() => {
-        minutes = parsInt(timer / 60, 10);
-        seconds = parsInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            clearInterval(interval);
-            alert("Time is up!");
-            endQuiz();
-        }
-    }, 1000);
 }
