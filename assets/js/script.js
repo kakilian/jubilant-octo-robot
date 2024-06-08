@@ -9,9 +9,9 @@ import {
     questions
 } from './questions.js';
 
-import {
-    startTimer
-} from './timer.js';
+//import {
+//    startTimer
+//} from './timer.js';
 
 console.log('script loaded');
 console.log('script.js');
@@ -31,7 +31,7 @@ let introductionContainer;
 let controlsContainer;
 let questionContainerElement;
 let questionElement;
-let answerButtonElement;
+//let answerButtonElement;
 let corAnswerElement;
 let incorAnswerElement;
 let refreshButton;
@@ -60,7 +60,7 @@ function initializeDomComponents() {
     startButton = document.getElementById('start-btn-front');
     questionNumber = document.getElementById('question-number');
     introductionContainer = document.getElementById('introduction-container');
-    followingButton = document.getElementById('following-btn')
+    followingButton = document.getElementById('following-btn');
     controlsContainer = document.getElementById('controls-container');
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
@@ -114,22 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function startGame() {
     introductionContainer.classList.add('hide');
-    console.log('question,', question)
-    console.log('questions,', questions)
     shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, 10);
-    console.log('Shuffled Questions', shuffledQuestions)
     currentQuestionIndex = 0;
     questionNumber.innerText = currentQuestionIndexToDisplay;
     score = 0;
-    console.log('Before set question')
     setQuestionContent(shuffledQuestions[currentQuestionIndex]);
-    console.log('After set question')
     questionContainerElement.classList.remove('hide');
-    // controlsContainer.classList.remove('hide');
     followingButton.classList.remove('hide');
-    console.log('next-button is here')
     setNextQuestion();
-    startTimer(timerDuration, timerElement);
+    startTimer(timerDuration, timerElement, timeInterval);
     console.log('Timer started');
 }
 /**
@@ -138,11 +131,7 @@ function startGame() {
  * @returns 
  */
 function setQuestionContent(question) {
-    //questionElement.innerText = question.question
-    // Debug log to check the recieved question object
     controlsContainer.classList.add('hide');
-    console.log('Recieved question:', question);
-    // Check if the question object answers array is valid
     corAnswerElement.classList.add('hide');
     incorAnswerElement.classList.add('hide');
     startButton.classList.add('hide');
@@ -152,9 +141,6 @@ function setQuestionContent(question) {
         return;
     }
 
-    /**
-     * Question length with array - is correct?
-     */
     if (question.answers.length < 4) {
         console.error('Expect at least 4 answers, but got:', question.answers.length);
         return;
@@ -170,7 +156,6 @@ function setQuestionContent(question) {
      * Looking for correct answer index 
      */
     correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true);
-
 }
 
 /**
@@ -178,12 +163,10 @@ function setQuestionContent(question) {
  * @returns 
  */
 function setNextQuestion() {
-    console.log('setNextQuestion')
     if (currentQuestionIndex >= shuffledQuestions.length) {
         displayFinalScore();
         return;
     }
-    console.log('finalScore');
     setQuestionContent(shuffledQuestions[currentQuestionIndex]);
     questionContainerElement.classList.remove('hide');
     followingButton.classList.add('hide');
@@ -208,14 +191,12 @@ function handleAnswerClick(answerindex) {
 
     let x = 10;
     let finalScoreElement = document.getElementById('final-score');
-    console.log(finalScoreElement);
+
     if (finalScoreElement) {
         finalScoreElement.innerHTML = (score === x) ? "Congratulations! You scored 10 out of 10" : `You scored ${score} out of 10 questions`;
     } else {
         console.error('Element with ID final-score not found.')
     }
-
-    console.log('hello here I am');
 
     if (currentQuestionIndex >= shuffledQuestions.length) {
         resetState();
@@ -235,7 +216,7 @@ function resetState() {
  * Display Final Score at the end of the Quiz
  */
 function displayFinalScore() {
-    console.log('finalscore - please write your name here')
+    console.log('finalscore - please write your name here');
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
 
@@ -259,4 +240,28 @@ function displayFinalScore() {
  */
 function endQuiz() {
     displayFinalScore();
+}
+
+/**
+ * Timer
+ */
+function startTimer(duration, display) {
+    console.log('Timers running');
+    let timer = duration,
+        minutes, seconds;
+    let timeInterval = setInterval(() => {
+        minutes = parsInt(timer / 60, 10);
+        seconds = parsInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            clearInterval(interval);
+            alert("Time is up!");
+            endQuiz();
+        }
+    }, 1000);
 }
