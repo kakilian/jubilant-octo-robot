@@ -58,8 +58,8 @@ function initializeDomComponents() {
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
     answerButtonElement = document.getElementById('answer-button');
-    corAnswerElement = document.getElementById('correct-answer');
-    incorAnswerElement = document.getElementById('incorrect-answer');
+    corAnswerElement = document.getElementById('cor-answer');
+    incorAnswerElement = document.getElementById('incor-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.getElementById('end-score-spieler');
@@ -73,10 +73,10 @@ function initializeDomComponents() {
      * Add Event listeners for the button-grid
      */
 
-    answerButton1.addEventListener('click', () => alert(0 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
-    answerButton2.addEventListener('click', () => alert(1 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
-    answerButton3.addEventListener('click', () => alert(2 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
-    answerButton4.addEventListener('click', () => alert(3 === correctQuestionIndex ? 'Your answer is correct' : 'Incorrect'))
+    answerButton1.addEventListener('click', () => handleAnswerClick(0));
+    answerButton2.addEventListener('click', () => handleAnswerClick(1));
+    answerButton3.addEventListener('click', () => handleAnswerClick(2));
+    answerButton4.addEventListener('click', () => handleAnswerClick(3));
 }
 
 /** 
@@ -200,7 +200,6 @@ function handleAnswerClick(answerindex) {
         resetState();
     }
 }
-
 
 function resetState() {
     followingButton.classList.add('hide');
