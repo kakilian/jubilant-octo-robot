@@ -186,13 +186,24 @@ p {
 
 table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 th,
 td {
     border: 2px gold;
-    padding: 5px;
+    padding: 10px;
     text-align: left;
+    background-color: #f8f8f8;
+}
+
+th {
+    background-color: #FF3EA5;
+    color: #000;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 .hide {

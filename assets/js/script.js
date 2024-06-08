@@ -9,6 +9,10 @@ import {
     questions
 } from './questions.js';
 
+import {
+    startTimer
+} from './timer.js';
+
 console.log('script loaded');
 console.log('script.js');
 console.log('players.js');
@@ -34,8 +38,6 @@ let refreshButton;
 let restartButton;
 let resultsContainer;
 let followingButton;
-//let displayFinalScore;
-
 
 let answerButton1;
 let answerButton2;
@@ -48,6 +50,12 @@ let currentQuestionIndexToDisplay = 1;
 let shuffledQuestions = [];
 let correctQuestionIndex = -1
 
+let timerDuration = 60;
+let timerElement;
+
+/**
+ * Initialize DOM Components
+ */
 function initializeDomComponents() {
     startButton = document.getElementById('start-btn-front');
     questionNumber = document.getElementById('question-number');
@@ -56,12 +64,12 @@ function initializeDomComponents() {
     controlsContainer = document.getElementById('controls-container');
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
-    //answerButtonElement = document.getElementById('answer-button');
     corAnswerElement = document.getElementById('cor-answer');
     incorAnswerElement = document.getElementById('incor-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.getElementById('end-score-spieler');
+    timerElement = document.getElementById('timer');
 
     answerButton1 = document.getElementById('answer-btn-1');
     answerButton2 = document.getElementById('answer-btn-2');
@@ -99,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         questionContainerElement.classList.add('hide');
         introductionContainer.classList.remove('hide');
     });
-
 });
 
 /** 
@@ -122,8 +129,14 @@ function startGame() {
     followingButton.classList.remove('hide');
     console.log('next-button is here')
     setNextQuestion();
+    startTimer(timerDuration, timerElement);
+    console.log('Timer started');
 }
-
+/**
+ * Set Question Content
+ * @param {*} question 
+ * @returns 
+ */
 function setQuestionContent(question) {
     //questionElement.innerText = question.question
     // Debug log to check the recieved question object
@@ -139,7 +152,9 @@ function setQuestionContent(question) {
         return;
     }
 
-    //Question length with array - is correct?
+    /**
+     * Question length with array - is correct?
+     */
     if (question.answers.length < 4) {
         console.error('Expect at least 4 answers, but got:', question.answers.length);
         return;
@@ -151,11 +166,17 @@ function setQuestionContent(question) {
     answerButton3.innerText = question.answers[2].text;
     answerButton4.innerText = question.answers[3].text;
 
-    // Looking for correct answer index 
+    /**
+     * Looking for correct answer index 
+     */
     correctQuestionIndex = question.answers.findIndex(answer => answer.correct === true);
 
 }
 
+/**
+ * Setting next Question
+ * @returns 
+ */
 function setNextQuestion() {
     console.log('setNextQuestion')
     if (currentQuestionIndex >= shuffledQuestions.length) {
@@ -168,7 +189,11 @@ function setNextQuestion() {
     followingButton.classList.add('hide');
     controlsContainer.classList.remove('hide');
 }
-
+/**
+ * Answer Handled with Answer Click, as above
+ * @param {
+ * } answerindex 
+ */
 function handleAnswerClick(answerindex) {
     if (answerindex === correctQuestionIndex) {
         score++;
@@ -196,7 +221,9 @@ function handleAnswerClick(answerindex) {
         resetState();
     }
 }
-
+/**
+ * Reset State for the Quiz
+ */
 function resetState() {
     followingButton.classList.add('hide');
     corAnswerElement.classList.add('hide');
@@ -204,7 +231,11 @@ function resetState() {
     setNextQuestion();
 }
 
+/**
+ * Display Final Score at the end of the Quiz
+ */
 function displayFinalScore() {
+    console.log('finalscore - please write your name here')
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
 
@@ -214,10 +245,18 @@ function displayFinalScore() {
     addPlayer(playerName, currentDate, score);
 
     if (score === 10) {
-        document.getElementById('end-score').innerHTML = `Congratulations! You did great!`;
+        document.getElementById('final-message').innerHTML = `Congratulations! You did great!`;
     } else {
-        document.getElementById('end-score').innerHTML = `Cheshire outsmarted you, better luck next time!`;
+        document.getElementById('final-message').innerHTML = `Cheshire outsmarted you, better luck next time!`;
     }
+    console.log('finished script read');
 
     displayLeaderboard();
+}
+
+/**
+ * Quiz End 
+ */
+function endQuiz() {
+    displayFinalScore();
 }

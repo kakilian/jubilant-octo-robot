@@ -1,11 +1,21 @@
-
 console.log('timer.js');
 
-export function myTimer () {
-    document.getElementById('timer').innerHTML = sec + "sec left";
-    sec--;
-    if (sec === -1) {
-        clearInterval(time);
-        alert("Time is almost up!",(''));
-    }
-};
+export function startTimer(duration, display) {
+    let timer = duration,
+        minutes, seconds;
+    const interval = setInterval(() => {
+        minutes = parsInt(timer / 60, 10);
+        seconds = parsInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            clearInterval(interval);
+            alert("Time is up!");
+            endQuiz();
+        }
+    }, 1000);
+}
