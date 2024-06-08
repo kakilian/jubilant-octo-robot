@@ -182,7 +182,13 @@ function handleAnswerClick(answerindex) {
     }
 
     let x = 10;
-    document.getElementById('final-score').innerHTML = (score === x) ? "Congratulations! You scored 10 out of 10" : `You scored ${score} out of 10 questions`;
+    let finalScoreElement = document.getElementById('final-score');
+    console.log(finalScoreElement);
+    if (finalScoreElement) {
+        finalScoreElement.innerHTML = (score === x) ? "Congratulations! You scored 10 out of 10" : `You scored ${score} out of 10 questions`;
+    } else {
+        console.error('Element with ID final-score not found.')
+    }
 
     console.log('hello here I am');
 
