@@ -26,6 +26,11 @@ body {
     align-items: center;
 }
 
+.timer,
+#timer {
+    font-size: 1em;
+    color: rgb(211, 24, 195);
+}
 
 .correct,
 #cor-answer {

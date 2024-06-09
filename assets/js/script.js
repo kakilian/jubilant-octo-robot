@@ -19,24 +19,13 @@ console.log('players.js');
 console.log('questions.js');
 console.log('timer.js');
 
-let correctAnswers = {};
-let incorrectAnswers = {};
+let corAnswer = {};
+let incorAnswer = {};
 let key = 'Item'; {
     localStorage.setItem(key, 'Value, name, score');
 };
 
-let startButton;
-let questionNumber;
-let introductionContainer;
-let controlsContainer;
-let questionContainerElement;
-let questionElement;
-let corAnswerElement;
-let incorAnswerElement;
-let refreshButton;
-let restartButton;
-let resultsContainer;
-let followingButton;
+let startButton, questionNumber, introductionContainer, controlsContainer, questionContainerElement, questionElement, corAnswerElement, incorAnswerElement, refreshButton, restartButton, resultsContainer, followingButton;
 
 let answerButton1;
 let answerButton2;
