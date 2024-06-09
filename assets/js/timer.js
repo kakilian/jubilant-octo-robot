@@ -7,6 +7,9 @@ console.log('timer.js');
 export function startTimer(duration, display, endCallBack) {
     console.log('Timers running');
     let timer = duration, minutes, seconds;
+    let stop = () => {
+        clearInterval(start);
+    }
     let timeInterval = setInterval(() => {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -17,6 +20,7 @@ export function startTimer(duration, display, endCallBack) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
+            stop();
             clearInterval(timeInterval);
             alert("Time is up!");
             endCallBack();
