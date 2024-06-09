@@ -4,31 +4,45 @@
 
 <!-- Table of Contents -->
 ## Table of Contents
+
 * [Project Introduction](#project-introduction)
-* [Wireframes](#)
-* [For First-Time Users:](#for-first-time-users)
+* [AmIResponsive](#am-i-responsive)
+* [Wireframes](#wireframes)
+* [For First-Time Users](#for-first-time-users)
 * [For Returning Users](#for-returning-users)
 * [My Process](#my-process)
-* [Features]()
-* [art: Color Reference](#color-referencecolor-palette-color-wheel-from-adobe) 
+* [Project Features Overview](#project-features-overview)
+* [Color Reference](#color-reference)
 * [Usage](#usage)
-* [Roadmap](#roadmap-possible-extensions-to-do-list)
-* [Contributing](#contribution)
-* [Questions: FAQ](#)
-* [License](#licence)
-* [Contact](#contact)
-* [Background pictures - credits](#picture-credits)
-* [Project Sources](#project-sources)
+* [Roadmap](#roadmap)
+* [Testing](#testing)
 * [Responsive Design and Testing](#responsive-design-and-testing)
-* [Apology and Explaination Regarding Code Usage](#apology-and-explanation-regarding-project-code-usage)
+* [Deployment](#deployment)
+* [License](#license)
+* [Contact](#contact)
+* [Contribution](#contribution)
+* [Picture Credits](#picture-credits)
+* [Project Sources](#project-sources)
+* [Apology and Explanation Regarding Project Code Usage](#apology-and-explanation-regarding-project-code-usage)
+
+---
 
 ## Project Introduction:
 
 Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
+---
 
-## Wireframes with Balsamiq ![Balsamiq](assets/image/wireframes.pdf)
+[AmIResponsive](assets/image/validator/am-i-responsive.png)
+
+---
+
+## Wireframes with Balsamiq 
 
 Orignally I draw on paper, design changed when I found images that were allow to be used on this project.
+
+![Balsamiq](assets/image/wireframes.pdf)
+
+---
 
 ## For First-Time Users:
 
@@ -36,58 +50,60 @@ Are you ready to embark on a journey filled with curiosity, wonder, and, of cour
 
 With Cheshire by your side, you'll not only test your knowledge of our furry friends but also discover fascinating tidbits about the whimsical world of Alice in Wonderland. Get ready to immerse yourself in a magical adventure that's sure to leave you smiling and wanting more!
 
+---
+
 ## For Returning Users:
 
 Welcome back, fellow explorer! If you've enjoyed your previous journey with Cheshire, get ready for even more excitement and fun. We're considering adding more questions from the fairy tale and general cat trivia to enhance your quiz experience. Additionally, we're exploring the possibility of developing a leaderboard, where you can compete with other players and showcase your cat knowledge prowess. Stay tuned for these exciting updates as we continue to make "Quizzing with Cheshire" even more purr-fectly delightful!
 
 This project is inspired by my daughter's desire for interactive experiences. Drawing from the whimsical world of Alice in Wonderland, I set out to bring it to life in this project. And let's be real, those cat lovers out there often have conversations with their furry companions, so why not engage in a quiz with Cheshire and his adventures?
 
+---
+
 ## My Process:
 
 I brainstormed questions that would not only be easy but also offer fun facts and memorable takeaways. Realizing the need for variety, I crafted over 20 random questions to curate a dynamic 10-question quiz. To ensure accessibility, I designed it as a multiple-choice experience, suitable for users of all reading levels. And of course, I injected a cheeky fun factor, embodied by our mischievous host, Cheshire.
+
+---
 
 ## Project Features Overview:
 
 This project includes several key features designed to enhance the user experience:
 
+---
+
 ### Introduction Page: 
 An inviting introduction page welcomes the user and encourages them to play the game.
+
 ### Quiz Section: 
 The main section of the game contains 29 questions about cats and the Cheshire Cat from Alice in Wonderland.
+
 ### Score Section: 
 At the end of the quiz, a score section displays the user's results and includes a leaderboard, which is stored locally using local storage.
+
 ### Timer: 
 A timer starts running when the user clicks the start button, adding a time-based challenge element to the game.
 
-## To accommodate the content flow, the project is structured into four main sections:
+---
 
-### Introduction to the Quiz: 
-Welcomes users and introduces them to Cheshire and the adventure that awaits.
-### Quiz Questions: 
-Presents users with a series of questions, each with four possible answers, fostering interactive engagement.
-### Correct or Incorrect Responses: 
-Provides feedback and encouragement based on user answers, along with tracking their score.
-### Final Score: 
-Displays the user's end score and offers the option to start the quiz anew.
-These features work together to create an engaging and interactive quiz experience for the user.
+## Color Reference
 
-## Color Reference:[Color Palette](https://color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/circle-palette.png)
+![Color Palette](https://color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/circle-palette.png)
 
-The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland." Below are the specific colors used throughout the project:
+The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland."
 
-- **Primary Color**: [#ff3ea5] - A vibrant pink color used for primary elements.
-- **Wrong Answer**: [#d63333] - A bold red color indicating incorrect answers.
-- **Correct Answer**: [#008000]  - A standard green color indicating correct answers.
+- **Primary Color**: `#ff3ea5` - A vibrant pink color used for primary elements.
+- **Wrong Answer**: `#d63333` - A bold red color indicating incorrect answers.
+- **Correct Answer**: `#008000` - A standard green color indicating correct answers.
 - **Font Colors**:
-  - **Black**: [#000000]- Used for the main text to ensure readability.
-  - **Purple**: [#800080] - Used for paragraph text, adding a whimsical touch in line with the theme.
-- **Start Button Border**: [#00ffff] - A bright aqua color used for the border of the start button to make it stand out.
-- **Table Borders** (`<th>` and `<td>` elements): [#ffd700] - A gold color used for table borders to add a touch of elegance.
-- **Background Color**: [#f5f5f5] - A light, neutral background color that keeps the interface clean and readable.
-- **Image Fallback Color**: [#00ffff]- Aqua color used as a fallback if an image fails to load.
+  - **Black**: `#000000` - Used for the main text to ensure readability.
+  - **Purple**: `#800080` - Used for paragraph text, adding a whimsical touch in line with the theme.
+- **Start Button Border**: `#00ffff` - A bright aqua color used for the border of the start button to make it stand out.
+- **Table Borders** (`<th>` and `<td>` elements): `#ffd700` - A gold color used for table borders to add a touch of elegance.
+- **Background Color**: `#f5f5f5` - A light, neutral background color that keeps the interface clean and readable.
+- **Image Fallback Color**: `#00ffff` - Aqua color used as a fallback if an image fails to load.
 
-
-These colors were selected not only for their aesthetic appeal but also to maintain consistency with the playful and fantastical theme of the Cheshire Cat.
+---
 
 ## Usage:
 ### How to Play "Quizzing with Cheshire":
@@ -116,7 +132,7 @@ These colors were selected not only for their aesthetic appeal but also to maint
 
 7. **Restarting the Quiz**:
    - If you wish to play again, you can click the "Restart Quiz" button. This will reset the quiz, allowing you to start over and attempt to improve your score.
-
+---
 ### Tips for a Great Quiz Experience:
 
 - **Read Carefully**: Take your time to read each question and all possible answers thoroughly before making your selection.
@@ -126,8 +142,9 @@ These colors were selected not only for their aesthetic appeal but also to maint
 
 By following these steps and tips, you will be able to fully enjoy and engage with the "Quizzing with Cheshire" experience, testing your knowledge and having fun along the way.
 
+---
 
-## Roadmap: Possible extensions/ To do List!
+## Roadmap: 
 
 To continuously enhance the "Quizzing with Cheshire" experience, the following roadmap outlines planned developments and potential future features:
 
@@ -164,32 +181,68 @@ To continuously enhance the "Quizzing with Cheshire" experience, the following r
    - Implement a language selection feature, allowing users to choose their preferred language for the quiz.
 
 By following this roadmap, we aim to create a more engaging, educational, and enjoyable experience for all users, continuously evolving the "Quizzing with Cheshire" project to meet and exceed user expectations.
+---
 
+## Testing 
 
+Extensive testing was conducted to ensure the website works across different browsers and screen sizes.
+---
 ## Responsive Design and Testing:
 I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
 
+### Device and Screen Size Testing
+
 ![JSHint](https://jshint.com/)
 
-![W3C](https://validator.w3.org/) 
+![W3C](https://validator.w3.org/)
+---
+(assets/image/validator/html-pp2-w3c.png) 
+---
+(assets/image/validator/css-validator.png)
+---
 
-![W3C for html](assets/image/html-validator.png) 
-   Here I adjusted the errors as advised in html W3C. ALso I was told to remove the autor in <meta> so I moved it down to the footer as shown in templates
+There will show some errors, I did take note and removed them, only for the code not to work anymore. So I put them back in place. One is the usage of the console.log for my font in css. Anyother is an "extra" </div> - without these in place the code gave me snytax errors so they remain in place.
 
+As far as I know, there are no bus in my code.
+ 
 ![Lighthouse](assets/image/pp2.png)
+---
+(assets/image/validator/lighthouse-validatio-2.png)
 
-**I noticed a lot** of mistakes, both in typing errors and using the wrong folder/file in my "explorer". One common mistake was the use of capital letters, which often explained why my links were broken. It was the first time I used Balsamiq. Knowing that it wouldn't be a prerequisite for this PP2, I still wanted to get a hands-on feeling for what I could do with it. 
-My <git add> . with commit messages are strained, trying to be direct but not too dry. I also found myself uncertain whether what I had tried to achieve had actually worked. As a result, I ended up sending <git commit> a crazy number of times for something I was trying to accomplish.
+---
 
+## Deployment
 
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+ - In [GitHub respository](https://github.com/kakilian/jubilant-octo-robot.git/),
+ navigate to the **Settings** tab
+ - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+ - The page will automatically be refreshed with a detailed ribbon display to indicate the successful deployment.
+
+ The live link can be found [here](https://kakilian.github.io/jubilant-octo-robot.git/)
+
+### Local Deployment
+
+In order to make a local copy of this püroject, you can clone it.
+In your IDE Terminal, type the following command to clone my repositiry:
+
+   - `git clone https://github.com/kakilian/jubilant-octo-robot.git`
+
+   - Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/kakilian/jubilant-octo-robot.git/), which will start the Gitpod workspace for you.
+
+---
 
 ## Licence:
 
    Distributed under the no License. See LICENSE.txt for more information.
-
+---
 ## Contact:
-
-   linkedin.com/in/katarina-kilian-082169276
+   **Project Maintainer**: [Katarina Kilian]
+   **Email**:[katarina.kilian@student-codeinstitue.net]
+   **Github**:[kakilian](https://github.com/kakilian)
+   **linkedin**[katarina-kilian](https://linkedin.com/in/katarina-kilian-082169276)
+   
+---
 
 ## Contribution:
 
@@ -197,18 +250,21 @@ My <git add> . with commit messages are strained, trying to be direct but not to
 ![**Picture of Cheshire**](assets/image/cheshire.png)
 ![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
 ![**Cheshire leaving the game**](assets/image/translucent.png)   For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to **"miami22"**. The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
-
+---
 ## Project Sources:
 I leveraged various resources throughout the development of this Quiz Project:
-- Video tutorials on quiz building. ![Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
+- Video tutorial on quiz building. One main one is as follows ![Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
 - Google Fonts for typography choices.
 - Color palettes from design playbooks to ensure visual harmony.
 - Favicon creation tool from ![favicon.io](https://favicon.io/favicon-converter/).
 - Community forums like ![FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code inspiration.
-- GPT - Helped write questions and text corrections.
+including this great shuffling advice ![FreeCodeCamp](https://forum.freecodecamp.org/t/how-do-i-make-this-js-code-to-unshuffle-my-questions/513180)
+- GPT - Helped write questions and READme text corrections.
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
-
+---
+---
+---
 [^1]
 ## Apology and Explanation Regarding Project Code Usage
 During the project, I initially used a video provided to me as a source for coding. When I sought assistance to fix parts of the non-functioning code, I was informed that the code was "well-used by students" and could result in a fail for my PP2 project.

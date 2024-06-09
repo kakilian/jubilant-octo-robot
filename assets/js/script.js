@@ -215,7 +215,9 @@ function displayFinalScore() {
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
     followingButton.classList.remove('hide');
-    refreshButton.classList.remove('hide');
+    refreshButton.classList.add('hide');
+    restartButton.parentElement.classList.remove('hide');
+
     //console.log('following and refresh button', remove - hide);
 
     let finalScoreElement = document.getElementById('final-score');
@@ -234,6 +236,8 @@ function displayFinalScore() {
 
     finalScoreElement.parentElement.classList.remove('hide');
     finalMessageElement.parentElement.classList.remove('hide');
+    // restartButton.parentElement.classList.remove('hide');
+
     console.log('finished script read');
 
     displayLeaderboard(resultsContainer);

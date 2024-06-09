@@ -26,6 +26,7 @@ body {
     align-items: center;
 }
 
+div>
 .timer,
 #timer {
     font-size: 1.3em;
