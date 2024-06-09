@@ -40,6 +40,7 @@ let correctQuestionIndex = -1
 
 let timerDuration = 60;
 let timerElement;
+let timeInterval;
 
 /**
  * Initialize DOM Components
@@ -187,7 +188,12 @@ function handleAnswerClick(answerindex) {
     }
 
     if (currentQuestionIndex >= shuffledQuestions.length) {
-        resetState();
+        endQuiz();
+    } else {
+        currentQuestionIndex++;
+        currentQuestionIndexToDisplay++;
+        questionNumber.innerText = currentQuestionIndexToDisplay;
+        setNextQuestion();
     }
 }
 /**
@@ -227,5 +233,6 @@ function displayFinalScore() {
  * Quiz End with Timer 'Call-back'
  */
 function endQuiz() {
+    clearInterval(timeInterval);
     displayFinalScore();
 }
