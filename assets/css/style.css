@@ -148,7 +148,8 @@ p {
     border-radius: 10px;
 }
 
-p>#final-message {
+p>#final-message,
+#final-score {
     display: none;
     min-width: 50%;
     color: #FF3EA5;
@@ -171,7 +172,7 @@ p>#final-message {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2 1fr);
+    grid-template-columns: repeat(2, 2);
     color: black;
     gap: 10px;
     width: 100%;

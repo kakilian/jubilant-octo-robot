@@ -37,7 +37,7 @@
     <div class="quiz-page hide" id="question-container">
         <div>Question: <span id="question-number">0</span>/10</div>
         <img class="img2" src="assets/image/cute.png" alt="a Cute Comic Cat, Cheshire from Alice in Wonderland">
-        <div>Timer: <span class="timer" id="timer">00:00</span></div>
+        <div>Timer: <span class="timer" id="timer">00:00</span>/60</div>
         <div class="question-class" id="question">Question:</div>
         <div class="btn-grid btn" id="answer-buttons">
             <button id="answer-btn-1">Answer 1</button>
@@ -56,6 +56,7 @@
         </div>
     </div>
     </div>
+
     <!-- quiz results correct and incorrectly answered-->
     <div>
         <div class="results-container hide" id="end-score-spieler">
@@ -73,7 +74,7 @@
             </table>
             <div class="final-score-container score-box hide" id="result">
                 <p id="final-score">Your score will appear here: </p>
-                <p id="final-message"><bold>Awesome effort!</bold> Take the quiz again and better your score! your Cheshire.</p>
+                <p id="final-message">Awesome effort! Take the quiz again and better your score! your Cheshire.</p>
             </div>
             <div id="leaderboard"></div>
         </div>
@@ -87,6 +88,6 @@
     <script src="assets/js/players.js" type="module"></script>
     <script src="assets/js/timer.js" type="module"></script>
     <script src="assets/js/script.js" type="module"></script>
-</body>
+    </body>
 
 </html>

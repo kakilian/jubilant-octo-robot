@@ -221,7 +221,7 @@ function displayFinalScore() {
     let finalScoreElement = document.getElementById('final-score');
     let finalMessageElement = document.getElementById('final-message');
 
-    //document.getElementById('final-score').innerHTML = ('You scored `${score}` out of 10 questions');
+    document.getElementById('final-score').innerHTML = ('You scored `${score}` out of 10 questions');
     let playerName = prompt('Enter your name:');
     let currentDate = new Date().toLocaleDateString();
     addPlayer(playerName, currentDate, score);

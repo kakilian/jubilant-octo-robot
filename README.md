@@ -108,7 +108,7 @@ These colors were selected not only for their aesthetic appeal but also to maint
    - A progress tracker will display your current question number out of the total 10 questions, helping you keep track of your journey through the quiz.
 
 5. **Timer**:
-   - The quiz features a timer that starts as soon as you click the "Start Quiz" button. This adds an element of challenge, encouraging you to think quickly and answer promptly.
+   - The quiz features a 60 second-timer that starts as soon as you click the "Start Quiz" button. This adds an element of challenge, encouraging you to think quickly and answer promptly.
 
 6. **Completing the Quiz**:
    - After answering all 10 questions, you will be taken to the final score section. Here, your total score will be displayed, along with feedback based on your performance.

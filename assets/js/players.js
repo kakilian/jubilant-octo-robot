@@ -15,9 +15,9 @@ class Player {
  *  Player Array, showing past players and scores on this quiz
  */
 let player = [
-    new Player('Violet', '2024-06-11', 9),
-    new Player('Charly', '2024-06-08', 10),
-    new Player('Kate', '2024-06-25', 8),
+    new Player('Cheshire', '2024-06-11', 10),
+    new Player('Alice', '2024-06-08', 5),
+    new Player('Violet', '2024-06-25', 8),
 ];
 
 
