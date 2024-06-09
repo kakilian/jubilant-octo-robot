@@ -226,7 +226,7 @@ function displayFinalScore() {
     }
     console.log('finished script read');
 
-    displayLeaderboard();
+    displayLeaderboard(resultsContainer);
 }
 
 /**

@@ -193,17 +193,12 @@ table {
     width: 100%;
 }
 
-th,
 td {
     border: 2px gold;
     padding: 10px;
     text-align: left;
-    background-color: #f8f8f8;
-}
-
-th {
-    background-color: #FF3EA5;
-    color: #000;
+    background-color: pink;
+    box-shadow: 0 0 5px;
 }
 
 tr:nth-child(even) {

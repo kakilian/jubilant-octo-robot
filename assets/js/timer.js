@@ -17,7 +17,7 @@ export function startTimer(duration, display, endCallBack) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            clearInterval('timeInterval');
+            clearInterval(timeInterval);
             alert("Time is up!");
             endCallBack();
         }
