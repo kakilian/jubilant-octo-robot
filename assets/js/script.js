@@ -161,6 +161,7 @@ function setNextQuestion() {
     followingButton.classList.add('hide');
     controlsContainer.classList.remove('hide');
 }
+
 /**
  * Answer Handled with Answer Click, as above
  * @param {
@@ -213,8 +214,14 @@ function displayFinalScore() {
     console.log('finalscore - please write your name here');
     questionContainerElement.classList.add('hide');
     resultsContainer.classList.remove('hide');
+    followingButton.classList.remove('hide');
+    refreshButton.classList.remove('hide');
+    //console.log('following and refresh button', remove - hide);
 
-    document.getElementById('final-score').innerHTML = `You scored ${score} out of 10 questions`;
+    let finalScoreElement = document.getElementById('final-score');
+    let finalMessageElement = document.getElementById('final-message');
+
+    //document.getElementById('final-score').innerHTML = ('You scored `${score}` out of 10 questions');
     let playerName = prompt('Enter your name:');
     let currentDate = new Date().toLocaleDateString();
     addPlayer(playerName, currentDate, score);
@@ -224,6 +231,9 @@ function displayFinalScore() {
     } else {
         document.getElementById('final-message').innerHTML = `Cheshire outsmarted you, better luck next time!`;
     }
+
+    finalScoreElement.parentElement.classList.remove('hide');
+    finalMessageElement.parentElement.classList.remove('hide');
     console.log('finished script read');
 
     displayLeaderboard(resultsContainer);
@@ -235,4 +245,5 @@ function displayFinalScore() {
 function endQuiz() {
     clearInterval(timeInterval);
     displayFinalScore();
+    resetState();
 }

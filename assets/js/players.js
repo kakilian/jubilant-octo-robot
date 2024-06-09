@@ -18,7 +18,6 @@ let player = [
     new Player('Violet', '2024-06-11', 9),
     new Player('Charly', '2024-06-08', 10),
     new Player('Kate', '2024-06-25', 8),
-    new Player('Andre', '2024-06-01', 0)
 ];
 
 
