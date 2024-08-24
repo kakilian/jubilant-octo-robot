@@ -25,16 +25,15 @@
 * [Project Sources](#project-sources)
 * [Apology and Explanation Regarding Project Code Usage](#apology-and-explanation-regarding-project-code-usage)
 
----
 
 ## Project Introduction:
 
 Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
----
 
-[AmIResponsive](assets/image/validator/am-i-responsive.png)
 
----
+![AmIResponsive](assets/image/validator/am-i-responsive.png)
+
+
 
 ## Wireframes with Balsamiq 
 
@@ -42,7 +41,7 @@ Orignally I draw on paper, design changed when I found images that were allow to
 
 ![Balsamiq](assets/image/wireframes.pdf)
 
----
+
 
 ## For First-Time Users:
 
@@ -50,7 +49,7 @@ Are you ready to embark on a journey filled with curiosity, wonder, and, of cour
 
 With Cheshire by your side, you'll not only test your knowledge of our furry friends but also discover fascinating tidbits about the whimsical world of Alice in Wonderland. Get ready to immerse yourself in a magical adventure that's sure to leave you smiling and wanting more!
 
----
+
 
 ## For Returning Users:
 
@@ -58,19 +57,17 @@ Welcome back, fellow explorer! If you've enjoyed your previous journey with Ches
 
 This project is inspired by my daughter's desire for interactive experiences. Drawing from the whimsical world of Alice in Wonderland, I set out to bring it to life in this project. And let's be real, those cat lovers out there often have conversations with their furry companions, so why not engage in a quiz with Cheshire and his adventures?
 
----
 
 ## My Process:
 
 I brainstormed questions that would not only be easy but also offer fun facts and memorable takeaways. Realizing the need for variety, I crafted over 20 random questions to curate a dynamic 10-question quiz. To ensure accessibility, I designed it as a multiple-choice experience, suitable for users of all reading levels. And of course, I injected a cheeky fun factor, embodied by our mischievous host, Cheshire.
 
----
+
 
 ## Project Features Overview:
 
 This project includes several key features designed to enhance the user experience:
 
----
 
 ### Introduction Page: 
 An inviting introduction page welcomes the user and encourages them to play the game.
@@ -84,7 +81,6 @@ At the end of the quiz, a score section displays the user's results and includes
 ### Timer: 
 A timer starts running when the user clicks the start button, adding a time-based challenge element to the game.
 
----
 
 ## Color Reference
 
@@ -103,9 +99,10 @@ The color scheme for this project was chosen to create a bright and cheerful atm
 - **Background Color**: `#f5f5f5` - A light, neutral background color that keeps the interface clean and readable.
 - **Image Fallback Color**: `#00ffff` - Aqua color used as a fallback if an image fails to load.
 
----
+
 
 ## Usage:
+
 ### How to Play "Quizzing with Cheshire":
 
 1. **Starting the Quiz**:
@@ -132,7 +129,9 @@ The color scheme for this project was chosen to create a bright and cheerful atm
 
 7. **Restarting the Quiz**:
    - If you wish to play again, you can click the "Restart Quiz" button. This will reset the quiz, allowing you to start over and attempt to improve your score.
----
+
+
+
 ### Tips for a Great Quiz Experience:
 
 - **Read Carefully**: Take your time to read each question and all possible answers thoroughly before making your selection.
@@ -142,7 +141,7 @@ The color scheme for this project was chosen to create a bright and cheerful atm
 
 By following these steps and tips, you will be able to fully enjoy and engage with the "Quizzing with Cheshire" experience, testing your knowledge and having fun along the way.
 
----
+
 
 ## Roadmap: 
 
@@ -181,35 +180,28 @@ To continuously enhance the "Quizzing with Cheshire" experience, the following r
    - Implement a language selection feature, allowing users to choose their preferred language for the quiz.
 
 By following this roadmap, we aim to create a more engaging, educational, and enjoyable experience for all users, continuously evolving the "Quizzing with Cheshire" project to meet and exceed user expectations.
----
+
 
 ## Testing 
 
 Extensive testing was conducted to ensure the website works across different browsers and screen sizes.
----
+
 ## Responsive Design and Testing:
 I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
 
 ### Device and Screen Size Testing
 
-![JSHint](https://jshint.com/)
+![CSS](assets/image/validator/css-validator.png)
 
-![W3C](https://validator.w3.org/)
----
-(assets/image/validator/html-pp2-w3c.png) 
----
-(assets/image/validator/css-validator.png)
----
+![W3C](assets/image/validator/html-pp2-w3c.png)
 
 There will show some errors, I did take note and removed them, only for the code not to work anymore. So I put them back in place. One is the usage of the console.log for my font in css. Anyother is an "extra" </div> - without these in place the code gave me snytax errors so they remain in place.
 
 As far as I know, there are no bus in my code.
  
 ![Lighthouse](assets/image/pp2.png)
----
-(assets/image/validator/lighthouse-validatio-2.png)
 
----
+(assets/image/validator/lighthouse-validatio-2.png)
 
 ## Deployment
 
@@ -230,21 +222,15 @@ In your IDE Terminal, type the following command to clone my repositiry:
 
    - Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/kakilian/jubilant-octo-robot.git/), which will start the Gitpod workspace for you.
 
----
 
-## Licence:
-
-   Distributed under the no License. See LICENSE.txt for more information.
----
-## Contact:
-   **Project Maintainer**: [Katarina Kilian]
-   **Email**:[katarina.kilian@student-codeinstitue.net]
    **Github**:[kakilian](https://github.com/kakilian)
    **linkedin**[katarina-kilian](https://linkedin.com/in/katarina-kilian-082169276)
    
----
-
 ## Contribution:
+
+
+## Code Usage: 
+
 
 ## Picture Credits:
 ![**Picture of Cheshire**](assets/image/cheshire.png)
@@ -262,19 +248,3 @@ including this great shuffling advice ![FreeCodeCamp](https://forum.freecodecamp
 - GPT - Helped write questions and READme text corrections.
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
----
----
----
-[^1]
-## Apology and Explanation Regarding Project Code Usage
-During the project, I initially used a video provided to me as a source for coding. When I sought assistance to fix parts of the non-functioning code, I was informed that the code was "well-used by students" and could result in a fail for my PP2 project.
-
-Unfortunately, with only three working days left, it was difficult to distance myself from the code I had been using. I attempted to make changes by using var for global usage. Despite working with "overused code," I still learned a lot by adding my own modifications and coding freestyle, even though the base code was pre-written. I deeply apologize for this.
-
-I understand the seriousness of plagiarism and I assure you that I had no intention of compromising my learning achievements or the integrity of the course. I appreciate the guidelines provided by student care and the online information regarding this matter.
-
-I want to clarify that I used the code from a video given to me by a teacher, unaware that it could be considered plagiarism. Despite this, I gained significant learning experience from using the code and watching the video.
-
-With just 48 hours remaining, including working through the night, I have been diligently adding my own pieces to the project in the hope of passing this part of the course. I kindly ask for your understanding. Once I saw how certain parts of the code worked, it became challenging to break away from it. I know I could use 'if' and 'else' statements to achieve similar results. However, after seeing the well-written, easy-to-understand code, it made more sense to use it. Functions, which are fundamental to JavaScript, help create a seamless user interface (UI). Through my mistakes, I realized that JavaScript is more complex than I initially understood from the course content. Ultimately, our goal as students, teachers, and course developers is to deepen our understanding and mastery of the subject.
-
-[^1]: 
