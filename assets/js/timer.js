@@ -1,4 +1,3 @@
-
 console.log('timer.js');
 
 /**
@@ -6,10 +5,19 @@ console.log('timer.js');
  */
 export function startTimer(duration, display, endCallBack) {
     console.log('Timers running');
-    let timer = duration, minutes, seconds;
+    let timer = duration,
+        minutes, seconds;
+
+    /**
+     * Function to stop the Timer
+     */
     let stop = () => {
-        clearInterval(start);
-    }
+        clearInterval(timeInterval);
+    };
+
+    /**
+     *  Start the interval
+     */
     let timeInterval = setInterval(() => {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -21,8 +29,8 @@ export function startTimer(duration, display, endCallBack) {
 
         if (--timer < 0) {
             stop();
-            clearInterval(timeInterval);
             alert("Time is up!");
+            if (typeof endCallBack === 'function') {}
             endCallBack();
         }
     }, 1000);

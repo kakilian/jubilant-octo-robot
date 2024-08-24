@@ -38,7 +38,7 @@ let currentQuestionIndexToDisplay = 1;
 let shuffledQuestions = [];
 let correctQuestionIndex = -1
 
-let timerDuration = 60;
+let timerDuration = 120;
 let timerElement;
 let timeInterval;
 
@@ -58,7 +58,7 @@ function initializeDomComponents() {
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.getElementById('end-score-spieler');
-    timerElement = document.getElementById('timer');
+    timerElement = document.getElementById('timer-display');
     answerButton1 = document.getElementById('answer-btn-1');
     answerButton2 = document.getElementById('answer-btn-2');
     answerButton3 = document.getElementById('answer-btn-3');
@@ -111,7 +111,6 @@ function startGame() {
     } else {
         console.error('Timer element not found in the DOM');
     }
-    console.log('Timer started');
 }
 
 /**
@@ -218,8 +217,6 @@ function displayFinalScore() {
     refreshButton.classList.add('hide');
     restartButton.parentElement.classList.remove('hide');
 
-    //console.log('following and refresh button', remove - hide);
-
     let finalScoreElement = document.getElementById('final-score');
     let finalMessageElement = document.getElementById('final-message');
 
@@ -236,9 +233,6 @@ function displayFinalScore() {
 
     finalScoreElement.parentElement.classList.remove('hide');
     finalMessageElement.parentElement.classList.remove('hide');
-    // restartButton.parentElement.classList.remove('hide');
-
-    console.log('finished script read');
 
     displayLeaderboard(resultsContainer);
 }
