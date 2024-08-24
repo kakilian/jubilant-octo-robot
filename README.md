@@ -223,16 +223,13 @@ In your IDE Terminal, type the following command to clone my repositiry:
    - Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/kakilian/jubilant-octo-robot.git/), which will start the Gitpod workspace for you.
 
 
-   **Github**:[kakilian](https://github.com/kakilian)
-   **linkedin**[katarina-kilian](https://linkedin.com/in/katarina-kilian-082169276)
-   
 ## Contribution:
 
 
-## Code Usage: 
+### Code Usage: 
 
 
-## Picture Credits:
+### Picture Credits:
 ![**Picture of Cheshire**](assets/image/cheshire.png)
 ![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
 ![**Cheshire leaving the game**](assets/image/translucent.png)   For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to **"miami22"**. The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
