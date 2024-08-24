@@ -38,7 +38,7 @@ let currentQuestionIndexToDisplay = 1;
 let shuffledQuestions = [];
 let correctQuestionIndex = -1
 
-let timerDuration = 120;
+let timerDuration = 10;
 let timerElement;
 let timeInterval;
 
@@ -204,6 +204,7 @@ function resetState() {
     corAnswerElement.classList.add('hide');
     incorAnswerElement.classList.add('hide');
     setNextQuestion();
+    //
 }
 
 /**
@@ -231,6 +232,7 @@ function displayFinalScore() {
         document.getElementById('final-message').innerHTML = `Cheshire outsmarted you, better luck next time!`;
     }
 
+    questionContainerElement.classList.add('hide');
     finalScoreElement.parentElement.classList.remove('hide');
     finalMessageElement.parentElement.classList.remove('hide');
 
@@ -244,4 +246,8 @@ function endQuiz() {
     clearInterval(timeInterval);
     displayFinalScore();
     resetState();
+    if (questionContainerElement.classList.contains('hide') === false) {
+        questionContainerElement.classList.add('hide');
+        console.log('ifstatement');
+    }
 }

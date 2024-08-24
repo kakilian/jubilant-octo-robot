@@ -8,11 +8,14 @@ export function startTimer(duration, display, endCallBack) {
     let timer = duration,
         minutes, seconds;
 
+    console.log(timer);
+
     /**
      * Function to stop the Timer
      */
     let stop = () => {
         clearInterval(timeInterval);
+        endCallBack();
     };
 
     /**
@@ -26,6 +29,8 @@ export function startTimer(duration, display, endCallBack) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
+        console.log(timer);
+        console.log(typeof timer);
 
         if (--timer < 0) {
             stop();
