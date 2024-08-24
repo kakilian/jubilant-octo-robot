@@ -1,13 +1,12 @@
 # Quizzing with Cheshire!
 
-![Cheshire Logo](assets/favicon/android-chrome-512x512.png)
+![Cheshire Logo](assets/favicon/android-chrome-192x192.png)
 
 <!-- Table of Contents -->
 ## Table of Contents
 
 * [Project Introduction](#project-introduction)
 * [AmIResponsive](#am-i-responsive)
-* [Wireframes](#wireframes)
 * [For First-Time Users](#for-first-time-users)
 * [For Returning Users](#for-returning-users)
 * [My Process](#my-process)
@@ -18,12 +17,10 @@
 * [Testing](#testing)
 * [Responsive Design and Testing](#responsive-design-and-testing)
 * [Deployment](#deployment)
-* [License](#license)
-* [Contact](#contact)
 * [Contribution](#contribution)
 * [Picture Credits](#picture-credits)
 * [Project Sources](#project-sources)
-* [Apology and Explanation Regarding Project Code Usage](#apology-and-explanation-regarding-project-code-usage)
+
 
 
 ## Project Introduction:
@@ -32,15 +29,6 @@ Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure bl
 
 
 ![AmIResponsive](assets/image/validator/am-i-responsive.png)
-
-
-
-## Wireframes with Balsamiq 
-
-Orignally I draw on paper, design changed when I found images that were allow to be used on this project.
-
-![Balsamiq](assets/image/wireframes.pdf)
-
 
 
 ## For First-Time Users:
@@ -84,7 +72,9 @@ A timer starts running when the user clicks the start button, adding a time-base
 
 ## Color Reference
 
-![Color Palette](https://color.adobe.com/create/color-wheel#) ![color wheel from adobe](assets/image/circle-palette.png)
+[Color Palette](https://color.adobe.com/create/color-wheel#) 
+
+![color wheel from adobe](assets/image/circle-palette.png)
 
 The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland."
 
@@ -198,10 +188,14 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 There will show some errors, I did take note and removed them, only for the code not to work anymore. So I put them back in place. One is the usage of the console.log for my font in css. Anyother is an "extra" </div> - without these in place the code gave me snytax errors so they remain in place.
 
 As far as I know, there are no bus in my code.
- 
+
+### Lighthouse
+
+Using [Lighthouse](assets/image/validator/lighthouse-validatio-2.png) to check the Performance of APP.
+
 ![Lighthouse](assets/image/pp2.png)
 
-(assets/image/validator/lighthouse-validatio-2.png)
+
 
 ## Deployment
 
@@ -220,28 +214,29 @@ In your IDE Terminal, type the following command to clone my repositiry:
 
    - `git clone https://github.com/kakilian/jubilant-octo-robot.git`
 
-   - Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/kakilian/jubilant-octo-robot.git/), which will start the Gitpod workspace for you.
+   - Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/kakilian/jubilant-octo-robot.git/) which will start the Gitpod workspace for you.
 
 
 ## Contribution:
 
-
-### Code Usage: 
-
-
 ### Picture Credits:
 ![**Picture of Cheshire**](assets/image/cheshire.png)
 ![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
-![**Cheshire leaving the game**](assets/image/translucent.png)   For the background image of Cheshire, I sourced a captivating graphic poster from ![wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster), credited to **"miami22"**. The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
----
+![**Cheshire leaving the game**](assets/image/translucent.png)   
+
+[wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster)
+
+For the background image of Cheshire, I sourced a captivating graphic poster from , credited to "miami22". The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
+
 ## Project Sources:
 I leveraged various resources throughout the development of this Quiz Project:
-- Video tutorial on quiz building. One main one is as follows ![Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
-- Google Fonts for typography choices.
-- Color palettes from design playbooks to ensure visual harmony.
-- Favicon creation tool from ![favicon.io](https://favicon.io/favicon-converter/).
-- Community forums like ![FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code inspiration.
-including this great shuffling advice ![FreeCodeCamp](https://forum.freecodecamp.org/t/how-do-i-make-this-js-code-to-unshuffle-my-questions/513180)
-- GPT - Helped write questions and READme text corrections.
+- Video tutorial on quiz building. One main one is as follows 
+[Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
+- Google Fonts for typography choices.[Google Fonts](https://fonts.google.com/)
+- Color palettes from design playbooks to ensure visual harmony. [Design Playbooks](https://playbook.powerapp.cloud/guides/design_guidelines/color)
+- Favicon creation tool from [favicon.io](https://favicon.io/favicon-converter/).
+- Community forums like [FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code inspiration.
+including this great shuffling advice [FreeCodeCamp](https://forum.freecodecamp.org/t/how-do-i-make-this-js-code-to-unshuffle-my-questions/513180)
+- GPT - Helped write questions and READme text corrections. [GPT](https://openai.com/index/gpt-4/)
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
