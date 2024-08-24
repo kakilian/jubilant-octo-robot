@@ -17,17 +17,17 @@ console.log('font-family');
 body {
     font-family: 'MyCustomFont', sans-serif;
     background-color: rgb(211, 24, 195);
-    padding: 0;
+    padding: 10px;
     margin: 0;
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: auto;
 }
 
-div>
-.timer,
+div>.timer,
 #timer {
     font-size: 1.3em;
     color: rgb(211, 24, 195);
@@ -51,15 +51,16 @@ div>
 .introduction,
 .quiz-page,
 .controls-container {
-    display: flex;
-    width: 80%;
     height: 80%;
-    align-items: center;
-    gap: 20px;
     padding: 20px;
     background-color: whitesmoke;
     border-radius: 10px;
     box-shadow: 0 0 10px;
+}
+
+.list {
+    font-size: 15px;
+    text-align: left;
 }
 
 /*-- Images --*/
@@ -159,7 +160,7 @@ p>#final-message,
 .start-btn,
 .next-btn {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 2rem;
     border: none;
     border-radius: 5px;
