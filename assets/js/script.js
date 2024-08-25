@@ -19,8 +19,6 @@ console.log('players.js');
 console.log('questions.js');
 console.log('timer.js');
 
-//let corAnswer = {};
-//let incorAnswer = {};
 let key = 'Item'; {
     localStorage.setItem(key, 'Value, name, score');
 };
@@ -212,8 +210,6 @@ function resetState() {
  * Display Final Score at the end of the Quiz
  */
 function displayFinalScore() {
-    clearInterval(timerDuration);
-
     questionContainerElement.classList.add('hide');
 
     let finalScoreElement = document.getElementById('final-score');
@@ -224,6 +220,7 @@ function displayFinalScore() {
     /**
      * To stop the Timer
      */
+    clearInterval(timerDuration);
 
     resultsContainer.classList.remove('hide');
     followingButton.classList.remove('hide');

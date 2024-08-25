@@ -35,8 +35,12 @@ export function startTimer(duration, display, endCallBack) {
         console.log(typeof timer);
 
         if (--timer < 0) {
-            stop();
             alert("Time is up!");
+            stop();
         }
     }, 1000);
+    /**
+     * WHen the users finishes the Quiz before the timer has stopped.
+     */
+    return stop;
 }

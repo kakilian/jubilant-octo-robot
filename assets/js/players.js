@@ -14,7 +14,7 @@ class Player {
 /**
  *  Player Array, showing past players and scores on this quiz
  */
-let player = [
+const player = [
     new Player('Cheshire', '2024-06-11', 10),
     new Player('Alice', '2024-06-08', 5),
     new Player('Violet', '2024-06-25', 8),
@@ -28,7 +28,7 @@ export function displayLeaderboard() {
     let leaderboardHTML = "<table><tr><th>Name</th><th>Score</th></tr>";
     player.sort((aPlayer, bPlayer) => bPlayer.score - aPlayer.score);
     player.forEach(player => {
-        leaderboardHTML += `<tr><td>${player.name}</td><td>${player.score}</td></tr>`;
+        leaderboardHTML += `<tr><td>${player.name}</td><td>${player.score}</td><td>${player.date}</td></tr>`;
     });
     leaderboardHTML += "</table>";
     document.getElementById("leaderboard").innerHTML = leaderboardHTML;
