@@ -15,7 +15,9 @@ export function startTimer(duration, display, endCallBack) {
      */
     let stop = () => {
         clearInterval(timeInterval);
-        endCallBack();
+        if (typeof endCallBack === 'function') {
+            endCallBack();
+        }
     };
 
     /**
@@ -35,8 +37,6 @@ export function startTimer(duration, display, endCallBack) {
         if (--timer < 0) {
             stop();
             alert("Time is up!");
-            if (typeof endCallBack === 'function') {}
-            endCallBack();
         }
     }, 1000);
 }

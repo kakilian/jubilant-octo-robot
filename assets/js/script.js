@@ -19,8 +19,8 @@ console.log('players.js');
 console.log('questions.js');
 console.log('timer.js');
 
-let corAnswer = {};
-let incorAnswer = {};
+//let corAnswer = {};
+//let incorAnswer = {};
 let key = 'Item'; {
     localStorage.setItem(key, 'Value, name, score');
 };
@@ -189,6 +189,7 @@ function handleAnswerClick(answerindex) {
 
     if (currentQuestionIndex >= shuffledQuestions.length) {
         endQuiz();
+        clearInterval(timerDuration);
     } else {
         currentQuestionIndex++;
         currentQuestionIndexToDisplay++;
@@ -211,18 +212,29 @@ function resetState() {
  * Display Final Score at the end of the Quiz
  */
 function displayFinalScore() {
-    console.log('finalscore - please write your name here');
+    clearInterval(timerDuration);
+
     questionContainerElement.classList.add('hide');
+
+    let finalScoreElement = document.getElementById('final-score');
+    let finalMessageElement = document.getElementById('final-message');
+
+    //console.log('finalscore - please write your name here');
+
+    /**
+     * To stop the Timer
+     */
+
     resultsContainer.classList.remove('hide');
     followingButton.classList.remove('hide');
     refreshButton.classList.add('hide');
     restartButton.parentElement.classList.remove('hide');
 
-    let finalScoreElement = document.getElementById('final-score');
-    let finalMessageElement = document.getElementById('final-message');
-
     document.getElementById('final-score').innerHTML = ('You scored `${score}` out of 10 questions');
     let playerName = prompt('Enter your name:');
+    /**
+     * To send score to local storage
+     */
     let currentDate = new Date().toLocaleDateString();
     addPlayer(playerName, currentDate, score);
 
