@@ -13,6 +13,7 @@ import {
     questions
 } from './questions.js';
 
+console.log('font-family');
 console.log('script loaded');
 console.log('script.js');
 console.log('players.js');
@@ -36,7 +37,7 @@ let currentQuestionIndexToDisplay = 1;
 let shuffledQuestions = [];
 let correctQuestionIndex = -1
 
-let timerDuration = 10;
+let timerDuration = 120;
 let timerElement;
 let timeInterval;
 
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     refreshButton.addEventListener('click', () => {
         questionContainerElement.classList.add('hide');
         introductionContainer.classList.remove('hide');
+        refreshButton.classList.add('hide');
     });
 });
 
@@ -202,6 +204,8 @@ function resetState() {
     followingButton.classList.add('hide');
     corAnswerElement.classList.add('hide');
     incorAnswerElement.classList.add('hide');
+    refreshButton.classList.add('hide');
+    startButton.classList.add('hide');
     setNextQuestion();
     //
 }
@@ -211,21 +215,17 @@ function resetState() {
  */
 function displayFinalScore() {
     questionContainerElement.classList.add('hide');
+    resultsContainer.classList.remove('hide');
+    followingButton.classList.remove('hide');
+    restartButton.parentElement.classList.remove('hide');
 
-    let finalScoreElement = document.getElementById('final-score');
-    let finalMessageElement = document.getElementById('final-message');
-
-    //console.log('finalscore - please write your name here');
+    const finalScoreElement = document.getElementById('final-score');
+    const finalMessageElement = document.getElementById('final-message');
 
     /**
      * To stop the Timer
      */
     clearInterval(timerDuration);
-
-    resultsContainer.classList.remove('hide');
-    followingButton.classList.remove('hide');
-    refreshButton.classList.add('hide');
-    restartButton.parentElement.classList.remove('hide');
 
     document.getElementById('final-score').innerHTML = ('You scored `${score}` out of 10 questions');
     let playerName = prompt('Enter your name:');
@@ -235,17 +235,17 @@ function displayFinalScore() {
     let currentDate = new Date().toLocaleDateString();
     addPlayer(playerName, currentDate, score);
 
-    if (score === 10) {
-        document.getElementById('final-message').innerHTML = `Congratulations! You did great!`;
+    if (finalScoreElement) {
+        finalScoreElement.innerHTML = `You scored ${score} out of 10 questions`;
     } else {
-        document.getElementById('final-message').innerHTML = `Cheshire outsmarted you, better luck next time!`;
+        console.error('Final score element not found');
     }
 
     questionContainerElement.classList.add('hide');
     finalScoreElement.parentElement.classList.remove('hide');
     finalMessageElement.parentElement.classList.remove('hide');
 
-    displayLeaderboard(resultsContainer);
+    displayLeaderboard();
 }
 
 /**
@@ -259,4 +259,5 @@ function endQuiz() {
         questionContainerElement.classList.add('hide');
         console.log('ifstatement');
     }
+    restartButton.classList.remove('hide');
 }

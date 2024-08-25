@@ -1,46 +1,29 @@
 console.log('timer.js');
 
 /**
- * Timer
+ * Starts a countdown timer and updates the display.
+ * @param {number} duration - The duration of the timer in seconds.
+ * @param {HTMLElement} display - The element to display the timer.
+ * @param {Function} endCallback - Function to call when the timer ends.
  */
-export function startTimer(duration, display, endCallBack) {
-    console.log('Timers running');
-    let timer = duration,
-        minutes, seconds;
-
-    console.log(timer);
-
-    /**
-     * Function to stop the Timer
-     */
-    let stop = () => {
+export function startTimer(duration, display, endCallback) {
+    let timer = duration;
+    const stop = () => {
         clearInterval(timeInterval);
-        if (typeof endCallBack === 'function') {
-            endCallBack();
-        }
+        endCallback();
     };
 
-    /**
-     *  Start the interval
-     */
-    let timeInterval = setInterval(() => {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+    const timeInterval = setInterval(() => {
+        const minutes = Math.floor(timer / 60);
+        const seconds = timer % 60;
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-        console.log(timer);
-        console.log(typeof timer);
+        display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
         if (--timer < 0) {
-            alert("Time is up!");
             stop();
+            alert("Time's up!");
         }
     }, 1000);
-    /**
-     * WHen the users finishes the Quiz before the timer has stopped.
-     */
+
     return stop;
 }
