@@ -191,8 +191,8 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 ![Timer](assets/image/validator/bug.timer.png)
 
 ### Known Issues
-Timer Functionality: The timer does not stop when the user finishes the task as expected. Instead, it only ends after the full 2-minute duration, regardless of user input.
-Restart Button: I encountered difficulties in making the restart button appear correctly. The "hide" functionality was particularly challenging, and I was unable to fully implement this feature before the deadline.
+- Timer Functionality: The timer does not stop when the user finishes the task as expected. Instead, it only ends after the full 2-minute duration, regardless of user input.
+- Restart Button: I encountered difficulties in making the restart button appear correctly. The "hide" functionality was particularly challenging, and I was unable to fully implement this feature before the deadline.
 
 ### Lighthouse
 
@@ -247,7 +247,9 @@ including this great shuffling advice [FreeCodeCamp](https://forum.freecodecamp.
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
 
 ### Finishing Note
-Unfortunately, I was not able to fully resolve my `timer` or `restart` issues before the project deadline. Despite my best efforts, the timer functionality and restart button could not be completed as intended. Moving forward, I plan to continue refining these features to improve the overall user experience. Thank you for your understanding.
+Unfortunately, I was not able to fully resolve the issues before my project deadline. Despite my best efforts, the `timer` functionality and `restart` button could not be completed as intended. Additionally, I had planned to implement `@screen-media` for responsive design, particularly focusing on mobile usage first. However, I ran out of time to properly address this for PC users, which is something that will need attention moving forward.
+
+This experience has highlighted the importance of effective time management, particularly in prioritizing tasks that need to be addressed early in the development process rather than leaving them until the end. Moving forward, I plan to continue refining these features to improve the overall user experience. Thank you for your understanding.
 
 ## Acknowledgments
 I would like to express my deepest gratitude to everyone who has supported me, both on-screen and in real life, throughout my journey to become a programmer. Your encouragement, guidance, and patience have been invaluable, and I truly appreciate the time and effort you have invested in helping me grow.
