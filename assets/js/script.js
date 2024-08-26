@@ -52,8 +52,6 @@ function initializeDomComponents() {
     controlsContainer = document.getElementById('controls-container');
     questionContainerElement = document.getElementById('question-container');
     questionElement = document.getElementById('question');
-    corAnswerElement = document.getElementById('cor-answer');
-    incorAnswerElement = document.getElementById('incor-answer');
     refreshButton = document.getElementById('start-btn-quiz');
     restartButton = document.getElementById('refresh-quiz');
     resultsContainer = document.getElementById('end-score-spieler');
@@ -66,31 +64,46 @@ function initializeDomComponents() {
     answerButton2.addEventListener('click', () => handleAnswerClick(1));
     answerButton3.addEventListener('click', () => handleAnswerClick(2));
     answerButton4.addEventListener('click', () => handleAnswerClick(3));
+
 }
+
 
 /** 
  * Load the DOM, !Important
  */
 document.addEventListener('DOMContentLoaded', () => {
     initializeDomComponents();
-    startButton.addEventListener('click', startGame);
-    followingButton.addEventListener('click', () => {
-        currentQuestionIndex++;
-        currentQuestionIndexToDisplay++;
-        questionNumber.innerText = currentQuestionIndexToDisplay;
-        followingButton.classList.add('hide');
-        setNextQuestion();
-    });
-    restartButton.addEventListener('click', () => {
-        resultsContainer.classList.add('hide');
-        introductionContainer.classList.remove('hide');
-    });
-    refreshButton.addEventListener('click', () => {
-        questionContainerElement.classList.add('hide');
-        introductionContainer.classList.remove('hide');
-        refreshButton.classList.add('hide');
-    });
+
+    if (startButton) {
+        startButton.addEventListener('click', startGame);
+    }
+
+    if (followingButton) {
+        followingButton.addEventListener('click', () => {
+            currentQuestionIndex++;
+            currentQuestionIndexToDisplay++;
+            questionNumber.innerText = currentQuestionIndexToDisplay;
+            followingButton.classList.add('hide');
+            setNextQuestion();
+        });
+    }
+
+    if (restartButton) {
+        restartButton.addEventListener('click', () => {
+            resultsContainer.classList.add('hide');
+            introductionContainer.classList.remove('hide');
+        });
+    }
+
+    if (refreshButton) {
+        refreshButton.addEventListener('click', () => {
+            questionContainerElement.classList.add('hide');
+            introductionContainer.classList.remove('hide');
+            refreshButton.classList.add('hide');
+        });
+    }
 });
+
 
 /** 
  * Start the game by hiding the introduction and setting up the first question
@@ -104,6 +117,7 @@ function startGame() {
     setQuestionContent(shuffledQuestions[currentQuestionIndex]);
     questionContainerElement.classList.remove('hide');
     followingButton.classList.remove('hide');
+
     setNextQuestion();
 
     if (timerElement) {
@@ -113,6 +127,7 @@ function startGame() {
     }
 }
 
+
 /**
  * Set Question Content
  * @param {*} question 
@@ -120,8 +135,6 @@ function startGame() {
  */
 function setQuestionContent(question) {
     controlsContainer.classList.add('hide');
-    corAnswerElement.classList.add('hide');
-    incorAnswerElement.classList.add('hide');
     startButton.classList.add('hide');
 
     if (!question || !question.answers) {
@@ -169,12 +182,8 @@ function setNextQuestion() {
 function handleAnswerClick(answerindex) {
     if (answerindex === correctQuestionIndex) {
         score++;
-        corAnswerElement.classList.remove('hide');
-        incorAnswerElement.classList.add('hide');
         followingButton.classList.remove('hide');
     } else {
-        corAnswerElement.classList.add('hide');
-        incorAnswerElement.classList.remove('hide');
         followingButton.classList.remove('hide');
     }
 
@@ -252,6 +261,7 @@ function displayFinalScore() {
  * Quiz End with Timer 'Call-back'
  */
 function endQuiz() {
+    stopTimer();
     clearInterval(timeInterval);
     displayFinalScore();
     resetState();
