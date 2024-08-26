@@ -16,10 +16,13 @@
 * [Roadmap](#roadmap)
 * [Testing](#testing)
 * [Responsive Design and Testing](#responsive-design-and-testing)
+* [Known Issues](#known-issues)
 * [Deployment](#deployment)
 * [Contribution](#contribution)
 * [Picture Credits](#picture-credits)
 * [Project Sources](#project-sources)
+* [Finishing Note](#finishing-note)
+* [Acknowledgments](#acknowledgments)
 
 
 
@@ -28,7 +31,7 @@
 Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
 
 
-![AmIResponsive](assets/image/validator/am-i-responsive.png)
+![AmIResponsive](assets/image/validator/amiresponsive.png)
 
 
 ## For First-Time Users:
@@ -181,13 +184,15 @@ I prioritized responsiveness using tools like Lighthouse to ensure a seamless ex
 
 ### Device and Screen Size Testing
 
-![CSS](assets/image/validator/css-validator.png)
+![CSS](assets/image/validator/css.validator.png)
 
-![W3C](assets/image/validator/html-pp2-w3c.png)
+![W3C](assets/image/validator/html.validator.png)
 
-There will show some errors, I did take note and removed them, only for the code not to work anymore. So I put them back in place. One is the usage of the console.log for my font in css. Anyother is an "extra" </div> - without these in place the code gave me snytax errors so they remain in place.
+![Timer](assets/image/validator/bug.timer.png)
 
-As far as I know, there are no bus in my code.
+### Known Issues
+Timer Functionality: The timer does not stop when the user finishes the task as expected. Instead, it only ends after the full 2-minute duration, regardless of user input.
+Restart Button: I encountered difficulties in making the restart button appear correctly. The "hide" functionality was particularly challenging, and I was unable to fully implement this feature before the deadline.
 
 ### Lighthouse
 
@@ -240,3 +245,9 @@ including this great shuffling advice [FreeCodeCamp](https://forum.freecodecamp.
 - GPT - Helped write questions and READme text corrections. [GPT](https://openai.com/index/gpt-4/)
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
+
+### Finishing Note
+Unfortunately, I was not able to fully resolve my `timer` or `restart` issues before the project deadline. Despite my best efforts, the timer functionality and restart button could not be completed as intended. Moving forward, I plan to continue refining these features to improve the overall user experience. Thank you for your understanding.
+
+## Acknowledgments
+I would like to express my deepest gratitude to everyone who has supported me, both on-screen and in real life, throughout my journey to become a programmer. Your encouragement, guidance, and patience have been invaluable, and I truly appreciate the time and effort you have invested in helping me grow.
