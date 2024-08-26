@@ -192,6 +192,7 @@ p>#final-message,
 table {
     border-collapse: collapse;
     width: 100%;
+    padding: 10px;
 }
 
 td {

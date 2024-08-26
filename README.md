@@ -191,9 +191,9 @@ As far as I know, there are no bus in my code.
 
 ### Lighthouse
 
-Using [Lighthouse](assets/image/validator/lighthouse-validatio-2.png) to check the Performance of APP.
+Using Lighthouse to check the Performance of APP.
 
-![Lighthouse](assets/image/pp2.png)
+![Lighthouse](assets/image/validator/lighthouse.testing.png)
 
 
 

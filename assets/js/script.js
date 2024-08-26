@@ -213,8 +213,8 @@ function resetState() {
     followingButton.classList.add('hide');
     corAnswerElement.classList.add('hide');
     incorAnswerElement.classList.add('hide');
-    refreshButton.classList.add('hide');
-    startButton.classList.add('hide');
+    refreshButton.classList.remove('hide');
+    startButton.classList.remove('hide');
     setNextQuestion();
     //
 }
